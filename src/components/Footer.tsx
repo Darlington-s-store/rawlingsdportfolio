@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Github, Linkedin, Mail } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -8,7 +9,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <p className="text-sm text-muted-foreground mt-2 max-w-xs leading-relaxed">
+            <Link to="/" className="flex items-center gap-2 mb-4 group">
+              <div className="w-8 h-8 rounded-lg overflow-hidden border border-border/50 group-hover:border-primary/30 transition-all">
+                <img src={logo} alt="Logo" className="w-full h-full object-cover" />
+              </div>
+              <span className="font-display font-bold text-base tracking-tight">Rawlings <span className="text-primary">Junior</span></span>
+            </Link>
+            <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
               Full-stack developer building scalable web apps, payment systems, and backend APIs from Accra, Ghana.
             </p>
           </div>

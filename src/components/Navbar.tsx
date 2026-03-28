@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
+import logo from "@/assets/logo.png";
+
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
@@ -22,7 +24,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/60 bg-background shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <div className="flex-1" />
+        <Link to="/" className="flex items-center gap-2 group">
+          <div className="w-10 h-10 rounded-xl overflow-hidden border border-border/50 group-hover:border-primary/30 transition-all duration-300">
+            <img src={logo} alt="Logo" className="w-full h-full object-cover scale-110 group-hover:scale-125 transition-transform duration-500" />
+          </div>
+          <span className="font-display font-bold text-lg tracking-tight hidden sm:block">Rawlings <span className="text-primary">Junior</span></span>
+        </Link>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
