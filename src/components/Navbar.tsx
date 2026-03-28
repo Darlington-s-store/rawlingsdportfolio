@@ -22,12 +22,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/60 bg-background shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        {location.pathname !== "/" && (
-          <Link to="/" className="font-display text-xl font-bold tracking-tight">
-            <span className="text-gradient">ARJ</span>
-          </Link>
-        )}
-        {location.pathname === "/" && <div className="w-12 h-8" />} {/* Placeholder for balance */}
+        <div className="flex-1" />
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
