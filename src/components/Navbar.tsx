@@ -28,7 +28,7 @@ const Navbar = () => {
           <div className="w-10 h-10 rounded-xl overflow-hidden border border-border/50 group-hover:border-primary/30 transition-all duration-300">
             <img src={logo} alt="Logo" className="w-full h-full object-cover scale-110 group-hover:scale-125 transition-transform duration-500" />
           </div>
-          <span className="font-display font-bold text-lg tracking-tight hidden sm:block">Rawlings <span className="text-primary">Junior</span></span>
+          <span className="font-display font-bold text-lg tracking-tight hidden sm:block">Asomani Rawlings <span className="text-primary">Junior</span></span>
         </Link>
 
         {/* Desktop */}
