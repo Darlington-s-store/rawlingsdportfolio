@@ -44,7 +44,7 @@ const Footer = () => {
               <a href="https://github.com/Darlington-s-store" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg border border-border text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors">
                 <Github size={18} />
               </a>
-              <a href="https://www.linkedin.com/in/kwame-darlington-junior-189a80253" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg border border-border text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors">
+              <a href="https://www.linkedin.com/in/rawlings-junior-asomani-189a80253?" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg border border-border text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors">
                 <Linkedin size={18} />
               </a>
               <a href="mailto:asomanirawlingsjunior5333@gmail.com" className="p-2 rounded-lg border border-border text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors">

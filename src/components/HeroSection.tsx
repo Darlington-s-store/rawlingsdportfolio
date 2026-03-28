@@ -83,7 +83,7 @@ const HeroSection = () => {
               <Github size={20} />
             </a>
             <a
-              href="https://www.linkedin.com/in/kwame-darlington-junior-189a80253"
+              href="https://www.linkedin.com/in/rawlings-junior-asomani-189a80253?"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-xl border border-white/10 text-white/60 transition-colors hover:bg-primary/10 hover:border-primary/30 hover:text-primary"
