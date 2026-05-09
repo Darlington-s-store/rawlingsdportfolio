@@ -17,7 +17,7 @@ Personal portfolio showcasing full-stack development projects, technical skills,
 ## Setup & Development
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Darlington-s-store/portfolio.git
+   git clone https://github.com/Darlington-s-store/rawlingsdportfolio.git
    ```
 2. Install dependencies:
    ```bash
