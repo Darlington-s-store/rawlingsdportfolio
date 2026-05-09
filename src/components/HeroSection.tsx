@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Github, Linkedin, Calendar, Briefcase, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import projectTravel from "@/assets/AtlasWave_Travels.jpeg";
-import projectNova from "@/assets/Nova_Eye_Care.jpeg";
-import projectElshadai from "@/assets/Elshadai_Millenium.jpeg";
+import projectTravel from "@/assets/image.png";
+import projectNova from "@/assets/nova-eye-care.png";
+import projectElshadai from "@/assets/elshadai.png";
 
 const backgroundImages = [projectTravel, projectNova, projectElshadai];
 
