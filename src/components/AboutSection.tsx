@@ -12,7 +12,7 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-5 text-muted-foreground leading-relaxed">
             <p>
-              I'm Rawlings — a passionate Full-Stack Software Developer based in Accra, Ghana, with 5 years of hands-on
+              I'm Rawlings, a passionate Full-Stack Software Developer based in Accra, Ghana, with 5 years of hands-on
               experience designing, building, and shipping scalable, production-ready applications.
             </p>
             <p>
