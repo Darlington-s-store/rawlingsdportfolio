@@ -166,7 +166,7 @@ const ExperienceSection = () => {
       <div className="max-w-7xl mx-auto">
         <p className="text-primary font-display font-semibold text-sm uppercase tracking-widest mb-3">Experience</p>
         <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-          4+ years of <span className="text-gradient">building</span>
+          5+ years of <span className="text-gradient">building</span>
         </h2>
         <p className="text-muted-foreground max-w-2xl mb-12 leading-relaxed">
           From freelance projects to leading full product builds - here's a timeline of my professional journey as a full-stack developer.
