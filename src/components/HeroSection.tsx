@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Github, Linkedin, Calendar, Briefcase, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const HeroSection = () => {
   return (
@@ -31,34 +32,36 @@ const HeroSection = () => {
             I'm a Full-Stack Developer specializing in React, Node.js, and Python. I build reliable web applications, solid APIs, and mobile interfaces that solve real-world problems.
           </p>
 
-          <div className="flex flex-wrap gap-4 mb-16 animate-fade-up delay-3 justify-center">
-            <Button variant="hero" size="lg" className="h-14 px-8 text-base rounded-2xl" asChild>
-              <Link to="/projects">
-                Explore Projects <ArrowRight className="ml-2" size={20} />
-              </Link>
-            </Button>
-            <Button variant="hero-outline" size="lg" className="h-14 px-8 text-base rounded-2xl border-white/30 text-white hover:bg-white/10 hover:text-white" asChild>
-              <Link to="/contact">Let's Talk</Link>
-            </Button>
-          </div>
+          <ScrollReveal>
+            <div className="flex flex-wrap gap-4 mb-16 justify-center">
+              <Button variant="hero" size="lg" className="h-14 px-8 text-base rounded-2xl" asChild>
+                <Link to="/projects">
+                  Explore Projects <ArrowRight className="ml-2" size={20} />
+                </Link>
+              </Button>
+              <Button variant="hero-outline" size="lg" className="h-14 px-8 text-base rounded-2xl border-white/30 text-white hover:bg-white/10 hover:text-white" asChild>
+                <Link to="/contact">Let's Talk</Link>
+              </Button>
+            </div>
+          </ScrollReveal>
 
           {/* Key Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 animate-fade-up delay-3">
-            <div className="space-y-1">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 stagger-children">
+            <div className="space-y-1 stagger-item">
               <div className="flex items-center justify-center gap-2 text-primary">
                 <Calendar size={16} />
                 <span className="font-display text-2xl font-bold text-white">4+</span>
               </div>
               <p className="text-white/40 text-[10px] uppercase tracking-[0.2em] font-medium">Years Experience</p>
             </div>
-            <div className="space-y-1">
+            <div className="space-y-1 stagger-item">
               <div className="flex items-center justify-center gap-2 text-primary">
                 <Briefcase size={16} />
                 <span className="font-display text-2xl font-bold text-white">10+</span>
               </div>
               <p className="text-white/40 text-[10px] uppercase tracking-[0.2em] font-medium">Handcrafted Projects</p>
             </div>
-            <div className="space-y-1">
+            <div className="space-y-1 stagger-item">
               <div className="flex items-center justify-center gap-2 text-primary">
                 <Users size={16} />
                 <span className="font-display text-2xl font-bold text-white">8+</span>

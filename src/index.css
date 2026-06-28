@@ -93,32 +93,101 @@
   }
 }
 
-@layer utilities {
-  .animate-fade-up {
-    animation: fadeUp 0.6s ease-out forwards;
-    opacity: 0;
-  }
+/* Entrance animation states */
+.animate-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
 
-  .animate-fade-up-delay-1 {
-    animation: fadeUp 0.6s ease-out 0.1s forwards;
-    opacity: 0;
-  }
+.animate-hidden-scale {
+  opacity: 0;
+  transform: scale(0.95);
+}
 
-  .animate-fade-up-delay-2 {
-    animation: fadeUp 0.6s ease-out 0.2s forwards;
-    opacity: 0;
-  }
+.animate-hidden-left {
+  opacity: 0;
+  transform: translateX(-30px);
+}
 
-  .animate-fade-up-delay-3 {
-    animation: fadeUp 0.6s ease-out 0.3s forwards;
-    opacity: 0;
-  }
+.animate-hidden-right {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/* Revealed state */
+.in-view {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.in-view.in-view-delay-1 {
+  transition-delay: 0.1s;
+}
+
+.in-view.in-view-delay-2 {
+  transition-delay: 0.2s;
+}
+
+.in-view.in-view-delay-3 {
+  transition-delay: 0.3s;
+}
+
+.in-view.in-view-delay-4 {
+  transition-delay: 0.4s;
+}
+
+/* Stagger children */
+.stagger-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.stagger-children.in-view > .stagger-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-children > .stagger-item:nth-child(1) { transition-delay: 0.05s; }
+.stagger-children > .stagger-item:nth-child(2) { transition-delay: 0.1s; }
+.stagger-children > .stagger-item:nth-child(3) { transition-delay: 0.15s; }
+.stagger-children > .stagger-item:nth-child(4) { transition-delay: 0.2s; }
+.stagger-children > .stagger-item:nth-child(5) { transition-delay: 0.25s; }
+.stagger-children > .stagger-item:nth-child(6) { transition-delay: 0.3s; }
+.stagger-children > .stagger-item:nth-child(7) { transition-delay: 0.35s; }
+.stagger-children > .stagger-item:nth-child(8) { transition-delay: 0.4s; }
+.stagger-children > .stagger-item:nth-child(9) { transition-delay: 0.45s; }
+.stagger-children > .stagger-item:nth-child(10) { transition-delay: 0.5s; }
+.stagger-children > .stagger-item:nth-child(11) { transition-delay: 0.55s; }
+.stagger-children > .stagger-item:nth-child(12) { transition-delay: 0.6s; }
+
+/* Keep animate-fade-up for initial page load */
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
+  opacity: 0;
 }
 
 @keyframes fadeUp {
   from {
     opacity: 0;
     transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Page enter transition */
+.page-enter {
+  animation: pageIn 0.5s ease-out forwards;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
   }
   to {
     opacity: 1;

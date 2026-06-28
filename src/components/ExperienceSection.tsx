@@ -1,4 +1,5 @@
 import { Briefcase, Calendar, MapPin, ArrowUpRight } from "lucide-react";
+import ScrollReveal from "@/components/ScrollReveal";
 
 interface Role {
   title: string;
@@ -169,17 +170,19 @@ const ExperienceSection = () => {
   return (
     <section id="experience" className="section-padding">
       <div className="max-w-7xl mx-auto">
-        <p className="text-primary font-display font-semibold text-sm uppercase tracking-widest mb-3">Experience</p>
-        <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-          5+ years of <span className="text-gradient">building</span>
-        </h2>
-        <p className="text-muted-foreground max-w-2xl mb-12 leading-relaxed">
-          From freelance projects to leading full product builds - here's a timeline of my professional journey as a full-stack developer.
-        </p>
+        <ScrollReveal>
+          <p className="text-primary font-display font-semibold text-sm uppercase tracking-widest mb-3">Experience</p>
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+            5+ years of <span className="text-gradient">building</span>
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mb-12 leading-relaxed">
+            From freelance projects to leading full product builds - here's a timeline of my professional journey as a full-stack developer.
+          </p>
+        </ScrollReveal>
 
-        <div className="space-y-0">
+        <div className="space-y-0 stagger-children">
           {roles.map((role, index) => (
-            <div key={index} className="relative pl-8 md:pl-12 pb-12 last:pb-0">
+            <div key={index} className="relative pl-8 md:pl-12 pb-12 last:pb-0 stagger-item">
               {/* Timeline line */}
               {index < roles.length - 1 && (
                 <div className="absolute left-[15px] md:left-[23px] top-8 bottom-0 w-px bg-border" />

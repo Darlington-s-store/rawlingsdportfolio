@@ -1,7 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ExternalLink, Github, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { projects } from "@/data/projects";
 
@@ -12,7 +11,6 @@ const ProjectDetailPage = () => {
   if (!project) {
     return (
       <div className="min-h-screen">
-        <Navbar />
         <div className="pt-32 text-center">
           <h1 className="font-display text-4xl font-bold mb-4">Project not found</h1>
           <Link to="/projects" className="text-primary hover:underline">
@@ -26,7 +24,6 @@ const ProjectDetailPage = () => {
 
   return (
     <div className="min-h-screen">
-      <Navbar />
       <div className="pt-24 pb-16 px-6">
         <div className="max-w-5xl mx-auto">
           {/* Breadcrumb */}
