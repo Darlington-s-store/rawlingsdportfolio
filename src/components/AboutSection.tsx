@@ -1,4 +1,9 @@
-import { Code2, CreditCard, Server, Globe, Users, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import {
+  Code2, Server, Globe, Zap, Terminal, Cpu,
+  CheckCircle2, Award, ArrowRight
+} from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -12,14 +17,13 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-5 text-muted-foreground leading-relaxed">
             <p>
-              I'm Rawlings, a passionate Full-Stack Software Developer based in Accra, Ghana, with 5 years of hands-on
-              experience designing, building, and shipping scalable, production-ready applications.
+              I'm a Full-Stack Developer based in Kumasi, Ghana, with 5 years of experience building software that works. I design and build end-to-end applications, from clean frontends to optimized database schemas and APIs.
             </p>
             <p>
-              I thrive in remote, cross-functional teams, delivering high-quality code and robust system architecture without the need for close supervision. My expertise spans from crafting intuitive, pixel-perfect frontends to architecting powerful REST APIs and AI-driven features.
+              I enjoy working in collaborative environments where code quality and reliable systems are valued. I focus on writing maintainable, performant code that translates directly to client needs.
             </p>
             <p>
-              I specialize in end-to-end development, utilizing modern technologies like React, TypeScript, and Python to solve complex business problems. My goal is always to create software that is not only functional but also maintainable and impactful.
+              My primary stack includes React, Next.js, Node.js, Django, and PostgreSQL. I also build cross-platform mobile apps using React Native and Flutter, and work with cloud services like AWS.
             </p>
           </div>
 
@@ -63,6 +67,18 @@ const AboutSection = () => {
               <p className="text-muted-foreground text-xs">Corporate Finance Institute (CFI)</p>
             </div>
           </div>
+        </div>
+
+        {/* CTA Buttons */}
+        <div className="mt-16 flex flex-wrap gap-4 justify-center">
+          <Button className="rounded-xl h-11 px-6 text-sm" asChild>
+            <Link to="/projects">
+              View Projects <ArrowRight size={14} className="ml-2" />
+            </Link>
+          </Button>
+          <Button variant="outline" className="rounded-xl h-11 px-6 text-sm" asChild>
+            <Link to="/contact">Let's Connect</Link>
+          </Button>
         </div>
       </div>
     </section>

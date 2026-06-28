@@ -16,7 +16,7 @@ const Footer = () => {
               <span className="font-display font-bold text-lg tracking-tight">Asomani Rawlings <span className="text-primary">Junior</span></span>
             </Link>
             <p className="text-sm text-gray-400 max-w-xs leading-relaxed">
-              Full-stack developer building scalable web apps, payment systems, and backend APIs from Accra, Ghana.
+              Full-stack developer specializing in React, Node.js, and Python. Based in Kumasi, Ghana.
             </p>
           </div>
 

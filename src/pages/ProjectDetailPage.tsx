@@ -61,14 +61,14 @@ const ProjectDetailPage = () => {
             </div>
             <div className="flex gap-3">
               {project.github && (
-                <Button variant="outline" size="sm" asChild>
+                <Button variant="outline" asChild>
                   <a href={project.github} target="_blank" rel="noopener noreferrer">
                     <Github size={16} className="mr-2" /> GitHub
                   </a>
                 </Button>
               )}
               {project.live && (
-                <Button size="sm" asChild>
+                <Button variant="default" asChild>
                   <a href={project.live} target="_blank" rel="noopener noreferrer">
                     <ExternalLink size={16} className="mr-2" /> Live Demo
                   </a>

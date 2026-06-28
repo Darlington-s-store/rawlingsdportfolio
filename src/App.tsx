@@ -11,6 +11,8 @@ import ExperiencePage from "./pages/ExperiencePage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
 import ProjectDetailPage from "./pages/ProjectDetailPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import ScrollToTop from "@/components/ScrollToTop";
+import BackToTop from "@/components/BackToTop";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +22,8 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
+        <BackToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<AboutPage />} />

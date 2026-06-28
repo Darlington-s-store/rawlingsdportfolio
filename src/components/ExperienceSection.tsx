@@ -19,12 +19,12 @@ const roles: Role[] = [
     period: "2021 – Present",
     type: "Contract / Freelance",
     description:
-      "Designing, building, and shipping scalable, production-ready web and mobile applications for global clients. Thriving in cross-functional teams with a focus on clean, maintainable code.",
+      "Building end-to-end web and mobile applications for clients globally, focusing on reliability, clean database design, and smooth API integrations.",
     achievements: [
-      "Architected end-to-end applications from intuitive React frontends to powerful Node.js and Python (Django/Flask) backends.",
-      "Delivered a healthcare management platform (Nova Eye Care) with complex scheduling and patient records.",
-      "Built an AI-powered travel platform (AtlasWave) integrating LLMs for real-time recommendations.",
-      "Successfully delivered custom commercial applications (Rudi Finds Jem) meeting exact stakeholder requirements.",
+      "Developed full-stack features using React, TypeScript, Node.js, and Django.",
+      "Built and deployed Nova Eye Care, a practice management application with automated patient scheduling.",
+      "Integrated OpenAI models into AtlasWave to power conversational travel planning.",
+      "Collaborated directly with client stakeholders to design and launch Rudi Finds Jem.",
     ],
     techs: ["React", "TypeScript", "Node.js", "Python", "PostgreSQL", "Supabase", "Neon"],
   },
@@ -35,12 +35,12 @@ const roles: Role[] = [
     period: "2019 – 2021",
     type: "Freelance",
     description:
-      "Built the foundation of my technical expertise by delivering small-to-medium scale business tools and web applications.",
+      "Started as a freelance developer building landing pages, custom dashboards, and business tools.",
     achievements: [
-      "Developed a modular LMS (Fun Lovable Learning) with progress tracking and gamification.",
-      "Integrated secure payment gateways (Stripe, Mobile Money) for local and international markets.",
-      "Deployed and managed applications on cloud platforms like Vercel and Render.",
-      "Mastered the software development lifecycle through hands-on project delivery.",
+      "Built the core modules of an LMS (Fun Lovable Learning) supporting user dashboards and quizzes.",
+      "Implemented Stripe and Mobile Money API payment flows for local e-commerce projects.",
+      "Managed deployments and hosting on Vercel, Render, and Heroku.",
+      "Learned version control (Git), relational databases, and agile workflows.",
     ],
     techs: ["React", "Express.js", "MySQL", "Firebase", "Tailwind CSS"],
   },
@@ -55,7 +55,7 @@ const ExperienceSection = () => {
           5 years of <span className="text-gradient">building</span>
         </h2>
         <p className="text-muted-foreground max-w-2xl mb-12 leading-relaxed">
-          From freelance projects to leading full product builds — here's a timeline of my professional journey as a full-stack developer.
+          From freelance projects to leading full product builds - here's a timeline of my professional journey as a full-stack developer.
         </p>
 
         <div className="space-y-0">
