@@ -114,7 +114,7 @@ const roles: Role[] = [
     title: "Printing Press Operator / Graphic Design Assistant",
     company: "Printing Press",
     location: "Kumasi, Ghana",
-    period: "2017 – May 2018",
+    period: "2018 – May 2018",
     type: "Full-Time",
     description:
       "Operated printing equipment and assisted with graphic design and layout for various print projects.",
