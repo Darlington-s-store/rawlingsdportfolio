@@ -12,6 +12,7 @@ interface Role {
 }
 
 const roles: Role[] = [
+  // Tech
   {
     title: "Full-Stack Software Developer",
     company: "Remote - Freelance & Team Collaborations",
@@ -31,38 +32,6 @@ const roles: Role[] = [
     techs: ["React", "TypeScript", "Node.js", "Python", "PostgreSQL", "Supabase", "Neon"],
   },
   {
-    title: "Assistant Marketing Manager / IT Support",
-    company: "KM Community Bank",
-    location: "Kumasi, Ghana",
-    period: "2022 – 2024",
-    type: "Full-Time",
-    description:
-      "Managed marketing initiatives and provided IT support, bridging the bank's digital presence with technical infrastructure needs.",
-    achievements: [
-      "Managed IT system maintenance and troubleshooting for branch operations, reducing downtime and improving staff productivity.",
-      "Developed and executed marketing campaigns that increased community engagement and brand visibility.",
-      "Maintained and updated the bank's digital platforms, website content, and customer communication channels.",
-      "Trained staff on internal software tools and provided ongoing technical support for daily banking operations."
-    ],
-    techs: ["IT Support", "Digital Marketing", "Microsoft Office", "Social Media Management", "Troubleshooting"],
-  },
-  {
-    title: "Assistant Accountant / Bookstore Keeper",
-    company: "Santasi SDA Preparatory School",
-    location: "Kumasi, Ghana",
-    period: "2021 – 2022",
-    type: "Full-Time",
-    description:
-      "Managed financial records, assisted with accounting operations, and oversaw bookstore inventory and sales.",
-    achievements: [
-      "Maintained accurate financial records and reconciled accounts on a monthly basis.",
-      "Managed bookstore inventory, procurement, and sales reporting for the school.",
-      "Assisted in preparing financial statements and budget reports for school administration.",
-      "Implemented basic digital record-keeping systems to improve tracking and reduce manual errors."
-    ],
-    techs: ["Accounting", "Inventory Management", "Microsoft Excel", "Record Keeping"],
-  },
-  {
     title: "Software Development Intern",
     company: "Tech Company Collaboration",
     location: "Accra, Ghana",
@@ -79,21 +48,56 @@ const roles: Role[] = [
     techs: ["React", "JavaScript", "Git", "REST APIs", "Figma"],
   },
   {
-    title: "Computer Science Tutor",
-    company: "University of Skills Training and Entrepreneurial Development (USTED)",
-    location: "Kumasi, Ghana",
-    period: "2020 – 2022",
-    type: "Part-Time",
+    title: "Junior Full-Stack Developer",
+    company: "Early Career Projects",
+    location: "Accra, Ghana",
+    period: "2019 – 2021",
+    type: "Freelance",
     description:
-      "Tutored undergraduate students in programming fundamentals, web development, and database concepts, bridging the gap between theory and practical application.",
+      "Started as a freelance developer building landing pages, custom dashboards, and business tools.",
     achievements: [
-      "Led weekly tutorials for 30+ students on HTML, CSS, JavaScript, and Python basics.",
-      "Designed hands-on coding exercises and graded assignments for introductory programming courses.",
-      "Mentored students on personal projects, helping them build portfolios and debug real code.",
-      "Developed supplementary learning materials that improved overall class pass rates."
+      "Built the core modules of an LMS (Fun Lovable Learning) supporting user dashboards and quizzes.",
+      "Implemented Stripe and Mobile Money API payment flows for local e-commerce projects.",
+      "Managed deployments and hosting on Vercel, Render, and Heroku.",
+      "Learned version control (Git), relational databases, and agile workflows."
     ],
-    techs: ["JavaScript", "Python", "HTML/CSS", "MySQL"],
+    techs: ["React", "Express.js", "MySQL", "Firebase", "Tailwind CSS"],
   },
+  // Bank
+  {
+    title: "Assistant Marketing Manager / IT Support",
+    company: "KM Community Bank",
+    location: "Kumasi, Ghana",
+    period: "2022 – 2024",
+    type: "Full-Time",
+    description:
+      "Managed marketing initiatives and provided IT support, bridging the bank's digital presence with technical infrastructure needs.",
+    achievements: [
+      "Managed IT system maintenance and troubleshooting for branch operations, reducing downtime and improving staff productivity.",
+      "Developed and executed marketing campaigns that increased community engagement and brand visibility.",
+      "Maintained and updated the bank's digital platforms, website content, and customer communication channels.",
+      "Trained staff on internal software tools and provided ongoing technical support for daily banking operations."
+    ],
+    techs: ["IT Support", "Digital Marketing", "Microsoft Office", "Social Media Management", "Troubleshooting"],
+  },
+  // Assistant Accountant
+  {
+    title: "Assistant Accountant / Bookstore Keeper",
+    company: "Santasi SDA Preparatory School",
+    location: "Kumasi, Ghana",
+    period: "2021 – 2022",
+    type: "Full-Time",
+    description:
+      "Managed financial records, assisted with accounting operations, and oversaw bookstore inventory and sales.",
+    achievements: [
+      "Maintained accurate financial records and reconciled accounts on a monthly basis.",
+      "Managed bookstore inventory, procurement, and sales reporting for the school.",
+      "Assisted in preparing financial statements and budget reports for school administration.",
+      "Implemented basic digital record-keeping systems to improve tracking and reduce manual errors."
+    ],
+    techs: ["Accounting", "Inventory Management", "Microsoft Excel", "Record Keeping"],
+  },
+  // Marketing
   {
     title: "Digital Marketing Assistant",
     company: "Freelance & Local Business Collaborations",
@@ -110,22 +114,7 @@ const roles: Role[] = [
     ],
     techs: ["WordPress", "HTML/CSS", "Canva", "Social Media Analytics"],
   },
-  {
-    title: "Printing Press Operator / Graphic Design Assistant",
-    company: "Printing Press",
-    location: "Kumasi, Ghana",
-    period: "2018 – May 2018",
-    type: "Full-Time",
-    description:
-      "Operated printing equipment and assisted with graphic design and layout for various print projects.",
-    achievements: [
-      "Operated and maintained printing machinery for high-volume production runs.",
-      "Assisted with graphic design layouts and prepress preparation using design software.",
-      "Managed print job scheduling and coordinated with clients to meet delivery deadlines.",
-      "Ensured quality control across all printed materials before client delivery."
-    ],
-    techs: ["Graphic Design", "Print Production", "CorelDRAW", "Quality Control"],
-  },
+  // Teaching
   {
     title: "Teacher / Staff Secretary",
     company: "Nana Nkrumah Adventist Junior High School",
@@ -143,20 +132,36 @@ const roles: Role[] = [
     techs: ["Teaching", "Administration", "Microsoft Office", "Record Management"],
   },
   {
-    title: "Junior Full-Stack Developer",
-    company: "Early Career Projects",
-    location: "Accra, Ghana",
-    period: "2019 – 2021",
-    type: "Freelance",
+    title: "Printing Press Operator / Graphic Design Assistant",
+    company: "Printing Press",
+    location: "Kumasi, Ghana",
+    period: "2018",
+    type: "Full-Time",
     description:
-      "Started as a freelance developer building landing pages, custom dashboards, and business tools.",
+      "Operated printing equipment and assisted with graphic design and layout for various print projects.",
     achievements: [
-      "Built the core modules of an LMS (Fun Lovable Learning) supporting user dashboards and quizzes.",
-      "Implemented Stripe and Mobile Money API payment flows for local e-commerce projects.",
-      "Managed deployments and hosting on Vercel, Render, and Heroku.",
-      "Learned version control (Git), relational databases, and agile workflows."
+      "Operated and maintained printing machinery for high-volume production runs.",
+      "Assisted with graphic design layouts and prepress preparation using design software.",
+      "Managed print job scheduling and coordinated with clients to meet delivery deadlines.",
+      "Ensured quality control across all printed materials before client delivery."
     ],
-    techs: ["React", "Express.js", "MySQL", "Firebase", "Tailwind CSS"],
+    techs: ["Graphic Design", "Print Production", "CorelDRAW", "Quality Control"],
+  },
+  {
+    title: "Computer Science Tutor",
+    company: "University of Skills Training and Entrepreneurial Development (USTED)",
+    location: "Kumasi, Ghana",
+    period: "2020 – 2022",
+    type: "Part-Time",
+    description:
+      "Tutored undergraduate students in programming fundamentals, web development, and database concepts, bridging the gap between theory and practical application.",
+    achievements: [
+      "Led weekly tutorials for 30+ students on HTML, CSS, JavaScript, and Python basics.",
+      "Designed hands-on coding exercises and graded assignments for introductory programming courses.",
+      "Mentored students on personal projects, helping them build portfolios and debug real code.",
+      "Developed supplementary learning materials that improved overall class pass rates."
+    ],
+    techs: ["JavaScript", "Python", "HTML/CSS", "MySQL"],
   },
 ];
 
