@@ -80,6 +80,37 @@ export const projects: Project[] = [
     github: "https://github.com/Darlington-s-store/mytravelconsult",
     live: "https://mytravelconsult.vercel.app/",
   },
+  {
+    id: 6,
+    title: "Hope for Prisoners & Social Justice",
+    description: "NGO / Nonprofit Web Presence: Designed and developed the full digital presence for a nonprofit organization focused on social justice and prisoner rehabilitation.",
+    techs: ["React", "Tailwind CSS", "Node.js"],
+    features: ["Resource management", "Independent updates", "Low bandwidth performance"],
+    problem: "The nonprofit needed an accessible, fast digital presence to reach audiences on low-bandwidth connections and allow staff to update resources independently.",
+    solution: "Designed and developed a highly optimized, fully accessible React web application with content management capabilities.",
+    image: projectTransport,
+    live: "https://hopeforprisonersandsocialjustice.org/",
+  },
+  {
+    id: 7,
+    title: "Wedding Management & Gift Platform",
+    description: "Full-Stack Event Platform: Built a feature-rich wedding platform for event planning, guest management, and online gift coordination.",
+    techs: ["React", "Node.js", "Express.js", "PostgreSQL"],
+    features: ["Guest management", "Gift registries", "Role-based access", "Mobile responsive"],
+    problem: "Couples faced coordination friction managing guests, registries, and RSVPs across multiple fragmented tools.",
+    solution: "Built a centralized full-stack wedding event platform featuring guest RSVP tracking, role-based authorization, and registry coordination.",
+    image: projectWedding,
+  },
+  {
+    id: 8,
+    title: "E-Commerce Platform",
+    description: "In Progress: Building a scalable multi-vendor e-commerce solution with product catalogue, cart, order management, and vendor dashboards.",
+    techs: ["React", "TypeScript", "Node.js", "PostgreSQL", "Supabase"],
+    features: ["Product catalogue", "Order management", "Vendor dashboards", "Admin permission flows"],
+    problem: "Small vendors lack a unified, scalable ecosystem to list products, manage order state, and track earnings.",
+    solution: "Architected a multi-vendor e-commerce platform with robust role permissions, catalog tracking, and vendor metrics dashboards.",
+    image: projectEcommerce,
+  },
 ];
 
 export const allTechs = [...new Set(projects.flatMap((p) => p.techs))];

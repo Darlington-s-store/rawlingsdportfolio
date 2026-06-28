@@ -47,7 +47,7 @@ const HeroSection = () => {
             <div className="space-y-1">
               <div className="flex items-center justify-center gap-2 text-primary">
                 <Calendar size={16} />
-                <span className="font-display text-2xl font-bold text-white">5+</span>
+                <span className="font-display text-2xl font-bold text-white">4+</span>
               </div>
               <p className="text-white/40 text-[10px] uppercase tracking-[0.2em] font-medium">Years Experience</p>
             </div>

@@ -51,7 +51,7 @@ const AboutSection = () => {
         {/* Education Row */}
         <div className="mt-20 pt-10 border-t border-border">
           <h3 className="font-display text-xl font-bold mb-8">Education & Certifications</h3>
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-3 gap-6">
             <div className="bg-card/50 rounded-2xl p-6 border border-border/50">
               <div className="flex justify-between items-start mb-2">
                 <h4 className="font-bold text-sm">BSc Information Technology</h4>
@@ -65,6 +65,13 @@ const AboutSection = () => {
                 <span className="text-[10px] font-medium bg-primary/10 text-primary px-2 py-0.5 rounded-full">2022</span>
               </div>
               <p className="text-muted-foreground text-xs">Corporate Finance Institute (CFI)</p>
+            </div>
+            <div className="bg-card/50 rounded-2xl p-6 border border-border/50">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="font-bold text-sm">AI Prompting Essentials</h4>
+                <span className="text-[10px] font-medium bg-primary/10 text-primary px-2 py-0.5 rounded-full">2025</span>
+              </div>
+              <p className="text-muted-foreground text-xs">AI Prompting Essentials & Prompt Engineering</p>
             </div>
           </div>
         </div>

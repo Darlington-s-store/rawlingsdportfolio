@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import {
   MapPin, Mail, Github, Linkedin, Terminal, Cpu,
   CheckCircle2, Award, ArrowRight, Calendar, Briefcase,
-  Users, Code2, Download
+  Users, Code2, Download, Phone
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
@@ -11,12 +11,13 @@ import Footer from "@/components/Footer";
 import heroImage from "@/assets/Hero.jpeg";
 
 const skills = [
-  { name: "React / Next.js", level: 95 },
-  { name: "TypeScript", level: 92 },
-  { name: "Node.js / Express", level: 90 },
-  { name: "Python (Django/Flask)", level: 85 },
-  { name: "PostgreSQL / Supabase", level: 88 },
-  { name: "Tailwind CSS", level: 95 },
+  { name: "React / Next.js / Tailwind CSS", level: 95 },
+  { name: "TypeScript / JavaScript (Advanced)", level: 92 },
+  { name: "Node.js / Express.js / REST APIs", level: 90 },
+  { name: "Python (Django / Flask)", level: 85 },
+  { name: "PostgreSQL / MySQL / Supabase", level: 88 },
+  { name: "AI Prompting & LLM Integration", level: 93 },
+  { name: "Data Entry & CSV/Sheets Processing", level: 90 },
 ];
 
 const philosophy = [
@@ -24,6 +25,24 @@ const philosophy = [
   { icon: Cpu, title: "Performance First", desc: "Fast load times, lightweight bundles, and optimal database queries." },
   { icon: CheckCircle2, title: "Business Alignment", desc: "Matching technical features directly to stakeholder needs and business goals." },
   { icon: Award, title: "Reliable Deliveries", desc: "Production-ready apps with robust error handling and secure integrations." },
+];
+
+const references = [
+  {
+    name: "Prof. Portia Addai Boadu",
+    role: "Lecturer, USTED",
+    phone: "+233 24 358 7655"
+  },
+  {
+    name: "Dr. Frank Gorden",
+    role: "Senior Lecturer, USTED",
+    phone: "+233 24 365 8174"
+  },
+  {
+    name: "Pr. Kofi Ahenkan",
+    role: "CEO, Saint Publications (Kumasi | Canada)",
+    phone: "+233 26 400 9020"
+  }
 ];
 
 const SkillBar = ({ name, level }: { name: string; level: number }) => {
@@ -86,28 +105,36 @@ const AboutPage = () => {
                   <p className="text-primary text-sm font-medium">Full-Stack Software Developer</p>
                 </div>
                 
-                <div className="space-y-2.5 pt-4 border-t border-border text-xs text-muted-foreground text-left max-w-xs mx-auto">
-                  <div className="flex items-center gap-2.5">
-                    <MapPin size={14} className="text-primary shrink-0" />
-                    <span>Kumasi, Ghana</span>
+                <div className="space-y-3.5 pt-4 border-t border-border text-xs text-muted-foreground text-left max-w-xs mx-auto">
+                  <div className="flex items-start gap-2.5">
+                    <MapPin size={14} className="text-primary shrink-0 mt-0.5" />
+                    <span>Accra, Ghana (Open to Remote & Relocation)</span>
                   </div>
-                  <div className="flex items-center gap-2.5">
-                    <Mail size={14} className="text-primary shrink-0" />
+                  <div className="flex items-start gap-2.5">
+                    <Mail size={14} className="text-primary shrink-0 mt-0.5" />
                     <span>asomanirawlingsjunior5333@gmail.com</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <Phone size={14} className="text-primary shrink-0 mt-0.5" />
+                    <div className="flex flex-col gap-1 text-[11px]">
+                      <span>+233 55 294 5333</span>
+                      <span>+233 20 031 0301</span>
+                      <span>+233 25 750 1827</span>
+                    </div>
                   </div>
                 </div>
 
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-2 py-4 border-t border-b border-border">
                   {[
-                    { value: "5+", label: "Years", icon: Calendar },
+                    { value: "4+ Yrs", label: "Experience", icon: Calendar },
                     { value: "10+", label: "Projects", icon: Briefcase },
                     { value: "8+", label: "Clients", icon: Users },
                   ].map((s) => (
                     <div key={s.label} className="text-center space-y-0.5">
                       <div className="flex items-center justify-center gap-1 text-primary">
                         <s.icon size={12} />
-                        <span className="font-display text-base font-bold text-foreground">{s.value}</span>
+                        <span className="font-display text-sm font-bold text-foreground">{s.value}</span>
                       </div>
                       <p className="text-muted-foreground/70 text-[9px] uppercase tracking-widest font-medium">{s.label}</p>
                     </div>
@@ -165,8 +192,9 @@ const AboutPage = () => {
                 <h2 className="font-display text-lg font-bold text-foreground">Education & Certifications</h2>
                 <div className="space-y-3">
                   {[
-                    { title: "BSc Information Technology", meta: "2022 - 2026 · USTED" },
-                    { title: "Accounting Fundamentals", meta: "2022 · Corporate Finance Institute (CFI)" },
+                    { title: "Bachelor of Science - Information Technology", meta: "Expected: 2026 · USTED" },
+                    { title: "Accounting Fundamentals - Certificate", meta: "2022 · Corporate Finance Institute (CFI)" },
+                    { title: "AI Prompting Essentials & Prompt Engineering - Certificate", meta: "Issued: 2025" },
                   ].map((e) => (
                     <div key={e.title} className="flex items-center justify-between bg-card border border-border p-4 rounded-xl">
                       <div>
@@ -174,6 +202,23 @@ const AboutPage = () => {
                         <p className="text-muted-foreground text-xs">{e.meta}</p>
                       </div>
                       <Code2 size={16} className="text-primary shrink-0" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* References */}
+              <div className="space-y-5 pt-6 border-t border-border">
+                <h2 className="font-display text-lg font-bold text-foreground">References</h2>
+                <div className="grid sm:grid-cols-3 gap-4">
+                  {references.map((r, i) => (
+                    <div key={i} className="bg-card border border-border p-4 rounded-xl space-y-2 text-left">
+                      <h3 className="font-medium text-xs text-foreground leading-tight">{r.name}</h3>
+                      <p className="text-[10px] text-primary font-medium">{r.role}</p>
+                      <p className="text-muted-foreground text-[10px] flex items-center gap-1 pt-1 border-t border-border/40 mt-1">
+                        <Phone size={10} className="text-primary shrink-0" />
+                        {r.phone}
+                      </p>
                     </div>
                   ))}
                 </div>

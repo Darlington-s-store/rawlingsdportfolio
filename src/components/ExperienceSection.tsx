@@ -14,19 +14,133 @@ interface Role {
 const roles: Role[] = [
   {
     title: "Full-Stack Software Developer",
-    company: "Freelance & Team Collaborations",
+    company: "Remote - Freelance & Team Collaborations",
     location: "Remote · Accra, Ghana",
-    period: "2021 – Present",
+    period: "2022 – Present",
     type: "Contract / Freelance",
     description:
-      "Building end-to-end web and mobile applications for clients globally, focusing on reliability, clean database design, and smooth API integrations.",
+      "Design and develop full-stack web and mobile applications from requirements through to production deployment using React, TypeScript, Node.js, Python (Django/Flask), and React Native.",
     achievements: [
-      "Developed full-stack features using React, TypeScript, Node.js, and Django.",
-      "Built and deployed Nova Eye Care, a practice management application with automated patient scheduling.",
-      "Integrated OpenAI models into AtlasWave to power conversational travel planning.",
-      "Collaborated directly with client stakeholders to design and launch Rudi Finds Jem.",
+      "Architect and implement secure REST APIs for authentication (JWT), user management, booking systems, and complex business workflows.",
+      "Collaborate in distributed remote teams using structured Git workflows (feature branching, pull requests, peer code reviews) ensuring code quality and team velocity.",
+      "Integrate AI capabilities (OpenAI API, custom chatbots) directly into production applications, delivering intelligent user experiences.",
+      "Design, optimize, and manage relational databases (PostgreSQL, MySQL) hosted on Neon and Supabase, applying best practices for performance and scalability.",
+      "Deploy and maintain applications on Vercel, Render, and Google Cloud Platform, monitoring live environments and resolving production issues.",
+      "Leverage AI-assisted development tools (Cursor, GitHub Copilot) as force multipliers to deliver higher-quality code faster without sacrificing engineering rigor."
     ],
     techs: ["React", "TypeScript", "Node.js", "Python", "PostgreSQL", "Supabase", "Neon"],
+  },
+  {
+    title: "Assistant Marketing Manager / IT Support",
+    company: "KM Community Bank",
+    location: "Kumasi, Ghana",
+    period: "2022 – 2024",
+    type: "Full-Time",
+    description:
+      "Managed marketing initiatives and provided IT support, bridging the bank's digital presence with technical infrastructure needs.",
+    achievements: [
+      "Managed IT system maintenance and troubleshooting for branch operations, reducing downtime and improving staff productivity.",
+      "Developed and executed marketing campaigns that increased community engagement and brand visibility.",
+      "Maintained and updated the bank's digital platforms, website content, and customer communication channels.",
+      "Trained staff on internal software tools and provided ongoing technical support for daily banking operations."
+    ],
+    techs: ["IT Support", "Digital Marketing", "Microsoft Office", "Social Media Management", "Troubleshooting"],
+  },
+  {
+    title: "Assistant Accountant / Bookstore Keeper",
+    company: "Santasi SDA Preparatory School",
+    location: "Kumasi, Ghana",
+    period: "2021 – 2022",
+    type: "Full-Time",
+    description:
+      "Managed financial records, assisted with accounting operations, and oversaw bookstore inventory and sales.",
+    achievements: [
+      "Maintained accurate financial records and reconciled accounts on a monthly basis.",
+      "Managed bookstore inventory, procurement, and sales reporting for the school.",
+      "Assisted in preparing financial statements and budget reports for school administration.",
+      "Implemented basic digital record-keeping systems to improve tracking and reduce manual errors."
+    ],
+    techs: ["Accounting", "Inventory Management", "Microsoft Excel", "Record Keeping"],
+  },
+  {
+    title: "Software Development Intern",
+    company: "Tech Company Collaboration",
+    location: "Accra, Ghana",
+    period: "2021 – 2022",
+    type: "Internship",
+    description:
+      "Contributed to internal tools and client-facing features in a collaborative development environment, gaining exposure to agile workflows and production codebases.",
+    achievements: [
+      "Developed and maintained reusable React components used across multiple internal dashboards.",
+      "Wrote integration tests and participated in code reviews to uphold code quality standards.",
+      "Collaborated with senior developers to ship bug fixes and minor features on weekly release cycles.",
+      "Documented API endpoints and build processes to improve team onboarding and knowledge sharing."
+    ],
+    techs: ["React", "JavaScript", "Git", "REST APIs", "Figma"],
+  },
+  {
+    title: "Computer Science Tutor",
+    company: "University of Skills Training and Entrepreneurial Development (USTED)",
+    location: "Kumasi, Ghana",
+    period: "2020 – 2022",
+    type: "Part-Time",
+    description:
+      "Tutored undergraduate students in programming fundamentals, web development, and database concepts, bridging the gap between theory and practical application.",
+    achievements: [
+      "Led weekly tutorials for 30+ students on HTML, CSS, JavaScript, and Python basics.",
+      "Designed hands-on coding exercises and graded assignments for introductory programming courses.",
+      "Mentored students on personal projects, helping them build portfolios and debug real code.",
+      "Developed supplementary learning materials that improved overall class pass rates."
+    ],
+    techs: ["JavaScript", "Python", "HTML/CSS", "MySQL"],
+  },
+  {
+    title: "Digital Marketing Assistant",
+    company: "Freelance & Local Business Collaborations",
+    location: "Kumasi, Ghana",
+    period: "2020 – 2021",
+    type: "Contract",
+    description:
+      "Supported small businesses with online presence, social media strategy, and digital content creation while building technical solutions for their needs.",
+    achievements: [
+      "Managed social media accounts and scheduled content calendars for 3 local businesses.",
+      "Created basic landing pages and marketing websites using WordPress and custom HTML/CSS.",
+      "Analyzed audience engagement data and adjusted content strategies to improve reach.",
+      "Designed promotional graphics and email newsletters used for product launches."
+    ],
+    techs: ["WordPress", "HTML/CSS", "Canva", "Social Media Analytics"],
+  },
+  {
+    title: "Printing Press Operator / Graphic Design Assistant",
+    company: "Printing Press",
+    location: "Kumasi, Ghana",
+    period: "2017 – May 2018",
+    type: "Full-Time",
+    description:
+      "Operated printing equipment and assisted with graphic design and layout for various print projects.",
+    achievements: [
+      "Operated and maintained printing machinery for high-volume production runs.",
+      "Assisted with graphic design layouts and prepress preparation using design software.",
+      "Managed print job scheduling and coordinated with clients to meet delivery deadlines.",
+      "Ensured quality control across all printed materials before client delivery."
+    ],
+    techs: ["Graphic Design", "Print Production", "CorelDRAW", "Quality Control"],
+  },
+  {
+    title: "Teacher / Staff Secretary",
+    company: "Nana Nkrumah Adventist Junior High School",
+    location: "Kumasi, Ghana",
+    period: "May 2018 – July 2019",
+    type: "Full-Time",
+    description:
+      "Taught classes and served as staff secretary, managing school records and administrative tasks.",
+    achievements: [
+      "Delivered lessons across multiple subjects, improving student engagement and performance.",
+      "Managed staff records, meeting minutes, and official school correspondence as secretary.",
+      "Assisted in organizing school events and coordinating communication between staff and administration.",
+      "Developed and maintained organized filing systems for student and staff documentation."
+    ],
+    techs: ["Teaching", "Administration", "Microsoft Office", "Record Management"],
   },
   {
     title: "Junior Full-Stack Developer",
@@ -40,7 +154,7 @@ const roles: Role[] = [
       "Built the core modules of an LMS (Fun Lovable Learning) supporting user dashboards and quizzes.",
       "Implemented Stripe and Mobile Money API payment flows for local e-commerce projects.",
       "Managed deployments and hosting on Vercel, Render, and Heroku.",
-      "Learned version control (Git), relational databases, and agile workflows.",
+      "Learned version control (Git), relational databases, and agile workflows."
     ],
     techs: ["React", "Express.js", "MySQL", "Firebase", "Tailwind CSS"],
   },
@@ -52,7 +166,7 @@ const ExperienceSection = () => {
       <div className="max-w-7xl mx-auto">
         <p className="text-primary font-display font-semibold text-sm uppercase tracking-widest mb-3">Experience</p>
         <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-          5 years of <span className="text-gradient">building</span>
+          4+ years of <span className="text-gradient">building</span>
         </h2>
         <p className="text-muted-foreground max-w-2xl mb-12 leading-relaxed">
           From freelance projects to leading full product builds - here's a timeline of my professional journey as a full-stack developer.
