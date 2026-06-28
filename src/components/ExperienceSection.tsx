@@ -180,9 +180,10 @@ const ExperienceSection = () => {
           </p>
         </ScrollReveal>
 
-        <div className="space-y-0 stagger-children">
-          {roles.map((role, index) => (
-            <div key={index} className="relative pl-8 md:pl-12 pb-12 last:pb-0 stagger-item">
+        <ScrollReveal>
+          <div className="space-y-0 stagger-children">
+            {roles.map((role, index) => (
+              <div key={index} className="relative pl-8 md:pl-12 pb-12 last:pb-0 stagger-item">
               {/* Timeline line */}
               {index < roles.length - 1 && (
                 <div className="absolute left-[15px] md:left-[23px] top-8 bottom-0 w-px bg-border" />
@@ -236,6 +237,7 @@ const ExperienceSection = () => {
             </div>
           ))}
         </div>
+      </ScrollReveal>
       </div>
     </section>
   );

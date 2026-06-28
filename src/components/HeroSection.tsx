@@ -46,7 +46,8 @@ const HeroSection = () => {
           </ScrollReveal>
 
           {/* Key Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 stagger-children">
+          <ScrollReveal>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 stagger-children">
             <div className="space-y-1 stagger-item">
               <div className="flex items-center justify-center gap-2 text-primary">
                 <Calendar size={16} />
@@ -87,6 +88,7 @@ const HeroSection = () => {
               </a>
             </div>
           </div>
+        </ScrollReveal>
         </div>
       </div>
     </section>
