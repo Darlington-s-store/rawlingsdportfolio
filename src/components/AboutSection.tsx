@@ -25,7 +25,7 @@ const AboutSection = () => {
                 Over the past 5 years in Kumasi, Ghana, I have delivered production systems for businesses, non-profits, and community institutions. Projects include the event ticketing platform <span className="text-foreground font-medium">Tribes & Cliqs</span>, the <span className="text-foreground font-medium">Hinterland Falcons PF Club</span> administration system, retail storefront <span className="text-foreground font-medium">Yaa Baby Enterprise</span>, and the <span className="text-foreground font-medium">Hope for Prisoners</span> humanitarian network.
               </p>
               <p className="text-muted-foreground text-sm sm:text-base">
-                My core work spans the complete engineering lifecycle: Node.js backend services and database administration (PostgreSQL, MySQL, Supabase, Redis), modern web and mobile frontends in React 19, Next.js 15, and React Native, alongside dedicated <span className="text-foreground font-medium">AI engineering</span> (autonomous voice agents, LLM pipelines, speech synthesis). I regularly integrate critical services like payment gateways (Paystack Mobile Money & cards, Stripe), automated SMS/email notifications, and developer AI workflows—always structured around defensive validation and data privacy.
+                My core work spans the complete engineering lifecycle: specialized <span className="text-foreground font-medium">database administration (DBA)</span> across PostgreSQL, MySQL, Supabase, and Redis caching, paired with academic and applied <span className="text-foreground font-medium">systems research</span>, full-stack web and mobile development (React 19, Next.js 15, React Native), and dedicated <span className="text-foreground font-medium">AI engineering</span> (autonomous voice agents and LLM pipelines). I regularly integrate mission-critical services like Paystack Mobile Money & card checkouts, automated SMS/email notifications, and developer AI workflows.
               </p>
 
               <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
@@ -46,24 +46,24 @@ const AboutSection = () => {
             <div className="grid sm:grid-cols-2 gap-4 stagger-children">
               {[
                 {
-                  num: "01 // WEB & MOBILE",
+                  num: "01 // DATABASE (DBA)",
+                  title: "Database Administration & Tuning",
+                  desc: "Relational 3NF normalization, composite query indexing, connection pooling, Redis caching, and ACID transaction guarantees across PostgreSQL and MySQL.",
+                },
+                {
+                  num: "02 // SYSTEMS RESEARCH",
+                  title: "Applied Systems & Data Research",
+                  desc: "Academic and practical research at USTED in database systems, data structures, algorithm efficiency, and LLM agent benchmark evaluation.",
+                },
+                {
+                  num: "03 // WEB & MOBILE",
                   title: "Modular Web & Mobile Apps",
-                  desc: "Accessible interfaces and cross-platform native mobile applications built with React 19, Next.js 15, and React Native.",
+                  desc: "Accessible web platforms and cross-platform native iOS & Android applications engineered with React 19, Next.js 15, and React Native.",
                 },
                 {
-                  num: "02 // ARCHITECTURE & DBMS",
-                  title: "Type-Safe Backend & DBMS",
-                  desc: "Predictable REST APIs, strict schema validation, and normalized relational database schemas across PostgreSQL and MySQL.",
-                },
-                {
-                  num: "03 // AI ENGINEERING",
-                  title: "Voice AI & Agent Pipelines",
-                  desc: "Autonomous conversational agents (Atlaswave Travels), real-time speech recognition, structured LLM prompts, and AI developer tooling.",
-                },
-                {
-                  num: "04 // SECURITY & PAYMENTS",
-                  title: "Security & Payment Systems",
-                  desc: "Paystack Mobile Money & card checkouts, hardened authentication (JWT, RBAC), encrypted payloads, and webhook verification.",
+                  num: "04 // AI & SECURITY",
+                  title: "Voice AI & Payment Systems",
+                  desc: "Voice-driven conversational agents (Atlaswave Travels), hardened JWT authentication lifecycles, and Paystack Mobile Money checkout workflows.",
                 },
               ].map((item) => (
                 <div

@@ -89,28 +89,29 @@ export const workExperience: WorkRole[] = [
   },
   {
     id: "cs-tutor",
-    title: "Computer Science & Web Development Tutor",
+    title: "Computer Science & Database Systems Tutor & Researcher",
     company: "University of Skills Training and Entrepreneurial Development (USTED)",
     location: "Kumasi, Ghana",
     period: "2023 – 2024",
-    type: "Academic / Part-Time",
+    type: "Academic & Research",
     category: "Academia & Teaching",
     featured: true,
     description:
-      "Instructed undergraduate students in Database Management Systems (DBMS), SQL, JavaScript, Python, and modern software engineering fundamentals.",
+      "Instructed undergraduate students in Database Administration (DBA), Database Management Systems (DBMS), and conducted applied research into relational schema normalization and query optimization.",
     achievements: [
       "Conducted practical laboratory sessions for 60+ computer science students, translating abstract data modeling concepts into hands-on SQL and relational schema implementations.",
+      "Conducted applied research on relational database query profiling, indexing trade-offs, and storage engine benchmarks.",
       "Designed curriculum modules, code review templates, and hands-on coding exercises for web development, algorithm design, and client-server communication.",
-      "Mentored students on software architecture, Git collaboration workflows, and security best practices for their capstone projects.",
-      "Evaluated student project submissions and provided actionable feedback on code structure, algorithmic efficiency, and UI/UX design."
+      "Mentored students on database architecture, data integrity constraints, Git collaboration workflows, and security best practices for their capstone projects."
     ],
     techs: [
       "Database Systems (DBMS)",
+      "Database Administration (DBA)",
+      "Systems Research",
       "SQL",
-      "JavaScript",
-      "Python",
-      "Data Structures",
-      "Git"
+      "PostgreSQL",
+      "MySQL",
+      "Data Structures"
     ],
   },
   {
@@ -291,11 +292,11 @@ export const educationList: EducationItem[] = [
     institution: "University of Skills Training and Entrepreneurial Development (USTED)",
     location: "Kumasi, Ghana",
     period: "2022 – Expected 2026",
-    type: "Undergraduate Degree",
+    type: "Undergraduate Degree & Research",
     details: [
-      "Specialized in Database Management Systems (DBMS), Advanced Systems Design, Software Engineering, and Computer Networks.",
-      "Conducted extensive laboratory work with relational database normalization (SQL, PostgreSQL, MySQL), distributed client-server architectures, and secure web services.",
-      "Served as Computer Science Tutor for peers in programming fundamentals, algorithm design, and web development."
+      "Specialized in Database Administration (DBA), Relational Database Management Systems (DBMS), Advanced Systems Design, and Applied Computer Science Research.",
+      "Conducted research and extensive laboratory benchmarks on relational database normalization (SQL, PostgreSQL, MySQL), query profiling (EXPLAIN), and distributed data modeling.",
+      "Served as Computer Science & Database Systems Tutor for peers, leading weekly laboratory reviews, schema normalization clinics, and student research projects."
     ],
   },
   {

@@ -19,11 +19,11 @@ const HeroSection = () => {
           {/* Left Column - Content */}
           <div className="lg:col-span-6 space-y-5 sm:space-y-6">
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] text-foreground animate-fade-up">
-              Engineering high-impact <span className="text-primary">web, mobile & AI systems</span>.
+              Engineering high-impact <span className="text-primary">web, mobile, AI & data systems</span>.
             </h1>
 
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl animate-fade-up delay-1">
-              I'm <span className="text-foreground font-semibold">Rawlings Junior Asomani</span>, a full-stack, mobile & AI engineer with 5+ years of experience engineering production web platforms, React Native mobile apps, autonomous voice AI agents, Paystack & Stripe payment systems, and robust database architectures.
+              I'm <span className="text-foreground font-semibold">Rawlings Junior Asomani</span>, a full-stack, mobile & AI engineer with a deep focus on <span className="text-foreground font-medium">database administration (DBA)</span> and <span className="text-foreground font-medium">systems research</span>. With 5+ years of experience, I build resilient web & mobile applications, autonomous voice AI agents, and optimized, secure database architectures.
             </p>
 
             <ScrollReveal>
@@ -62,27 +62,27 @@ const HeroSection = () => {
               {/* Clean Engineering Capability Matrix */}
               <div className="pt-6 sm:pt-8 border-t border-border/80 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4">
                 <div className="space-y-1 p-2.5 sm:p-0 rounded-xl bg-orange-50/30 sm:bg-transparent border border-orange-100/60 sm:border-0">
-                  <span className="font-mono text-[10px] font-bold text-primary uppercase tracking-widest">01 / Web</span>
-                  <p className="font-display font-bold text-xs sm:text-sm text-foreground">React 19 & Next.js</p>
-                  <p className="text-[11px] sm:text-xs text-muted-foreground">TypeScript · Node</p>
+                  <span className="font-mono text-[10px] font-bold text-primary uppercase tracking-widest">01 / Web & Mobile</span>
+                  <p className="font-display font-bold text-xs sm:text-sm text-foreground">React & Native</p>
+                  <p className="text-[11px] sm:text-xs text-muted-foreground">Next.js 15 · iOS & Android</p>
                 </div>
 
                 <div className="space-y-1 p-2.5 sm:p-0 rounded-xl bg-orange-50/30 sm:bg-transparent border border-orange-100/60 sm:border-0">
-                  <span className="font-mono text-[10px] font-bold text-primary uppercase tracking-widest">02 / Mobile</span>
-                  <p className="font-display font-bold text-xs sm:text-sm text-foreground">React Native</p>
-                  <p className="text-[11px] sm:text-xs text-muted-foreground">iOS & Android · Expo</p>
-                </div>
-
-                <div className="space-y-1 p-2.5 sm:p-0 rounded-xl bg-orange-50/30 sm:bg-transparent border border-orange-100/60 sm:border-0">
-                  <span className="font-mono text-[10px] font-bold text-primary uppercase tracking-widest">03 / AI Engineering</span>
+                  <span className="font-mono text-[10px] font-bold text-primary uppercase tracking-widest">02 / AI Engineering</span>
                   <p className="font-display font-bold text-xs sm:text-sm text-foreground">Voice AI & Agents</p>
                   <p className="text-[11px] sm:text-xs text-muted-foreground">Atlaswave AI · OpenAI</p>
                 </div>
 
                 <div className="space-y-1 p-2.5 sm:p-0 rounded-xl bg-orange-50/30 sm:bg-transparent border border-orange-100/60 sm:border-0">
-                  <span className="font-mono text-[10px] font-bold text-primary uppercase tracking-widest">04 / Payments & DBMS</span>
-                  <p className="font-display font-bold text-xs sm:text-sm text-foreground">Paystack & SQL</p>
-                  <p className="text-[11px] sm:text-xs text-muted-foreground">MoMo · SMS/Email</p>
+                  <span className="font-mono text-[10px] font-bold text-primary uppercase tracking-widest">03 / Database Admin</span>
+                  <p className="font-display font-bold text-xs sm:text-sm text-foreground">PostgreSQL & MySQL</p>
+                  <p className="text-[11px] sm:text-xs text-muted-foreground">DBA · Indexing · Redis</p>
+                </div>
+
+                <div className="space-y-1 p-2.5 sm:p-0 rounded-xl bg-orange-50/30 sm:bg-transparent border border-orange-100/60 sm:border-0">
+                  <span className="font-mono text-[10px] font-bold text-primary uppercase tracking-widest">04 / Systems Research</span>
+                  <p className="font-display font-bold text-xs sm:text-sm text-foreground">Data Modeling & Pay</p>
+                  <p className="text-[11px] sm:text-xs text-muted-foreground">USTED · Paystack MoMo</p>
                 </div>
               </div>
             </ScrollReveal>

@@ -30,15 +30,15 @@ const coreStacks = [
     techs: ["Node.js", "Express.js", "Paystack & Stripe", "Twilio & Resend", "REST APIs"],
   },
   {
-    title: "Database Management (DBMS)",
+    title: "Database Administration (DBA)",
     badge: "Core Specialization",
     image: databaseStack,
     imageFit: "object-contain p-4",
     imageBg: "bg-white",
-    alt: "Database Stack - PostgreSQL, MySQL, Supabase, Redis",
+    alt: "Database Stack - PostgreSQL, MySQL, Supabase, Redis, DBA, Query Optimization",
     description:
-      "Comprehensive database management: normalized relational schemas (3NF), query indexing, Redis caching, transaction integrity, and automated backups.",
-    techs: ["PostgreSQL", "MySQL", "Supabase", "Redis Caching", "Schema Modeling"],
+      "Specialized database administration: 3NF relational schema design, composite indexing, query profiling, connection pooling, Redis caching, and automated backup lifecycles.",
+    techs: ["PostgreSQL", "MySQL", "Supabase", "Redis Caching", "Query Optimization", "DBA Automation"],
   },
   {
     title: "Mobile App Development",

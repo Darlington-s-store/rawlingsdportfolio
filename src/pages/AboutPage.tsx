@@ -15,11 +15,11 @@ import Footer from "@/components/Footer";
 import heroImage from "@/assets/Hero.jpeg";
 
 const skills = [
-  { name: "React 19 / Next.js 15 / Scalable Frontend Architecture", level: 96 },
-  { name: "Node.js / Express.js / High-Throughput Backend APIs", level: 95 },
-  { name: "Database Management Systems (PostgreSQL, MySQL, Supabase, Redis)", level: 94 },
+  { name: "Database Administration (DBA) & Schema Modeling (PostgreSQL, MySQL, Redis)", level: 96 },
+  { name: "Systems & Data Architecture Research (USTED Academic Research & Benchmarks)", level: 95 },
+  { name: "Full-Stack Web Engineering (React 19, Next.js 15, TypeScript, Node.js)", level: 95 },
+  { name: "AI Engineering & Voice Agents (AtlasWave Travels, OpenAI, Speech API)", level: 94 },
   { name: "Payment Integrations & Webhooks (Paystack, Stripe, MoMo)", level: 94 },
-  { name: "AI Integration & Voice-Powered Agents (AtlasWave Travels)", level: 94 },
   { name: "React Native / Expo / iOS & Android Mobile Apps", level: 93 },
   { name: "SMS & Email Automation (Twilio, Resend, SendGrid, Hubtel)", level: 92 },
   { name: "Application Security & Hardened Auth (JWT, RBAC, Zod)", level: 92 },
@@ -46,10 +46,10 @@ const enterpriseIntegrations = [
     tags: ["Resend", "SendGrid", "NodeMailer", "AWS SES", "HTML Email Templates", "DNS Deliverability"],
   },
   {
-    badge: "04 // DATABASE MANAGEMENT",
-    title: "Database Management Systems (DBMS)",
-    desc: "Complete lifecycle database management: relational schema design, 3NF normalization, composite indexing, query performance tuning, connection pooling, and ACID transaction guarantees across PostgreSQL, MySQL, Supabase, and in-memory Redis caching.",
-    tags: ["PostgreSQL", "MySQL", "Supabase", "Redis Caching", "Schema Modeling", "Automated Backups", "Query Tuning"],
+    badge: "04 // DATABASE ADMINISTRATION & RESEARCH",
+    title: "Database Administration (DBA) & Systems Research",
+    desc: "Complete lifecycle database administration and systems research: relational schema design, 3NF normalization, composite indexing, query performance tuning with EXPLAIN ANALYZE, connection pooling (PgBouncer), automated backup policies, and academic research in database systems and data modeling at USTED.",
+    tags: ["PostgreSQL", "MySQL", "Supabase", "Redis Caching", "DBA Optimization", "PgBouncer", "Systems Research", "3NF Normalization"],
   },
 ];
 
@@ -319,9 +319,9 @@ const AboutPage = () => {
                 </div>
                 <div className="space-y-1">
                   <h1 className="font-display text-xl sm:text-2xl font-bold text-foreground">Rawlings Junior Asomani</h1>
-                  <p className="text-primary text-xs sm:text-sm font-semibold">Full-Stack Web, Mobile & AI Engineer</p>
+                  <p className="text-primary text-xs sm:text-sm font-semibold">Full-Stack, AI & Database Engineer (DBA)</p>
                   <p className="text-muted-foreground text-xs pt-1 max-w-xs mx-auto">
-                    Senior full-stack engineer specializing in web and mobile applications, AI engineering & voice agents, payment gateways, messaging pipelines, and database administration.
+                    Engineer and researcher specializing in Database Administration (DBA), Systems Research, Web & Mobile Applications, and Voice AI Agents.
                   </p>
                 </div>
                 
@@ -412,7 +412,10 @@ const AboutPage = () => {
 
                 <div className="space-y-4 text-foreground/85 text-sm sm:text-base leading-relaxed">
                   <p>
-                    I'm <span className="text-foreground font-semibold">Rawlings Junior Asomani</span>, a full-stack software engineer based in Kumasi, Ghana, with over 5 years of professional experience developing commercial web platforms, mobile applications, and database management systems.
+                    I'm <span className="text-foreground font-semibold">Rawlings Junior Asomani</span>, a full-stack software engineer and researcher based in Kumasi, Ghana, with over 5 years of professional experience developing commercial web platforms, mobile applications, and database administration systems.
+                  </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    A core pillar of my work is <span className="text-foreground font-medium">Database Administration (DBA)</span> and <span className="text-foreground font-medium">Systems Research</span>. Having instructed undergraduate students in Database Management Systems (DBMS) at USTED and conducted hands-on research into relational data modeling, query optimization, and storage engines, I bring academic depth to production database management. From fine-tuning composite indexes and connection pools in PostgreSQL and MySQL to orchestrating automated backup policies and zero-data-loss failovers, I ensure systems maintain sub-second queries and uncompromised ACID transactional integrity.
                   </p>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     I build across <span className="text-foreground font-medium">both the backend and the frontend</span> with equal rigor. On the server side, I design modular Node.js architectures, normalized PostgreSQL and MySQL schemas, and documented RESTful APIs. On the client side, I create responsive, accessible user interfaces using React 19, Next.js 15, and cross-platform mobile apps with React Native for iOS and Android.
@@ -535,18 +538,18 @@ const AboutPage = () => {
                 </div>
               </ScrollReveal>
 
-              {/* Core Engineering Specializations: Web, Mobile & AI */}
+              {/* Core Engineering Specializations: 4 Pillars */}
               <ScrollReveal>
                 <div className="space-y-5 pt-8 border-t border-border">
                   <div>
                     <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Core Specializations</p>
-                    <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground">Web, Mobile & AI Engineering</h2>
+                    <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground">Web, Mobile, AI & Database Research</h2>
                     <p className="text-muted-foreground text-sm mt-1">
-                      Delivering production systems across responsive web applications, native mobile ecosystems, and autonomous AI agents.
+                      Four specialized pillars uniting client-facing engineering, autonomous intelligence, and rigorous database research.
                     </p>
                   </div>
 
-                  <div className="grid md:grid-cols-3 gap-5 pt-2">
+                  <div className="grid sm:grid-cols-2 gap-5 pt-2">
                     {/* Web Card */}
                     <div className="bg-card border border-border p-6 rounded-2xl space-y-3 hover:border-primary/40 hover:shadow-md transition-all flex flex-col justify-between">
                       <div className="space-y-3">
@@ -594,6 +597,24 @@ const AboutPage = () => {
                       </div>
                       <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border/60">
                         {["Voice AI Agents", "OpenAI API", "Web Speech API", "LLM Prompting", "Function Calling"].map((tag) => (
+                          <span key={tag} className="text-[10px] font-medium bg-secondary px-2.5 py-0.5 rounded-md text-foreground">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Database Administration & Research Card */}
+                    <div className="bg-card border border-border p-6 rounded-2xl space-y-3 hover:border-primary/40 hover:shadow-md transition-all flex flex-col justify-between">
+                      <div className="space-y-3">
+                        <span className="font-mono text-xs font-bold text-primary tracking-widest block uppercase">04 // Database Administration (DBA) & Research</span>
+                        <h3 className="font-display font-bold text-base text-foreground">Database Administration & Research</h3>
+                        <p className="text-muted-foreground text-xs leading-relaxed">
+                          3NF relational schema design, query profiling with EXPLAIN ANALYZE, connection pooling, Redis in-memory caching, automated backup lifecycles, and academic systems research at USTED.
+                        </p>
+                      </div>
+                      <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border/60">
+                        {["PostgreSQL", "MySQL", "Supabase", "Redis Caching", "DBA Optimization", "Systems Research"].map((tag) => (
                           <span key={tag} className="text-[10px] font-medium bg-secondary px-2.5 py-0.5 rounded-md text-foreground">
                             {tag}
                           </span>
