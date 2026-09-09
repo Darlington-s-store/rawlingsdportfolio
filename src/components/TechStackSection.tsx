@@ -23,7 +23,7 @@ const categories = [
   {
     title: "Mobile",
     icon: Smartphone,
-    techs: ["React Native", "Expo", "Flutter"],
+    techs: ["React Native", "Expo"],
   },
   {
     title: "Cloud & DevOps",

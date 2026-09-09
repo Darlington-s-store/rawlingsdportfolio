@@ -1,5 +1,5 @@
 import projectWedding from "@/assets/wedding.png";
-import projectTransport from "@/assets/Trip.jpeg";
+import projectHope from "@/assets/hope-for-prisoners.png";
 import projectEcommerce from "@/assets/project-ecommerce.jpg";
 import projectTravel from "@/assets/image.png";
 import projectLearning from "@/assets/fun.png";
@@ -83,12 +83,12 @@ export const projects: Project[] = [
   {
     id: 6,
     title: "Hope for Prisoners & Social Justice",
-    description: "NGO / Nonprofit Web Presence: Designed and developed the full digital presence for a nonprofit organization focused on social justice and prisoner rehabilitation.",
+    description: "NGO & Nonprofit Digital Platform: Designed and developed the web platform for a nonprofit supporting prisoners with relief, advocacy, vocational training, and community empowerment across Ghana.",
     techs: ["React", "Tailwind CSS", "Node.js"],
-    features: ["Resource management", "Independent updates", "Low bandwidth performance"],
-    problem: "The nonprofit needed an accessible, fast digital presence to reach audiences on low-bandwidth connections and allow staff to update resources independently.",
-    solution: "Designed and developed a highly optimized, fully accessible React web application with content management capabilities.",
-    image: projectTransport,
+    features: ["Advocacy & relief showcases", "Vocational training programs", "Community donation flows", "Low-bandwidth accessibility"],
+    problem: "The nonprofit needed an accessible, fast digital presence to showcase their humanitarian mission, reach supporters across Ghana, and allow staff to share updates and collect donations.",
+    solution: "Designed and developed an optimized, responsive web application highlighting their relief programs, vocational training initiatives, and community support channels.",
+    image: projectHope,
     live: "https://hopeforprisonersandsocialjustice.org/",
   },
   {
