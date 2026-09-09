@@ -21,15 +21,6 @@ const HeroSection = () => {
       
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-32 relative z-10 w-full mt-6">
         <div className="max-w-4xl">
-          {/* Live Availability Badge */}
-          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/25 mb-8 animate-fade-up">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-            </span>
-            Available for full-time & contract roles • Kumasi, Ghana / Remote
-          </div>
-
           <h1 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.06] mb-6 text-white animate-fade-up">
             Building modern web products with <span className="text-primary">clarity & speed</span>.
           </h1>
