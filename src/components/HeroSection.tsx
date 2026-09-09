@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Github, Linkedin, MapPin } from "lucide-react";
+import { ArrowRight, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import heroPhoto from "@/assets/Hero.jpeg";
@@ -61,34 +61,21 @@ const HeroSection = () => {
             </ScrollReveal>
           </div>
 
-          {/* Right Column - Profile Picture */}
+          {/* Right Column - Profile Picture (Fully Displayed) */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <ScrollReveal variant="right" className="relative w-full max-w-sm sm:max-w-md">
-              {/* Decorative subtle orange glow */}
-              <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-orange-200/50 via-orange-100/30 to-transparent blur-lg opacity-70" />
+            <ScrollReveal variant="right" className="relative w-full max-w-md lg:max-w-lg">
+              {/* Subtle ambient orange glow */}
+              <div className="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-orange-200/40 via-orange-100/30 to-transparent blur-xl pointer-events-none" />
 
-              {/* Photo Card Container */}
-              <div className="relative rounded-3xl p-3 bg-white border border-orange-100 shadow-xl shadow-orange-500/5">
-                <div className="relative overflow-hidden rounded-2xl aspect-[4/5] bg-muted">
+              {/* Clean White Card Frame */}
+              <div className="relative rounded-3xl p-2 sm:p-2.5 bg-white border border-orange-200/70 shadow-xl shadow-orange-500/5">
+                <div className="overflow-hidden rounded-2xl bg-white">
                   <img
                     src={heroPhoto}
-                    alt="Rawlings Junior Asomani - Full-Stack Developer"
-                    className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
+                    alt="Rawlings Junior Asomani"
+                    className="w-full h-auto object-contain rounded-2xl block hover:scale-[1.02] transition-transform duration-500"
                     loading="eager"
                   />
-                  {/* Subtle gradient for badge legibility */}
-                  <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/60 via-black/20 to-transparent pointer-events-none" />
-
-                  {/* Name / Location Badge */}
-                  <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white">
-                    <div>
-                      <p className="font-display font-semibold text-sm drop-shadow-sm">Rawlings Junior Asomani</p>
-                      <div className="flex items-center gap-1.5 text-xs text-white/90 drop-shadow-sm">
-                        <MapPin size={12} className="text-primary" />
-                        <span>Kumasi, Ghana</span>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </ScrollReveal>
