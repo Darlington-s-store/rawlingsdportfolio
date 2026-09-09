@@ -318,18 +318,6 @@ const AboutPage = () => {
                     Full-stack engineer specializing in web and mobile applications, payment gateways, messaging pipelines, and database administration.
                   </p>
                 </div>
-
-                {/* Availability Badge */}
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-50 border border-orange-200/80 text-orange-800 text-xs font-medium">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  Available for Web, Mobile, Payments & AI Projects
-                </div>
-
-                {/* Security Focus Indicator */}
-                <div className="flex items-center justify-center gap-2 text-[11px] text-muted-foreground bg-secondary/50 py-1.5 px-3 rounded-lg border border-border/60">
-                  <ShieldCheck size={13} className="text-primary" />
-                  <span className="font-medium text-foreground">Security-First & DBMS Architecture</span>
-                </div>
                 
                 <div className="space-y-3 pt-4 border-t border-border text-xs text-muted-foreground text-left max-w-xs mx-auto">
                   <div className="flex items-start gap-2.5">
@@ -445,7 +433,7 @@ const AboutPage = () => {
                         <h3 className="font-display font-bold text-lg text-foreground">Voice-Powered AI Agent &middot; AtlasWave Travels</h3>
                       </div>
                     </div>
-                    <span className="text-xs font-semibold px-3 py-1 rounded-full bg-orange-100/80 text-orange-900 border border-orange-200">
+                    <span className="font-mono text-xs font-semibold text-primary">
                       OpenAI + Web Speech API
                     </span>
                   </div>
@@ -650,7 +638,7 @@ const AboutPage = () => {
                       <div key={i} className="relative group">
                         <div className="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-primary border-4 border-background" />
                         <div className="space-y-1.5">
-                          <span className="font-mono text-xs font-semibold text-primary bg-orange-50 px-2.5 py-0.5 rounded-full border border-orange-200/80 inline-block">
+                          <span className="font-mono text-xs font-semibold text-primary inline-block">
                             {m.period}
                           </span>
                           <h3 className="font-display font-bold text-base text-foreground">{m.role}</h3>

@@ -18,12 +18,6 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Column - Content */}
           <div className="lg:col-span-6 space-y-6">
-            {/* Specialization Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200/80 text-primary text-xs font-semibold uppercase tracking-wider animate-fade-up">
-              <span className="w-2 h-2 rounded-full bg-primary" />
-              <span>Full-Stack Web & Mobile Developer</span>
-            </div>
-
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.08] text-foreground animate-fade-up">
               Building high-impact <span className="text-primary">web & mobile applications</span>.
             </h1>

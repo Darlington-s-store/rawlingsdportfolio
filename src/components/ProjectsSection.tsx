@@ -37,14 +37,14 @@ const ProjectsSection = () => {
           )}
         </ScrollReveal>
 
-        {/* Filter Pills */}
+        {/* Filter Tabs */}
         <ScrollReveal>
           <div className="flex flex-wrap gap-2 mb-10">
             <button
               onClick={() => setFilter("All")}
-              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${
+              className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all ${
                 filter === "All"
-                  ? "bg-primary text-primary-foreground shadow-md shadow-primary/25 scale-105"
+                  ? "bg-primary text-primary-foreground shadow-md shadow-primary/25"
                   : "bg-card border border-border text-muted-foreground hover:text-foreground hover:border-primary/30"
               }`}
             >
@@ -54,9 +54,9 @@ const ProjectsSection = () => {
               <button
                 key={tech}
                 onClick={() => setFilter(tech)}
-                className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all ${
+                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all ${
                   filter === tech
-                    ? "bg-primary text-primary-foreground shadow-md shadow-primary/25 scale-105"
+                    ? "bg-primary text-primary-foreground shadow-md shadow-primary/25"
                     : "bg-card border border-border text-muted-foreground hover:text-foreground hover:border-primary/30"
                 }`}
               >
@@ -116,7 +116,7 @@ const ProjectsSection = () => {
                         height={800}
                       />
                       {project.status && (
-                        <span className="absolute top-3 right-3 text-[10px] font-semibold tracking-wide uppercase bg-primary text-primary-foreground px-2.5 py-0.5 rounded-full shadow-md">
+                        <span className="absolute top-3 right-3 text-[10px] font-mono font-bold tracking-wider uppercase bg-primary text-primary-foreground px-2.5 py-1 rounded-md shadow-sm">
                           {project.status}
                         </span>
                       )}
@@ -142,7 +142,7 @@ const ProjectsSection = () => {
                             <span
                               key={t}
                               onClick={(e) => { e.preventDefault(); setFilter(t); }}
-                              className={`text-[11px] font-medium px-2.5 py-0.5 rounded-full cursor-pointer transition-colors ${
+                              className={`text-[11px] font-medium px-2 py-0.5 rounded-md cursor-pointer transition-colors ${
                                 filter === t
                                   ? "bg-primary text-primary-foreground"
                                   : "bg-secondary text-secondary-foreground hover:bg-primary/20 hover:text-primary"

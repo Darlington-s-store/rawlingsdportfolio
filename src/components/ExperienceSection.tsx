@@ -197,7 +197,7 @@ const ExperienceSection = () => {
                 {/* Header */}
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-1">
                   <h3 className="font-display text-xl font-bold">{role.title}</h3>
-                  <span className="text-xs font-medium bg-primary/10 text-primary px-3 py-1 rounded-full whitespace-nowrap self-start">
+                  <span className="font-mono text-xs font-semibold text-primary whitespace-nowrap self-start">
                     {role.type}
                   </span>
                 </div>
@@ -228,7 +228,7 @@ const ExperienceSection = () => {
                 {/* Tech tags */}
                 <div className="flex flex-wrap gap-2 pt-4 border-t border-border">
                   {role.techs.map((t) => (
-                    <span key={t} className="text-xs font-medium bg-secondary text-secondary-foreground px-3 py-1 rounded-full">
+                    <span key={t} className="text-xs font-medium bg-secondary text-secondary-foreground px-2.5 py-0.5 rounded-md">
                       {t}
                     </span>
                   ))}

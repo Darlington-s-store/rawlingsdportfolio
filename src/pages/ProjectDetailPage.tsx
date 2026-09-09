@@ -51,7 +51,7 @@ const ProjectDetailPage = () => {
             <div>
               <h1 className="font-display text-3xl md:text-4xl font-bold mb-2">{project.title}</h1>
               {project.status && (
-                <span className="inline-block text-xs font-medium bg-primary/10 text-primary px-3 py-1 rounded-full">
+                <span className="font-mono text-xs font-semibold text-primary">
                   {project.status}
                 </span>
               )}
@@ -99,7 +99,7 @@ const ProjectDetailPage = () => {
                 <ul className="space-y-2">
                   {project.features.map((f) => (
                     <li key={f} className="text-sm text-muted-foreground flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                      <span className="text-primary font-bold shrink-0">&ndash;</span>
                       {f}
                     </li>
                   ))}
@@ -110,7 +110,7 @@ const ProjectDetailPage = () => {
                 <h2 className="font-display font-semibold text-sm uppercase tracking-wider text-primary mb-3">Technologies</h2>
                 <div className="flex flex-wrap gap-2">
                   {project.techs.map((t) => (
-                    <span key={t} className="text-xs font-medium bg-secondary text-secondary-foreground px-3 py-1 rounded-full">
+                    <span key={t} className="text-xs font-medium bg-secondary text-secondary-foreground px-2.5 py-0.5 rounded-md">
                       {t}
                     </span>
                   ))}

@@ -269,7 +269,7 @@ const ExperiencePage = () => {
                     <div className="bg-card rounded-2xl border border-border p-6 sm:p-8 card-hover shadow-sm">
                       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
                         <h3 className="font-display text-lg sm:text-xl font-bold">{role.title}</h3>
-                        <span className="text-[10px] font-medium bg-primary/10 text-primary px-3 py-1 rounded-full whitespace-nowrap self-start">
+                        <span className="font-mono text-xs font-semibold text-primary whitespace-nowrap self-start">
                           {role.type}
                         </span>
                       </div>
@@ -298,7 +298,7 @@ const ExperiencePage = () => {
 
                       <div className="flex flex-wrap gap-1.5 pt-4 border-t border-border">
                         {role.techs.map((t) => (
-                          <span key={t} className="text-[10px] font-medium bg-secondary text-secondary-foreground px-2.5 py-1 rounded-full">
+                          <span key={t} className="text-[11px] font-medium bg-secondary text-secondary-foreground px-2.5 py-0.5 rounded-md">
                             {t}
                           </span>
                         ))}
@@ -323,7 +323,7 @@ const ExperiencePage = () => {
                     <div className="bg-card rounded-2xl border border-border p-6 sm:p-8 card-hover shadow-sm">
                       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
                         <h3 className="font-display text-lg sm:text-xl font-bold">{edu.title}</h3>
-                        <span className="text-[10px] font-medium bg-primary/10 text-primary px-3 py-1 rounded-full whitespace-nowrap self-start">
+                        <span className="font-mono text-xs font-semibold text-primary whitespace-nowrap self-start">
                           {edu.type}
                         </span>
                       </div>

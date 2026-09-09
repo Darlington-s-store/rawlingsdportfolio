@@ -128,7 +128,7 @@ const TechStackSection = () => {
                         <button
                           key={tech}
                           onClick={() => navigate(`/projects?tech=${encodeURIComponent(tech)}`)}
-                          className="text-xs font-medium bg-secondary text-secondary-foreground hover:bg-primary/25 hover:text-primary px-3 py-1 rounded-full transition-all cursor-pointer border border-transparent hover:border-primary/20 hover:scale-105 active:scale-95 duration-200"
+                          className="text-xs font-medium bg-secondary text-secondary-foreground hover:bg-primary/15 hover:text-primary px-2.5 py-1 rounded-md transition-all cursor-pointer border border-transparent hover:border-primary/20 duration-200"
                         >
                           {tech}
                         </button>
