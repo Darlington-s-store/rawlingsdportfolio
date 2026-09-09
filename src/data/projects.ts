@@ -103,13 +103,14 @@ export const projects: Project[] = [
   },
   {
     id: 8,
-    title: "E-Commerce & Retail Storefront",
-    description: "Full-Stack Retail Platform: An online e-commerce marketplace featuring Ghanaian Cedi (Ghc) pricing, responsive product catalogues, detailed item showcases, and modern checkout.",
+    title: "Yaa Baby Enterprise",
+    description: "E-Commerce & Retail Platform: An online retail storefront for Yaa Baby Enterprise featuring Ghanaian Cedi (Ghc) pricing, home appliances, responsive product catalogues, and streamlined ordering.",
     techs: ["React", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
-    features: ["Dynamic product catalogue", "Currency localized pricing (Ghc)", "Product detail showcases", "Cart & order management", "Dark mode support"],
-    problem: "Local merchants and customers needed a clean, localized online shopping experience with transparent pricing in Ghanaian Cedis and mobile-first browsing.",
-    solution: "Developed a fast, responsive e-commerce web application with rich product cards, real-time inventory indicators, instant search/filtering, and seamless checkout flows.",
+    features: ["Dynamic product catalogue", "Ghanaian Cedi (Ghc) pricing", "Product detail showcases", "Mobile-optimized shopping", "Dark mode support"],
+    problem: "The enterprise needed a fast, reliable online retail portal to display inventory with transparent Ghanaian Cedi pricing and allow customers to browse and order products seamlessly on mobile.",
+    solution: "Built a modern e-commerce storefront with product cards, category filtering, real-time stock status, and a smooth user interface tailored for Ghanaian retail shoppers.",
     image: projectEcommerce,
+    live: "https://yaababyenterprise.com/",
   },
 ];
 
