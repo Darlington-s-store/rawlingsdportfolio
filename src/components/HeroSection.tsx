@@ -62,28 +62,6 @@ const HeroSection = () => {
               </div>
             </div>
           </ScrollReveal>
-
-          {/* Real Metrics & Engineering Highlights */}
-          <ScrollReveal>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-white/10 stagger-children">
-              <div className="space-y-1 stagger-item">
-                <span className="font-display text-2xl sm:text-3xl font-bold text-white">5+ Years</span>
-                <p className="text-white/40 text-xs font-medium tracking-wide">Production Code</p>
-              </div>
-              <div className="space-y-1 stagger-item">
-                <span className="font-display text-2xl sm:text-3xl font-bold text-white">8+ Apps</span>
-                <p className="text-white/40 text-xs font-medium tracking-wide">Deployed & Live</p>
-              </div>
-              <div className="space-y-1 stagger-item">
-                <span className="font-display text-2xl sm:text-3xl font-bold text-white">Full-Stack</span>
-                <p className="text-white/40 text-xs font-medium tracking-wide">React • Node • Postgres</p>
-              </div>
-              <div className="space-y-1 stagger-item">
-                <span className="font-display text-2xl sm:text-3xl font-bold text-white">Kumasi, GH</span>
-                <p className="text-white/40 text-xs font-medium tracking-wide">Open to Remote / Relo</p>
-              </div>
-            </div>
-          </ScrollReveal>
         </div>
       </div>
     </section>
