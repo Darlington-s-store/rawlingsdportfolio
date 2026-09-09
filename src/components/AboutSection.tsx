@@ -28,7 +28,7 @@ const AboutSection = () => {
                 Over the past 5 years in Kumasi, Ghana, I have designed and deployed end-to-end applications for real organizations and commercial clients—including localized retail platforms like <span className="text-foreground font-medium">Yaa Baby Enterprise</span>, nonprofit initiatives like <span className="text-foreground font-medium">Hope for Prisoners</span>, and tailored booking engines like <span className="text-foreground font-medium">Rudi Finds Jem</span>.
               </p>
               <p className="text-muted-foreground text-sm sm:text-base">
-                I specialize across two core domains: high-performance web applications built on <span className="text-foreground font-medium">React, Next.js, Node.js, and PostgreSQL</span>, and fluid, native-feel cross-platform mobile apps for <span className="text-foreground font-medium">iOS and Android using React Native & Expo</span>. I prioritize maintainable code, testable architecture, and clear client communication.
+                I am exceptionally strong across <span className="text-foreground font-medium">both the backend and the frontend</span>, engineering scalable Node.js architectures and PostgreSQL databases alongside reactive interfaces in React 19, Next.js 15, and React Native. I specialize in integrating <span className="text-foreground font-medium">autonomous AI agents with voice power</span>—such as my work on <span className="text-foreground font-medium">AtlasWave Travels</span>—while ensuring every project is hardened with enterprise-grade security and strict data protection.
               </p>
 
               <div className="pt-4 flex flex-wrap items-center gap-4">

@@ -5,7 +5,8 @@ import {
   CheckCircle2, Award, ArrowRight, Calendar, Briefcase,
   Users, Code2, Download, Phone, Smartphone, Globe, Layers,
   Check, Server, ShieldCheck, Zap, Clock, Sparkles, HelpCircle,
-  FolderGit2, ChevronRight, CheckCircle
+  FolderGit2, ChevronRight, CheckCircle, Mic, Volume2, Lock,
+  Shield, KeyRound, Bot, Database
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -13,156 +14,183 @@ import Footer from "@/components/Footer";
 import heroImage from "@/assets/Hero.jpeg";
 
 const skills = [
-  { name: "React 19 / Next.js 15 / Tailwind CSS (Web Architecture)", level: 96 },
-  { name: "React Native / Expo / iOS & Android (Mobile App Dev)", level: 93 },
-  { name: "TypeScript & Scalable Frontend Architecture", level: 94 },
-  { name: "Node.js / Express.js / High-Throughput REST APIs", level: 91 },
-  { name: "PostgreSQL / MySQL / Supabase Database Architecture", level: 89 },
-  { name: "Cloud & DevOps (AWS, Vercel, Docker, CI/CD)", level: 87 },
-  { name: "AI Engineering (OpenAI API, LangChain, RAG Pipelines)", level: 88 },
+  { name: "React 19 / Next.js 15 / Scalable Frontend Architecture", level: 96 },
+  { name: "Node.js / Express.js / High-Throughput Backend APIs", level: 95 },
+  { name: "AI Integration & Voice-Powered Agents (AtlasWave)", level: 94 },
+  { name: "React Native / Expo / iOS & Android Mobile Apps", level: 93 },
+  { name: "Application Security & Hardened Auth (JWT, RBAC, Zod)", level: 92 },
+  { name: "PostgreSQL / MySQL / Supabase Database Architecture", level: 90 },
+  { name: "Cloud & DevOps (AWS, Vercel, Docker, CI/CD)", level: 88 },
 ];
 
 const techArsenal = [
   {
-    category: "Web Frontend",
+    category: "Frontend Engineering",
     icon: Globe,
-    items: ["React 19", "Next.js 15", "TypeScript", "Tailwind CSS", "Vite", "HTML5 & CSS3", "TanStack Query", "Redux Toolkit"],
+    items: ["React 19", "Next.js 15", "TypeScript", "Tailwind CSS", "Vite", "TanStack Query", "Redux Toolkit", "Zustand", "Figma to Code"],
   },
   {
-    category: "Mobile App Development",
-    icon: Smartphone,
-    items: ["React Native", "Expo EAS", "iOS Development", "Android Development", "React Navigation", "Offline-First Caching", "Push Notifications"],
-  },
-  {
-    category: "Backend & Systems",
+    category: "Backend Architecture",
     icon: Server,
-    items: ["Node.js", "Express.js", "RESTful APIs", "GraphQL", "WebSockets", "JWT Authentication", "Microservices Architecture"],
+    items: ["Node.js", "Express.js", "RESTful APIs", "GraphQL", "WebSockets", "Microservices", "Event-Driven Systems", "Postman"],
   },
   {
-    category: "Databases & Storage",
-    icon: Layers,
-    items: ["PostgreSQL", "MySQL", "Supabase", "Prisma ORM", "Redis Caching", "Cloudflare R2", "AWS S3"],
+    category: "AI & Voice Agents",
+    icon: Bot,
+    items: ["Voice-Powered Agents", "Web Speech API (STT / TTS)", "OpenAI API", "Claude API", "LangChain", "RAG Pipelines", "AI Developer Tooling"],
   },
   {
-    category: "Cloud, DevOps & Tools",
-    icon: Cpu,
-    items: ["Vercel", "AWS (EC2, S3)", "Docker", "Git & GitHub Actions", "CI/CD Pipelines", "Postman", "Linux", "Figma to Code"],
+    category: "Application & System Security",
+    icon: ShieldCheck,
+    items: ["JWT Auth & Refresh Rotation", "Role-Based Access Control (RBAC)", "Zod Schema Validation", "SQL Injection Defense", "XSS & CSRF Mitigation", "Rate Limiting & Helmet"],
   },
   {
-    category: "AI & Intelligent Systems",
-    icon: Sparkles,
-    items: ["OpenAI API", "Claude API", "LangChain", "RAG Pipelines", "Vector Embeddings", "Prompt Engineering"],
+    category: "Cross-Platform Mobile",
+    icon: Smartphone,
+    items: ["React Native", "Expo EAS", "iOS Development", "Android Development", "React Navigation", "Offline-First Sync", "Push Notifications"],
+  },
+  {
+    category: "Databases & Cloud Infrastructure",
+    icon: Database,
+    items: ["PostgreSQL", "MySQL", "Supabase", "Prisma ORM", "Redis Caching", "AWS (EC2, S3)", "Vercel", "Docker", "CI/CD"],
+  },
+];
+
+const securityPillars = [
+  {
+    icon: KeyRound,
+    title: "Hardened Authentication",
+    desc: "Implementing secure JWT access and refresh token lifecycles, bcrypt/Argon2 password hashing, and granular Role-Based Access Control (RBAC) to enforce strict authorization boundaries.",
+  },
+  {
+    icon: Shield,
+    title: "Defensive Input Validation",
+    desc: "Using strict Zod schema validation across all API endpoints, parameterized SQL queries to prevent injection, and DOM sanitization to block Cross-Site Scripting (XSS).",
+  },
+  {
+    icon: Lock,
+    title: "End-to-End Data Encryption",
+    desc: "Enforcing TLS/SSL encryption in transit, encrypting sensitive fields at rest, secure HTTP-only cookies, and zero-trust secrets management with environment isolation.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "API Protection & Rate Limiting",
+    desc: "Configuring Helmet security headers, fine-grained Cross-Origin Resource Sharing (CORS) rules, and IP-based rate limiting to insulate backends against DDoS and abuse.",
   },
 ];
 
 const careerMilestones = [
   {
     period: "2024 — Present",
-    role: "Senior Full-Stack & Mobile Developer",
+    role: "Senior Full-Stack, Mobile & AI Engineer",
     company: "Autonomous Engineering & International Consulting",
-    desc: "Leading end-to-end development of high-performance web platforms and cross-platform mobile apps for commercial clients. Architecting cloud-native solutions, real-time sync systems, and bespoke mobile experiences across iOS and Android.",
+    desc: "Engineering secure, production-grade web platforms, cross-platform mobile apps, and autonomous voice-powered AI agents (such as AtlasWave Travels). Delivering end-to-end architectures that unite modern frontend aesthetics with resilient, hardened backend systems.",
   },
   {
     period: "2022 — 2024",
     role: "Full-Stack & Mobile Systems Engineer",
-    company: "Client Solutions & Production Platforms",
-    desc: "Engineered scalable REST APIs, relational database schemas, and responsive web portals. Built tailored booking engines, inventory management software, and cross-platform mobile prototypes with React Native.",
+    company: "Commercial Platforms & High-Traffic Solutions",
+    desc: "Architected scalable REST APIs, relational PostgreSQL databases, and cross-platform mobile prototypes with React Native. Delivered secure scheduling platforms and localized commercial engines with automated cloud deployments.",
   },
   {
     period: "2020 — 2022",
-    role: "Web Application Developer",
+    role: "Full-Stack Web Developer",
     company: "Commercial Enterprises & Nonprofits",
-    desc: "Delivered customized digital storefronts, inventory portals, and payment gateway workflows for businesses including Yaa Baby Enterprise and Hope for Prisoners advocacy portal.",
+    desc: "Delivered customized digital storefronts and inventory management platforms for clients including Yaa Baby Enterprise and Hope for Prisoners advocacy portal, ensuring 100% data integrity and payment security.",
   },
   {
     period: "2019 — 2020",
     role: "Software Engineering Inception",
-    company: "Foundations & Academic Projects",
-    desc: "Mastered algorithmic programming, strict web standards, relational database design, and software lifecycle principles at USTED in Kumasi, Ghana.",
+    company: "Foundations & Academic Engineering",
+    desc: "Mastered algorithmic programming, strict web standards, relational database architecture, and computer science fundamentals at USTED in Kumasi, Ghana.",
   },
 ];
 
 const philosophy = [
   {
     icon: Terminal,
-    title: "Type-Safe & Clean Architecture",
-    desc: "Writing strongly-typed TypeScript and modular architectures that are self-documenting, easily testable, and maintainable.",
+    title: "Full-Stack Craftsmanship",
+    desc: "Equal mastery across the entire stack—delivering polished, accessible frontends backed by rock-solid, high-throughput Node.js and PostgreSQL engines.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Security by Default",
+    desc: "Treating security not as an afterthought, but as an architectural foundation: defensive validation, hardened authentication, and zero-trust data boundaries.",
+  },
+  {
+    icon: Bot,
+    title: "Intelligent AI Integration",
+    desc: "Empowering user experiences with natural conversational and voice-powered AI agents, while using AI engineering tools to accelerate development velocity.",
   },
   {
     icon: Cpu,
     title: "Performance & Low Latency",
-    desc: "Obsessing over sub-second render times, minimal bundle weights, optimized database queries, and 60fps mobile transitions.",
-  },
-  {
-    icon: CheckCircle2,
-    title: "Business & User Alignment",
-    desc: "Translating ambiguous client needs into concrete software roadmaps that directly generate measurable revenue and user delight.",
-  },
-  {
-    icon: Award,
-    title: "Production-Grade Reliability",
-    desc: "Implementing graceful error boundaries, defensive validation, secure authentication, and resilient fault recovery.",
+    desc: "Obsessing over sub-second web load times, efficient database query plans, minimal network payloads, and fluid 60fps mobile transitions.",
   },
 ];
 
 const workflowSteps = [
   {
     step: "01",
-    title: "Discovery & System Architecture",
-    desc: "Deconstructing core business objectives, user journeys, relational database schemas, and API boundary definitions before writing code.",
+    title: "Discovery & Security Modeling",
+    desc: "Deconstructing core business goals, relational schemas, API boundaries, threat models, and authentication lifecycles before writing code.",
   },
   {
     step: "02",
-    title: "Component & UI Prototyping",
-    desc: "Crafting fluid, accessible web and mobile interfaces using unified design tokens, responsive Tailwind CSS, and Figma specifications.",
+    title: "Frontend & Voice Agent Prototyping",
+    desc: "Crafting fluid, accessible web and mobile interfaces with Tailwind CSS, integrating voice synthesis/recognition and AI agent response pipelines.",
   },
   {
     step: "03",
-    title: "Backend & Data Persistence",
-    desc: "Engineering high-throughput REST APIs, auth pipelines, database indexing, and third-party webhook integrations.",
+    title: "Hardened Backend & Data Persistence",
+    desc: "Engineering high-throughput REST APIs, input sanitization, database indexing, rate-limiting, and encrypted persistence in PostgreSQL.",
   },
   {
     step: "04",
-    title: "Verification & Cloud Delivery",
-    desc: "Rigorous cross-device testing, bundle optimization, security audits, and automated zero-downtime CI/CD deployment to Vercel and AWS.",
+    title: "Verification, Auditing & Cloud Delivery",
+    desc: "Rigorous vulnerability scanning, cross-device testing, bundle optimization, and zero-downtime CI/CD automated deployment to Vercel and AWS.",
   },
 ];
 
 const valuePropositions = [
   {
-    title: "End-to-End Ownership",
-    desc: "From initial concept wireframes and database architecture all the way to cloud deployment and mobile app store releases, I handle the full cycle without friction.",
+    title: "Equally Strong in Backend & Frontend",
+    desc: "No gaps between client and server. I build responsive, visually stunning user interfaces and back them with rock-solid, scalable backend APIs and relational databases.",
   },
   {
-    title: "Zero Technical Debt",
-    desc: "Strict TypeScript typing, reusable component libraries, clean file hierarchies, and thorough self-documenting patterns ensure your software is future-proof.",
+    title: "Voice-Powered AI & Intelligent Agents",
+    desc: "Proven expertise integrating conversational and voice-powered AI agents (demonstrated in AtlasWave Travels) that provide hands-free recommendations and automated customer workflows.",
   },
   {
-    title: "Transparent Communication",
-    desc: "Consistent async check-ins, sprint demos, clear milestone breakdowns, and zero surprises keep stakeholders fully aligned throughout every phase.",
+    title: "Ironclad System Security",
+    desc: "All applications are protected with hardened JWT authentication, RBAC authorization, strict Zod validation, parameterized queries, and defensive error boundaries.",
   },
   {
-    title: "Conversion & Speed Focus",
-    desc: "Every 100ms shaved from load time boosts conversion. I build lightweight, optimized applications designed to maximize retention and engagement.",
+    title: "AI-Accelerated Velocity",
+    desc: "I leverage cutting-edge AI engineering tools to automate boilerplate, streamline debugging, and deliver high-quality, production-ready software in record turnaround times.",
   },
 ];
 
 const faqs = [
   {
+    q: "How do you integrate AI and voice agents into production systems?",
+    a: "In projects like AtlasWave Travels, I integrate OpenAI LLMs with bidirectional Web Speech APIs (speech recognition & natural synthesis) and custom agentic prompts. This allows users to speak directly to the application, receive spoken guidance, and automatically trigger booking actions with full data validation.",
+  },
+  {
+    q: "Are you equally proficient in both frontend and backend development?",
+    a: "Yes. My development philosophy is rooted in full-stack ownership. I architect fast, accessible interfaces with React 19, Next.js 15, and Tailwind CSS, while simultaneously engineering high-throughput backends using Node.js, Express, PostgreSQL, and Supabase.",
+  },
+  {
+    q: "How do you ensure projects and systems are well-secured?",
+    a: "Security is built in from the ground up: hardened JWT auth with refresh rotation, role-based access control, strict Zod schema validation to stop malformed payloads, parameterized queries to prevent SQL injection, DOM sanitization against XSS, and rate limiting against DDoS.",
+  },
+  {
+    q: "Do you use modern AI tools in your daily development workflow?",
+    a: "Yes. I actively use AI-assisted developer tooling to accelerate architecture scaffolding, generate test cases, refactor complex routines, and optimize queries. This allows me to build faster, smarter, and with superior precision.",
+  },
+  {
     q: "Are you available for international remote roles or contracts?",
     a: "Yes. I regularly collaborate with international teams and clients across North America, Europe, and Africa. My schedule is structured to provide comfortable working overlap across multiple timezones.",
-  },
-  {
-    q: "Can you build both the Web platform and the Mobile app for a product?",
-    a: "Absolutely. One of my greatest strengths is cross-platform synergy: by sharing business logic, TypeScript definitions, and API endpoints between Next.js and React Native, we save significant development time while ensuring 100% feature parity.",
-  },
-  {
-    q: "Do you work with existing engineering teams or solo?",
-    a: "I work effectively in both environments. I am equally comfortable jumping into an existing Git codebase with established pull-request review workflows, or taking an idea from scratch as the sole lead developer.",
-  },
-  {
-    q: "What is your primary technology preference for new projects?",
-    a: "For web applications: Next.js 15, React 19, TypeScript, and Tailwind CSS with PostgreSQL / Supabase. For mobile applications: React Native with Expo and TypeScript. For backend services: Node.js / Express with modular architecture.",
   },
 ];
 
@@ -243,14 +271,20 @@ const AboutPage = () => {
                   <h1 className="font-display text-2xl font-bold text-foreground">Rawlings Junior Asomani</h1>
                   <p className="text-primary text-sm font-semibold">Full-Stack Web & Mobile Developer</p>
                   <p className="text-muted-foreground text-xs pt-1 max-w-xs mx-auto">
-                    Building high-performance web platforms and native mobile apps with modern TypeScript, React, Next.js, and React Native.
+                    Powerhouse in Frontend & Backend engineering, voice-powered AI agents, cross-platform mobile apps, and hardened application security.
                   </p>
                 </div>
 
                 {/* Availability Badge */}
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-50 border border-orange-200/80 text-orange-800 text-xs font-medium">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  Available for Web & Mobile Projects
+                  Available for Web, Mobile & AI Projects
+                </div>
+
+                {/* Security Focus Indicator */}
+                <div className="flex items-center justify-center gap-2 text-[11px] text-muted-foreground bg-secondary/50 py-1.5 px-3 rounded-lg border border-border/60">
+                  <ShieldCheck size={13} className="text-primary" />
+                  <span className="font-medium text-foreground">Security-First Architecture</span>
                 </div>
                 
                 <div className="space-y-3 pt-4 border-t border-border text-xs text-muted-foreground text-left max-w-xs mx-auto">
@@ -292,20 +326,24 @@ const AboutPage = () => {
                 {/* Quick Info Grid */}
                 <div className="space-y-2 pt-2 text-left text-xs">
                   <div className="flex justify-between py-1.5 border-b border-border/60">
+                    <span className="text-muted-foreground">Core Superpowers:</span>
+                    <span className="font-medium text-foreground">Full-Stack, Mobile & AI</span>
+                  </div>
+                  <div className="flex justify-between py-1.5 border-b border-border/60">
+                    <span className="text-muted-foreground">AI Specialization:</span>
+                    <span className="font-medium text-primary">Voice-Powered Agents</span>
+                  </div>
+                  <div className="flex justify-between py-1.5 border-b border-border/60">
                     <span className="text-muted-foreground">Timezone:</span>
-                    <span className="font-medium text-foreground">GMT / UTC (Worldwide Overlap)</span>
+                    <span className="font-medium text-foreground">GMT / UTC (Global Overlap)</span>
                   </div>
                   <div className="flex justify-between py-1.5 border-b border-border/60">
                     <span className="text-muted-foreground">Languages:</span>
                     <span className="font-medium text-foreground">English (Fluent), Twi</span>
                   </div>
-                  <div className="flex justify-between py-1.5 border-b border-border/60">
+                  <div className="flex justify-between py-1.5">
                     <span className="text-muted-foreground">Education:</span>
                     <span className="font-medium text-foreground">B.Sc. IT (USTED)</span>
-                  </div>
-                  <div className="flex justify-between py-1.5">
-                    <span className="text-muted-foreground">Specialty:</span>
-                    <span className="font-medium text-primary">Web & Cross-Platform Mobile</span>
                   </div>
                 </div>
 
@@ -328,22 +366,105 @@ const AboutPage = () => {
               {/* Detailed Narrative Biography */}
               <ScrollReveal variant="right" className="space-y-5">
                 <div className="space-y-2">
-                  <p className="text-xs font-semibold text-primary uppercase tracking-wider">Background & Trajectory</p>
+                  <p className="text-xs font-semibold text-primary uppercase tracking-wider">Background & Philosophy</p>
                   <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground">
-                    Engineering software with purpose, clarity, and precision.
+                    Engineering secure, high-impact systems with full-stack mastery and intelligent AI.
                   </h2>
                 </div>
 
                 <div className="space-y-4 text-foreground/85 text-sm sm:text-base leading-relaxed">
                   <p>
-                    I'm <span className="text-foreground font-semibold">Rawlings Junior Asomani</span>, a full-stack software engineer based in Kumasi, Ghana, with over 5 years of professional experience building web platforms, mobile applications, and backend systems for local organizations and international clients.
+                    I'm <span className="text-foreground font-semibold">Rawlings Junior Asomani</span>, a full-stack software engineer based in Kumasi, Ghana, with over 5 years of hands-on experience delivering commercial web applications, cross-platform mobile apps, and intelligent AI systems.
                   </p>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    My engineering journey began in 2019 solving tangible business challenges: automating manual bookkeeping workflows, building custom inventory systems, and developing localized storefronts. Over time, I have engineered full-scale solutions across multiple industries—from localized retail platforms like <span className="text-foreground font-medium">Yaa Baby Enterprise</span>, to nonprofit advocacy portals like <span className="text-foreground font-medium">Hope for Prisoners</span>, to customized scheduling platforms like <span className="text-foreground font-medium">Rudi Finds Jem</span>.
+                    I pride myself on being exceptionally strong across <span className="text-foreground font-medium">both the backend and the frontend</span>. On the backend, I design resilient, high-throughput Node.js architectures, relational PostgreSQL databases, and secure RESTful APIs. On the frontend, I create fast, intuitive, and responsive interfaces with React 19, Next.js 15, and React Native for iOS and Android.
                   </p>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    What sets my work apart is genuine full-stack ownership. Rather than treating frontend, backend, or mobile as disconnected silos, I bridge the entire software lifecycle: user-centered design, strict TypeScript contracts, performant PostgreSQL queries, cloud deployment pipelines, and seamless cross-platform mobile experiences on iOS and Android.
+                    A defining pillar of my engineering capability is <span className="text-foreground font-medium">AI integration</span>. As demonstrated in my work on the <span className="text-foreground font-semibold">AtlasWave Travels</span> project, I integrated an autonomous <span className="text-foreground font-semibold">voice-powered AI agent</span> with natural speech synthesis and recognition, allowing travelers to discover destinations, plan custom itineraries, and book tours using conversational speech.
                   </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Furthermore, I love leveraging modern AI tools to accelerate development workflows, streamline complex refactoring, and automate boilerplate—allowing me to ship polished software at remarkable speed without sacrificing quality. Above all, I ensure that <span className="text-foreground font-medium">every system I build is rigorously secured</span>: protected with hardened authentication, strict input validation, data encryption, and zero-trust access controls.
+                  </p>
+                </div>
+              </ScrollReveal>
+
+              {/* Spotlight: Voice-Powered AI & AtlasWave Travels */}
+              <ScrollReveal>
+                <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-orange-50 via-card to-orange-50/30 border-2 border-orange-200/90 space-y-5 shadow-sm">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <div className="flex items-center gap-2.5">
+                      <div className="w-10 h-10 rounded-xl bg-primary text-white flex items-center justify-center shadow-md shadow-primary/25">
+                        <Mic size={20} />
+                      </div>
+                      <div>
+                        <span className="text-[10px] font-mono uppercase tracking-wider text-primary font-bold">Featured AI Case Study</span>
+                        <h3 className="font-display font-bold text-lg text-foreground">Voice-Powered AI Agent &middot; AtlasWave Travels</h3>
+                      </div>
+                    </div>
+                    <span className="text-xs font-semibold px-3 py-1 rounded-full bg-orange-100/80 text-orange-900 border border-orange-200">
+                      OpenAI + Web Speech API
+                    </span>
+                  </div>
+
+                  <p className="text-foreground/85 text-xs sm:text-sm leading-relaxed">
+                    In the <strong>AtlasWave Travels</strong> platform, I engineered a fully autonomous, voice-powered AI travel concierge. By bridging OpenAI's language models with real-time speech recognition and text-to-speech voice synthesis, users can converse naturally with the system—asking travel questions, requesting tailored recommendations, and booking tours hands-free.
+                  </p>
+
+                  <div className="grid sm:grid-cols-3 gap-3 pt-2">
+                    <div className="bg-background/90 border border-border/80 p-3.5 rounded-xl space-y-1">
+                      <div className="flex items-center gap-1.5 text-primary text-xs font-semibold">
+                        <Volume2 size={14} /> Voice Synthesis
+                      </div>
+                      <p className="text-[11px] text-muted-foreground">Natural, low-latency audio responses with speech synthesis.</p>
+                    </div>
+                    <div className="bg-background/90 border border-border/80 p-3.5 rounded-xl space-y-1">
+                      <div className="flex items-center gap-1.5 text-primary text-xs font-semibold">
+                        <Bot size={14} /> Agentic Reasoning
+                      </div>
+                      <p className="text-[11px] text-muted-foreground">Dynamic prompt pipelines generating personalized travel plans.</p>
+                    </div>
+                    <div className="bg-background/90 border border-border/80 p-3.5 rounded-xl space-y-1">
+                      <div className="flex items-center gap-1.5 text-primary text-xs font-semibold">
+                        <Sparkles size={14} /> AI-Powered Velocity
+                      </div>
+                      <p className="text-[11px] text-muted-foreground">Leveraging modern AI tools to accelerate development workflows.</p>
+                    </div>
+                  </div>
+
+                  <div className="pt-2 flex items-center justify-between">
+                    <span className="text-xs text-muted-foreground">View the live project on the Projects page</span>
+                    <Button size="sm" variant="outline" className="rounded-xl h-8 text-xs border-primary/40 text-primary hover:bg-primary/10" asChild>
+                      <Link to="/projects">Inspect AtlasWave Case Study <ArrowRight size={12} className="ml-1" /></Link>
+                    </Button>
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              {/* Robust Security & Defense Architecture */}
+              <ScrollReveal>
+                <div className="space-y-5 pt-8 border-t border-border">
+                  <div>
+                    <div className="flex items-center gap-2 text-primary mb-1">
+                      <ShieldCheck size={16} />
+                      <p className="text-xs font-semibold uppercase tracking-wider">Enterprise-Grade Protection</p>
+                    </div>
+                    <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground">Bulletproof Security Architecture</h2>
+                    <p className="text-muted-foreground text-xs sm:text-sm mt-1">
+                      Ensuring every project, database, and endpoint is hardened against modern attack vectors.
+                    </p>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-4 pt-2">
+                    {securityPillars.map((p) => (
+                      <div key={p.title} className="bg-card border border-border p-5 rounded-2xl space-y-2 hover:border-primary/40 transition-all">
+                        <div className="flex items-center gap-2 text-primary">
+                          <p.icon size={17} />
+                          <h3 className="font-display font-semibold text-sm text-foreground">{p.title}</h3>
+                        </div>
+                        <p className="text-muted-foreground text-xs leading-relaxed">{p.desc}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </ScrollReveal>
 
@@ -367,7 +488,7 @@ const AboutPage = () => {
                       <div>
                         <h3 className="font-display font-bold text-base text-foreground mb-1.5">Web Application Architecture</h3>
                         <p className="text-muted-foreground text-xs leading-relaxed">
-                          Delivering sub-second load times, server-side rendering with Next.js 15, accessible UI components, reactive state management, and optimized SEO pipelines for commercial storefronts and SaaS platforms.
+                          Sub-second load times, server-side rendering with Next.js 15, accessible UI components, reactive state management, and optimized SEO pipelines for commercial storefronts and SaaS platforms.
                         </p>
                       </div>
                       <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border/60">
@@ -387,7 +508,7 @@ const AboutPage = () => {
                       <div>
                         <h3 className="font-display font-bold text-base text-foreground mb-1.5">Cross-Platform Mobile Development</h3>
                         <p className="text-muted-foreground text-xs leading-relaxed">
-                          Engineering native-feel iOS and Android applications with unified React Native and Expo ecosystems, fluid 60fps animations, offline-first data caching, push notifications, and hardware integrations.
+                          Native-feel iOS and Android applications with unified React Native and Expo ecosystems, fluid 60fps animations, offline-first data caching, push notifications, and hardware integrations.
                         </p>
                       </div>
                       <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border/60">
@@ -601,8 +722,8 @@ const AboutPage = () => {
               <ScrollReveal>
                 <div className="p-6 rounded-3xl bg-orange-50 border border-orange-200/80 space-y-4 text-center sm:text-left sm:flex sm:items-center sm:justify-between sm:space-y-0">
                   <div className="space-y-1">
-                    <h3 className="font-display font-bold text-lg text-foreground">Have a project in mind?</h3>
-                    <p className="text-xs text-muted-foreground">Let's discuss how we can bring your web or mobile vision to reality.</p>
+                    <h3 className="font-display font-bold text-lg text-foreground">Have an ambitious project in mind?</h3>
+                    <p className="text-xs text-muted-foreground">Let's discuss how we can engineer your web, mobile, or AI-powered vision with rock-solid security.</p>
                   </div>
                   <div className="flex flex-wrap gap-3 justify-center sm:justify-end">
                     <Button size="lg" className="rounded-xl h-11 px-6 text-sm font-semibold bg-primary text-white hover:bg-primary/90 shadow-md shadow-primary/25" asChild>
