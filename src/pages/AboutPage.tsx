@@ -121,28 +121,34 @@ const securityPillars = [
 
 const careerMilestones = [
   {
-    period: "2024 — Present",
-    role: "Senior Full-Stack, Mobile & AI Engineer",
-    company: "Autonomous Engineering & International Consulting",
-    desc: "Engineering secure, production-grade web platforms, cross-platform mobile apps, payment gateways (Paystack/Stripe), SMS/email notification pipelines, and autonomous voice-powered AI agents (such as AtlasWave Travels). Delivering end-to-end architectures that unite modern frontend aesthetics with resilient, hardened backend systems.",
+    period: "2023 — Present",
+    role: "Lead Full-Stack Web, Mobile & AI Solutions Engineer",
+    company: "Autonomous Engineering & Production Contracts",
+    desc: "Engineering secure, production-grade web platforms, cross-platform mobile apps (React Native), payment gateways (Paystack Mobile Money & cards), transactional SMS/email engines, and autonomous voice-powered AI agents (Atlaswave Travels). Delivering resilient architectures with normalized database management systems (DBMS).",
   },
   {
     period: "2022 — 2024",
-    role: "Full-Stack & Mobile Systems Engineer",
-    company: "Commercial Platforms & High-Traffic Solutions",
-    desc: "Architected scalable REST APIs, relational PostgreSQL & MySQL databases, and cross-platform mobile prototypes with React Native. Delivered secure scheduling platforms, payment integrations, and localized commercial engines with automated cloud deployments.",
+    role: "Full-Stack Systems Developer & Consultant",
+    company: "Commercial Platforms & Institutional Deployments",
+    desc: "Architected scalable REST APIs, relational PostgreSQL & MySQL databases, and administrative platforms including the Hinterland Falcons PF Club portal, Nova Eye Care clinic booking system, and Elshadai auto services platform.",
   },
   {
-    period: "2020 — 2022",
-    role: "Full-Stack Web Developer",
-    company: "Commercial Enterprises & Nonprofits",
-    desc: "Delivered customized digital storefronts and inventory management platforms for clients including Yaa Baby Enterprise and Hope for Prisoners advocacy portal, integrating SMS alerts and ensuring 100% data integrity and payment security.",
+    period: "2023 — 2024",
+    role: "Computer Science & Web Development Tutor",
+    company: "University of Skills Training and Entrepreneurial Development (USTED)",
+    desc: "Instructed 60+ undergraduate students in Database Management Systems (DBMS), SQL schema normalization, JavaScript, Python, algorithm fundamentals, and secure web application development.",
   },
   {
-    period: "2019 — 2020",
-    role: "Software Engineering Inception",
-    company: "Foundations & Academic Engineering",
-    desc: "Mastered algorithmic programming, strict web standards, relational database architecture (DBMS), and computer science fundamentals at USTED in Kumasi, Ghana.",
+    period: "2021 — 2022",
+    role: "Junior Full-Stack Developer",
+    company: "Early Career & Freelance Builds",
+    desc: "Delivered customized digital storefronts, e-learning platforms (Fun Lovable Learning), and early payment webhook flows, mastering git collaboration workflows and relational databases.",
+  },
+  {
+    period: "2020 — 2023",
+    role: "Fintech Support & Financial Operations Foundations",
+    company: "KM Community Bank & Santasi Accounting",
+    desc: "Managed branch IT infrastructure and workstation security at KM Community Bank, coupled with double-entry accounting ledger reconciliation at Santasi SDA—foundational domain expertise that directly powers Rawlings' architecture of idempotent payment gateways and financial databases today.",
   },
 ];
 
