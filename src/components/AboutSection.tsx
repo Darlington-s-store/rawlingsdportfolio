@@ -8,96 +8,83 @@ import {
 
 const AboutSection = () => {
   return (
-    <section id="about" className="px-6 pt-20 pb-12 md:px-12 md:pt-24 md:pb-16 lg:px-24 xl:px-32 section-alt">
+    <section id="about" className="px-6 pt-20 pb-16 md:px-12 md:pt-24 md:pb-20 lg:px-24 xl:px-32 section-alt">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
-          <p className="text-primary font-display font-semibold text-sm uppercase tracking-widest mb-3">About</p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-10">
-            Who I <span className="text-gradient">am</span>
+          <p className="text-primary font-display font-semibold text-xs uppercase tracking-widest mb-3">Philosophy & Background</p>
+          <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight mb-12">
+            Engineering software with <span className="text-gradient">craftsmanship & purpose</span>.
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          <ScrollReveal>
-            <div className="space-y-5 text-muted-foreground leading-relaxed">
+        <div className="grid lg:grid-cols-12 gap-12 items-start mb-16">
+          {/* Narrative Left Column */}
+          <ScrollReveal className="lg:col-span-6">
+            <div className="space-y-5 text-foreground/80 leading-relaxed text-base sm:text-lg">
               <p>
-                I'm a Full-Stack Developer based in Kumasi, Ghana, with 5 years of experience building software that works. I design and build end-to-end applications, from clean frontends to optimized database schemas and APIs.
+                I approach software development from first principles: clean data models, reliable API contracts, and fast, accessible user interfaces that work flawlessly across devices.
               </p>
-              <p>
-                I enjoy working in collaborative environments where code quality and reliable systems are valued. I focus on writing maintainable, performant code that translates directly to client needs.
+              <p className="text-muted-foreground text-sm sm:text-base">
+                Over the past 5 years in Kumasi, Ghana, I have designed and deployed end-to-end applications for real organizations and commercial clients—including localized retail platforms like <span className="text-foreground font-medium">Yaa Baby Enterprise</span>, nonprofit initiatives like <span className="text-foreground font-medium">Hope for Prisoners</span>, and tailored booking engines like <span className="text-foreground font-medium">Rudi Finds Jem</span>.
               </p>
-              <p>
-                My primary stack includes React, Next.js, Node.js, Django, and PostgreSQL. I also build cross-platform mobile apps using React Native and Flutter, and work with cloud services like AWS.
+              <p className="text-muted-foreground text-sm sm:text-base">
+                My primary production stack centers on <span className="text-foreground font-medium">React, Next.js, Node.js, and PostgreSQL</span>, backed by cross-platform mobile development in React Native. I prioritize maintainable code, testable architecture, and clear client communication.
               </p>
+
+              <div className="pt-4 flex flex-wrap items-center gap-4">
+                <Button className="rounded-xl h-11 px-6 text-sm font-semibold shadow-sm" asChild>
+                  <Link to="/experience">
+                    View Career Timeline <ArrowRight size={14} className="ml-2" />
+                  </Link>
+                </Button>
+                <Button variant="outline" className="rounded-xl h-11 px-6 text-sm" asChild>
+                  <Link to="/projects">See Live Work</Link>
+                </Button>
+              </div>
             </div>
           </ScrollReveal>
 
-          <ScrollReveal variant="right">
-            <div className="grid grid-cols-2 gap-4 stagger-children">
+          {/* 4 Tangible Engineering Principles */}
+          <ScrollReveal variant="right" className="lg:col-span-6">
+            <div className="grid sm:grid-cols-2 gap-4 stagger-children">
               {[
-                { icon: Server, title: "System Architecture", desc: "Robust REST APIs and scalable backend systems" },
-                { icon: Zap, title: "AI Integration", desc: "Leveraging OpenAI and LLMs for intelligent features" },
-                { icon: Code2, title: "Frontend Mastery", desc: "Pixel-perfect React and TypeScript interfaces" },
-                { icon: Globe, title: "Full-Stack Scale", desc: "End-to-end product delivery and cloud deployment" },
+                {
+                  icon: Zap,
+                  title: "Performance First",
+                  desc: "Sub-second load times, lightweight bundle budgets, and low-bandwidth optimization designed for real-world devices.",
+                },
+                {
+                  icon: Server,
+                  title: "Type-Safe Backend",
+                  desc: "Robust REST APIs, strict TypeScript validation, and optimized relational schemas in PostgreSQL & Supabase.",
+                },
+                {
+                  icon: Code2,
+                  title: "Modern Frontend",
+                  desc: "Modular component systems built with React 19, Next.js 15, accessible ARIA patterns, and responsive Tailwind CSS.",
+                },
+                {
+                  icon: Globe,
+                  title: "Production Ownership",
+                  desc: "Hands-on delivery from architecture diagrams and UX flows to automated CI/CD deployments on Vercel and AWS.",
+                },
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="bg-card rounded-2xl p-6 border border-border card-hover stagger-item"
+                  className="bg-card rounded-2xl p-6 border border-border card-hover stagger-item flex flex-col justify-between"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <item.icon className="text-primary" size={20} />
+                  <div>
+                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                      <item.icon className="text-primary" size={20} />
+                    </div>
+                    <h3 className="font-display font-semibold text-base mb-2">{item.title}</h3>
+                    <p className="text-muted-foreground text-xs leading-relaxed">{item.desc}</p>
                   </div>
-                  <h3 className="font-display font-semibold text-sm mb-1">{item.title}</h3>
-                  <p className="text-muted-foreground text-xs leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
           </ScrollReveal>
         </div>
-
-        {/* Education Row */}
-        <ScrollReveal>
-          <div className="mt-20 pt-10 border-t border-border">
-            <h3 className="font-display text-xl font-bold mb-8">Education & Certifications</h3>
-            <div className="grid sm:grid-cols-3 gap-6 stagger-children">
-              <div className="bg-card/50 rounded-2xl p-6 border border-border/50 stagger-item">
-                <div className="flex justify-between items-start mb-2">
-                  <h4 className="font-bold text-sm">BSc Information Technology</h4>
-                  <span className="text-[10px] font-medium bg-primary/10 text-primary px-2 py-0.5 rounded-full">2022 - 2026</span>
-                </div>
-                <p className="text-muted-foreground text-xs">University of Skills Training and Entrepreneurial Development (USTED)</p>
-              </div>
-              <div className="bg-card/50 rounded-2xl p-6 border border-border/50 stagger-item">
-                <div className="flex justify-between items-start mb-2">
-                  <h4 className="font-bold text-sm">Accounting Fundamentals</h4>
-                  <span className="text-[10px] font-medium bg-primary/10 text-primary px-2 py-0.5 rounded-full">2022</span>
-                </div>
-                <p className="text-muted-foreground text-xs">Corporate Finance Institute (CFI)</p>
-              </div>
-              <div className="bg-card/50 rounded-2xl p-6 border border-border/50 stagger-item">
-                <div className="flex justify-between items-start mb-2">
-                  <h4 className="font-bold text-sm">AI Prompting Essentials</h4>
-                  <span className="text-[10px] font-medium bg-primary/10 text-primary px-2 py-0.5 rounded-full">2025</span>
-                </div>
-                <p className="text-muted-foreground text-xs">AI Prompting Essentials & Prompt Engineering</p>
-              </div>
-            </div>
-          </div>
-        </ScrollReveal>
-
-        {/* CTA Buttons */}
-        <ScrollReveal>
-          <div className="mt-12 flex flex-wrap gap-4 justify-center">
-            <Button className="rounded-xl h-11 px-6 text-sm" asChild>
-              <Link to="/projects">
-                View Projects <ArrowRight size={14} className="ml-2" />
-              </Link>
-            </Button>
-            <Button variant="outline" className="rounded-xl h-11 px-6 text-sm" asChild>
-              <Link to="/contact">Let's Connect</Link>
-            </Button>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   );
