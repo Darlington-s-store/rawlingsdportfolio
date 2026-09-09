@@ -13,7 +13,7 @@ const Footer = () => {
               <div className="w-10 h-10 rounded-xl overflow-hidden border border-white/10 group-hover:border-primary/50 transition-all duration-300">
                 <img src={logo} alt="Logo" className="w-full h-full object-cover" />
               </div>
-              <span className="font-display font-bold text-lg tracking-tight">Asomani Rawlings <span className="text-primary">Junior</span></span>
+              <span className="font-display font-bold text-lg tracking-tight">Rawlings Junior <span className="text-primary">Asomani</span></span>
             </Link>
             <p className="text-sm text-gray-400 max-w-xs leading-relaxed">
               Full-stack software developer building scalable web apps, APIs, and mobile solutions from Kumasi, Ghana.
