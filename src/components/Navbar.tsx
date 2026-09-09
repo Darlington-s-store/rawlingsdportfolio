@@ -28,8 +28,8 @@ const Navbar = () => {
           <div className="w-9 h-9 rounded-xl overflow-hidden border border-border/60 group-hover:border-primary/40 transition-all duration-300 shadow-sm shrink-0">
             <img src={logo} alt="Logo" className="w-full h-full object-cover scale-110 group-hover:scale-125 transition-transform duration-500" />
           </div>
-          <span className="font-display font-bold text-sm sm:text-base md:text-lg tracking-tight">
-            Rawlings <span className="hidden sm:inline">Junior </span><span className="text-primary">Asomani</span>
+          <span className="font-display font-bold text-[13px] min-[360px]:text-sm sm:text-base md:text-lg tracking-tight whitespace-nowrap">
+            Rawlings Junior <span className="text-primary">Asomani</span>
           </span>
         </Link>
 
