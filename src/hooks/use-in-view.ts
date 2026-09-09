@@ -15,15 +15,24 @@ export function useInView(options?: IntersectionObserverInit) {
 
     const obs = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting || entry.intersectionRatio > 0) {
           setInView(true);
           obs.unobserve(el);
         }
       },
-      { threshold: 0.05, rootMargin: "50px", ...options },
+      { threshold: 0, rootMargin: "120px 0px", ...options },
     );
     obs.observe(el);
-    return () => obs.disconnect();
+
+    // Failsafe timer: ensures content reveals even if scrolling fast or observer fails
+    const timer = setTimeout(() => {
+      setInView(true);
+    }, 1000);
+
+    return () => {
+      obs.disconnect();
+      clearTimeout(timer);
+    };
   }, []);
 
   return { ref, inView };

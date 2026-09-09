@@ -146,7 +146,8 @@
 
 .stagger-children.in-view .stagger-item,
 .in-view .stagger-children .stagger-item,
-.in-view.stagger-children .stagger-item {
+.in-view.stagger-children .stagger-item,
+.in-view .stagger-item {
   opacity: 1;
   transform: translateY(0);
 }

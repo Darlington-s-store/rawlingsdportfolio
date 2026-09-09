@@ -41,7 +41,7 @@ const TechStackSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section id="tech" className="section-padding">
+    <section id="tech" className="px-6 pt-12 pb-20 md:px-12 md:pt-16 md:pb-24 lg:px-24 xl:px-32">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
           <p className="text-primary font-display font-semibold text-sm uppercase tracking-widest mb-3">Tech Stack</p>
@@ -50,8 +50,8 @@ const TechStackSection = () => {
           </h2>
         </ScrollReveal>
 
-        <ScrollReveal className="stagger-children">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+        <ScrollReveal>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 stagger-children">
             {categories.map((cat) => (
               <div
                 key={cat.title}

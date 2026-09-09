@@ -8,7 +8,7 @@ import {
 
 const AboutSection = () => {
   return (
-    <section id="about" className="section-padding section-alt">
+    <section id="about" className="px-6 pt-20 pb-12 md:px-12 md:pt-24 md:pb-16 lg:px-24 xl:px-32 section-alt">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
           <p className="text-primary font-display font-semibold text-sm uppercase tracking-widest mb-3">About</p>
@@ -32,8 +32,8 @@ const AboutSection = () => {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal variant="right" className="stagger-children">
-            <div className="grid grid-cols-2 gap-4">
+          <ScrollReveal variant="right">
+            <div className="grid grid-cols-2 gap-4 stagger-children">
               {[
                 { icon: Server, title: "System Architecture", desc: "Robust REST APIs and scalable backend systems" },
                 { icon: Zap, title: "AI Integration", desc: "Leveraging OpenAI and LLMs for intelligent features" },
@@ -87,7 +87,7 @@ const AboutSection = () => {
 
         {/* CTA Buttons */}
         <ScrollReveal>
-          <div className="mt-16 flex flex-wrap gap-4 justify-center">
+          <div className="mt-12 flex flex-wrap gap-4 justify-center">
             <Button className="rounded-xl h-11 px-6 text-sm" asChild>
               <Link to="/projects">
                 View Projects <ArrowRight size={14} className="ml-2" />
