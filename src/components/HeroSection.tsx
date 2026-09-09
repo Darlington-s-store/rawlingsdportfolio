@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Github, Linkedin, Globe, Smartphone } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Globe, Smartphone, CreditCard, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import heroPhoto from "@/assets/Hero.jpeg";
@@ -29,7 +29,7 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mb-10 animate-fade-up delay-1">
-              I'm <span className="text-foreground font-semibold">Rawlings Junior Asomani</span>, a software engineer with 5+ years of production experience crafting scalable web platforms and native-performance iOS & Android mobile applications using React, Next.js, React Native, Expo, Node.js, and PostgreSQL.
+              I'm <span className="text-foreground font-semibold">Rawlings Junior Asomani</span>, a software engineer with 5+ years of production experience crafting scalable web platforms, native-performance iOS & Android mobile applications, secure payment gateways (Paystack/Stripe), and voice-powered AI systems.
             </p>
 
             <ScrollReveal>
@@ -65,25 +65,45 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              {/* Dual Core Pillar Callouts */}
-              <div className="pt-6 border-t border-border/80 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl">
+              {/* 4 Core Pillars Grid */}
+              <div className="pt-6 border-t border-border/80 grid grid-cols-1 sm:grid-cols-2 gap-3.5 max-w-2xl">
                 <div className="flex items-center gap-3 p-3 rounded-xl bg-orange-50/60 border border-orange-200/50">
                   <div className="w-10 h-10 rounded-lg bg-white border border-orange-200/60 flex items-center justify-center shrink-0 text-primary shadow-xs">
-                    <Globe size={19} />
+                    <Globe size={18} />
                   </div>
                   <div>
                     <p className="font-display font-semibold text-sm text-foreground">Web Engineering</p>
-                    <p className="text-xs text-muted-foreground">React, Next.js & Node.js</p>
+                    <p className="text-xs text-muted-foreground">React 19, Next.js 15 & Node.js</p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 p-3 rounded-xl bg-orange-50/60 border border-orange-200/50">
                   <div className="w-10 h-10 rounded-lg bg-white border border-orange-200/60 flex items-center justify-center shrink-0 text-primary shadow-xs">
-                    <Smartphone size={19} />
+                    <Smartphone size={18} />
                   </div>
                   <div>
                     <p className="font-display font-semibold text-sm text-foreground">Mobile App Development</p>
                     <p className="text-xs text-muted-foreground">React Native • iOS & Android</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 p-3 rounded-xl bg-orange-50/60 border border-orange-200/50">
+                  <div className="w-10 h-10 rounded-lg bg-white border border-orange-200/60 flex items-center justify-center shrink-0 text-primary shadow-xs">
+                    <CreditCard size={18} />
+                  </div>
+                  <div>
+                    <p className="font-display font-semibold text-sm text-foreground">Payments & Messaging</p>
+                    <p className="text-xs text-muted-foreground">Paystack, Stripe, SMS & Email</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 p-3 rounded-xl bg-orange-50/60 border border-orange-200/50">
+                  <div className="w-10 h-10 rounded-lg bg-white border border-orange-200/60 flex items-center justify-center shrink-0 text-primary shadow-xs">
+                    <Bot size={18} />
+                  </div>
+                  <div>
+                    <p className="font-display font-semibold text-sm text-foreground">AI Agents & DBMS</p>
+                    <p className="text-xs text-muted-foreground">Voice AI & PostgreSQL/MySQL</p>
                   </div>
                 </div>
               </div>
