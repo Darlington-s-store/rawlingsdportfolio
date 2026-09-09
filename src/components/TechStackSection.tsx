@@ -1,21 +1,35 @@
 import { useNavigate } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
 import frontendStack from "@/assets/frontend-stack.jpg";
+import backendStack from "@/assets/backend-stack.png";
 import {
   Code2, Server, Database, Smartphone, Cloud, Brain,
 } from "lucide-react";
 
-const categories = [
+const coreStacks = [
   {
-    title: "Frontend",
+    title: "Frontend Architecture",
+    badge: "Core Specialization",
     icon: Code2,
+    image: frontendStack,
+    alt: "Frontend Stack - React 19, Next.js 15, TypeScript, Tailwind CSS",
+    description:
+      "Specialized in crafting modern, high-performance web applications, fluid micro-interactions, and scalable design systems.",
     techs: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5 & CSS3"],
   },
   {
-    title: "Backend",
+    title: "Backend & API Systems",
+    badge: "Core Specialization",
     icon: Server,
+    image: backendStack,
+    alt: "Backend Stack - Node.js, JavaScript, Python, Django",
+    description:
+      "Architecting reliable REST APIs, server-side data workflows, authentication pipelines, and optimized business logic.",
     techs: ["Node.js", "Express.js", "Python", "Django", "REST APIs"],
   },
+];
+
+const supportingCategories = [
   {
     title: "Database",
     icon: Database,
@@ -45,60 +59,72 @@ const TechStackSection = () => {
     <section id="tech" className="px-6 pt-12 pb-20 md:px-12 md:pt-16 md:pb-24 lg:px-24 xl:px-32">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
-          <p className="text-primary font-display font-semibold text-sm uppercase tracking-widest mb-3">Tech Stack</p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-10">
-            Technologies I <span className="text-gradient">work with</span>
+          <p className="text-primary font-display font-semibold text-xs uppercase tracking-widest mb-3">Production Tooling</p>
+          <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight mb-10">
+            Technologies I <span className="text-gradient">build with daily</span>
           </h2>
         </ScrollReveal>
 
-        {/* Featured First Stack: Frontend */}
-        <ScrollReveal className="mb-6">
-          <div className="bg-card rounded-2xl border border-border overflow-hidden card-hover group grid md:grid-cols-12 items-stretch shadow-sm">
-            <div className="md:col-span-5 lg:col-span-5 relative min-h-[220px] sm:min-h-[260px] overflow-hidden bg-black/20">
-              <img
-                src={frontendStack}
-                alt="Frontend Stack - React 19, Next.js 15, TypeScript, Tailwind CSS"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                loading="lazy"
-              />
-            </div>
-            <div className="p-6 md:p-8 md:col-span-7 lg:col-span-7 flex flex-col justify-between">
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Code2 className="text-primary" size={18} />
+        {/* Twin Core Pillars: Frontend & Backend */}
+        <ScrollReveal className="mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {coreStacks.map((stack) => (
+              <div
+                key={stack.title}
+                className="bg-card rounded-2xl border border-border overflow-hidden card-hover group flex flex-col justify-between shadow-sm hover:border-primary/40 hover:shadow-xl transition-all duration-300"
+              >
+                {/* Visual Header */}
+                <div className="relative w-full h-48 sm:h-56 overflow-hidden bg-black/20 border-b border-border/50">
+                  <img
+                    src={stack.image}
+                    alt={stack.alt}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* Content */}
+                <div className="p-6 sm:p-8 flex flex-col flex-1 justify-between">
+                  <div>
+                    <div className="flex items-center gap-2 mb-3">
+                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <stack.icon className="text-primary" size={17} />
+                      </div>
+                      <span className="text-[11px] font-semibold text-primary uppercase tracking-wider">
+                        {stack.badge}
+                      </span>
+                    </div>
+
+                    <h3 className="font-display text-xl sm:text-2xl font-bold mb-2">{stack.title}</h3>
+                    <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed mb-6">
+                      {stack.description}
+                    </p>
                   </div>
-                  <span className="text-xs font-semibold text-primary uppercase tracking-wider">
-                    Core Specialization
-                  </span>
-                </div>
-                <h3 className="font-display text-2xl font-bold mb-2">Frontend Engineering</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                  Specialized in building responsive, high-performance web applications and production interfaces with React 19, Next.js 15, TypeScript, and Tailwind CSS.
-                </p>
-              </div>
-              <div>
-                <p className="text-xs font-medium text-muted-foreground mb-3">Technologies in this stack:</p>
-                <div className="flex flex-wrap gap-2">
-                  {categories[0].techs.map((tech) => (
-                    <button
-                      key={tech}
-                      onClick={() => navigate(`/projects?tech=${encodeURIComponent(tech)}`)}
-                      className="text-xs font-medium bg-secondary text-secondary-foreground hover:bg-primary/25 hover:text-primary px-3.5 py-1.5 rounded-full transition-all cursor-pointer border border-transparent hover:border-primary/20 hover:scale-105 active:scale-95 duration-200"
-                    >
-                      {tech}
-                    </button>
-                  ))}
+
+                  <div>
+                    <p className="text-xs font-medium text-muted-foreground/80 mb-3">Production technologies:</p>
+                    <div className="flex flex-wrap gap-2">
+                      {stack.techs.map((tech) => (
+                        <button
+                          key={tech}
+                          onClick={() => navigate(`/projects?tech=${encodeURIComponent(tech)}`)}
+                          className="text-xs font-medium bg-secondary text-secondary-foreground hover:bg-primary/25 hover:text-primary px-3 py-1 rounded-full transition-all cursor-pointer border border-transparent hover:border-primary/20 hover:scale-105 active:scale-95 duration-200"
+                        >
+                          {tech}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </ScrollReveal>
 
-        {/* Other Tech Categories */}
+        {/* 4 Supporting Ecosystem Pillars */}
         <ScrollReveal>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 stagger-children">
-            {categories.slice(1).map((cat) => (
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 stagger-children">
+            {supportingCategories.map((cat) => (
               <div
                 key={cat.title}
                 className="bg-card rounded-2xl p-6 border border-border card-hover group stagger-item flex flex-col justify-between"
