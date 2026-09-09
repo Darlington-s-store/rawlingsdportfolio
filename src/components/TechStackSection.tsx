@@ -6,15 +6,10 @@ import databaseStack from "@/assets/database-stack.jpg";
 import mobileStack from "@/assets/mobile-stack.jpg";
 import cloudInfrastructure from "@/assets/cloud-infrastructure.jpg";
 import aiStack from "@/assets/ai-stack.jpg";
-import {
-  Code2, Server, Database, Smartphone, Cloud, Brain,
-} from "lucide-react";
-
 const coreStacks = [
   {
     title: "Frontend Architecture",
     badge: "Core Specialization",
-    icon: Code2,
     image: frontendStack,
     imageFit: "object-cover",
     imageBg: "bg-white",
@@ -26,7 +21,6 @@ const coreStacks = [
   {
     title: "Backend & API Systems",
     badge: "Core Specialization",
-    icon: Server,
     image: backendStack,
     imageFit: "object-cover",
     imageBg: "bg-white",
@@ -38,7 +32,6 @@ const coreStacks = [
   {
     title: "Database Management (DBMS)",
     badge: "Core Specialization",
-    icon: Database,
     image: databaseStack,
     imageFit: "object-contain p-4",
     imageBg: "bg-white",
@@ -50,7 +43,6 @@ const coreStacks = [
   {
     title: "Mobile App Development",
     badge: "Core Specialization",
-    icon: Smartphone,
     image: mobileStack,
     imageFit: "object-contain p-2",
     imageBg: "bg-white",
@@ -62,7 +54,6 @@ const coreStacks = [
   {
     title: "Cloud & Infrastructure",
     badge: "Core Specialization",
-    icon: Cloud,
     image: cloudInfrastructure,
     imageFit: "object-contain p-3",
     imageBg: "bg-white",
@@ -74,7 +65,6 @@ const coreStacks = [
   {
     title: "AI & Intelligent Systems",
     badge: "Core Specialization",
-    icon: Brain,
     image: aiStack,
     imageFit: "object-cover",
     imageBg: "bg-white",
@@ -101,7 +91,7 @@ const TechStackSection = () => {
         {/* 6 Core Pillars 3x2 Grid */}
         <ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {coreStacks.map((stack) => (
+            {coreStacks.map((stack, index) => (
               <div
                 key={stack.title}
                 className="bg-card rounded-2xl border border-border overflow-hidden card-hover group flex flex-col justify-between shadow-sm hover:border-primary/40 hover:shadow-xl transition-all duration-300"
@@ -119,12 +109,9 @@ const TechStackSection = () => {
                 {/* Content */}
                 <div className="p-6 sm:p-7 flex flex-col flex-1 justify-between">
                   <div>
-                    <div className="flex items-center gap-2 mb-3">
-                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                        <stack.icon className="text-primary" size={17} />
-                      </div>
-                      <span className="text-[11px] font-semibold text-primary uppercase tracking-wider">
-                        {stack.badge}
+                    <div className="flex items-center justify-between gap-2 mb-3">
+                      <span className="font-mono text-xs font-bold text-primary tracking-wider uppercase">
+                        0{index + 1} // {stack.badge}
                       </span>
                     </div>
 

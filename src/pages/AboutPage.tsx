@@ -28,25 +28,25 @@ const skills = [
 
 const enterpriseIntegrations = [
   {
-    icon: CreditCard,
+    badge: "01 // PAYMENTS & BILLING",
     title: "Payment Gateway Integrations",
     desc: "Seamless checkout, subscription billing, and transaction processing across web and mobile platforms. Expert integration with Paystack (Ghanaian Mobile Money / MoMo, Bank Cards, USSD), Stripe (Apple Pay, Google Pay, International Cards), and PayPal. Robust webhook listeners, idempotent verification, automated invoices, and multi-currency handling.",
     tags: ["Paystack", "Stripe", "Mobile Money (MoMo)", "PayPal", "Webhooks", "Idempotent Verification", "Multi-Currency"],
   },
   {
-    icon: MessageSquare,
+    badge: "02 // TRANSACTIONAL SMS",
     title: "SMS Notification & OTP Engines",
     desc: "Automated, low-latency SMS pipelines for time-sensitive alerts, two-factor authentication (2FA / OTP phone codes), instant booking confirmations, order tracking, and customer broadcasts across global and regional gateways including Twilio, Hubtel, Arkesel, and Termii.",
     tags: ["Twilio", "Hubtel SMS", "Arkesel", "2FA / OTP Verification", "Order Alerts", "Transactional SMS"],
   },
   {
-    icon: MailCheck,
+    badge: "03 // EMAIL INFRASTRUCTURE",
     title: "Transactional Email Systems",
     desc: "Production-grade email delivery for automated user onboarding drip sequences, password reset tokens, receipt delivery, and event reminders using Resend, SendGrid, NodeMailer, and AWS SES with high-deliverability DNS authentication (SPF, DKIM, DMARC).",
     tags: ["Resend", "SendGrid", "NodeMailer", "AWS SES", "HTML Email Templates", "DNS Deliverability"],
   },
   {
-    icon: Database,
+    badge: "04 // DATABASE MANAGEMENT",
     title: "Database Management Systems (DBMS)",
     desc: "Complete lifecycle database management: relational schema design, 3NF normalization, composite indexing, query performance tuning, connection pooling, and ACID transaction guarantees across PostgreSQL, MySQL, Supabase, and in-memory Redis caching.",
     tags: ["PostgreSQL", "MySQL", "Supabase", "Redis Caching", "Schema Modeling", "Automated Backups", "Query Tuning"],
@@ -456,22 +456,19 @@ const AboutPage = () => {
 
                   <div className="grid sm:grid-cols-3 gap-3 pt-2">
                     <div className="bg-background/90 border border-border/80 p-3.5 rounded-xl space-y-1">
-                      <div className="flex items-center gap-1.5 text-primary text-xs font-semibold">
-                        <Volume2 size={14} /> Voice Synthesis
-                      </div>
-                      <p className="text-[11px] text-muted-foreground">Natural, low-latency audio responses with speech synthesis.</p>
+                      <span className="font-mono text-[10px] font-bold text-primary uppercase tracking-wider block">01 / Audio & Speech</span>
+                      <p className="text-xs font-semibold text-foreground">Speech Synthesis (TTS)</p>
+                      <p className="text-[11px] text-muted-foreground">Natural, low-latency spoken responses via Web Speech API.</p>
                     </div>
                     <div className="bg-background/90 border border-border/80 p-3.5 rounded-xl space-y-1">
-                      <div className="flex items-center gap-1.5 text-primary text-xs font-semibold">
-                        <Bot size={14} /> Agentic Reasoning
-                      </div>
-                      <p className="text-[11px] text-muted-foreground">Dynamic prompt pipelines generating personalized travel plans.</p>
+                      <span className="font-mono text-[10px] font-bold text-primary uppercase tracking-wider block">02 / LLM Pipelines</span>
+                      <p className="text-xs font-semibold text-foreground">Structured Agent Prompts</p>
+                      <p className="text-[11px] text-muted-foreground">Context-aware destination discovery and itinerary planning.</p>
                     </div>
                     <div className="bg-background/90 border border-border/80 p-3.5 rounded-xl space-y-1">
-                      <div className="flex items-center gap-1.5 text-primary text-xs font-semibold">
-                        <Sparkles size={14} /> AI-Powered Velocity
-                      </div>
-                      <p className="text-[11px] text-muted-foreground">Leveraging modern AI tools to accelerate development workflows.</p>
+                      <span className="font-mono text-[10px] font-bold text-primary uppercase tracking-wider block">03 / Tooling</span>
+                      <p className="text-xs font-semibold text-foreground">Accelerated Delivery</p>
+                      <p className="text-[11px] text-muted-foreground">Using modern AI developer tools to speed up boilerplate.</p>
                     </div>
                   </div>
 
@@ -488,10 +485,7 @@ const AboutPage = () => {
               <ScrollReveal>
                 <div className="space-y-5 pt-8 border-t border-border">
                   <div>
-                    <div className="flex items-center gap-2 text-primary mb-1">
-                      <CreditCard size={16} />
-                      <p className="text-xs font-semibold uppercase tracking-wider">Production Infrastructure</p>
-                    </div>
+                    <span className="font-mono text-xs font-bold text-primary uppercase tracking-wider block mb-1">Production Infrastructure</span>
                     <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground">Payments, Communications & DBMS</h2>
                     <p className="text-muted-foreground text-xs sm:text-sm mt-1">
                       Connecting your applications to financial rails, customer communication channels, and high-performance databases.
@@ -501,10 +495,8 @@ const AboutPage = () => {
                   <div className="grid sm:grid-cols-2 gap-4 pt-2">
                     {enterpriseIntegrations.map((item) => (
                       <div key={item.title} className="bg-card border border-border p-5 rounded-2xl space-y-3 hover:border-primary/40 hover:shadow-md transition-all flex flex-col justify-between">
-                        <div className="space-y-2">
-                          <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-200/80 flex items-center justify-center text-primary">
-                            <item.icon size={20} />
-                          </div>
+                        <div className="space-y-1.5">
+                          <span className="font-mono text-[11px] font-bold text-primary tracking-wider block mb-1">{item.badge}</span>
                           <h3 className="font-display font-bold text-base text-foreground">{item.title}</h3>
                           <p className="text-muted-foreground text-xs leading-relaxed">{item.desc}</p>
                         </div>
@@ -562,12 +554,10 @@ const AboutPage = () => {
 
                   <div className="grid sm:grid-cols-2 gap-5 pt-2">
                     {/* Web Card */}
-                    <div className="bg-card border border-border p-6 rounded-2xl space-y-4 hover:border-primary/40 hover:shadow-md transition-all">
-                      <div className="w-11 h-11 rounded-xl bg-orange-50 border border-orange-200/70 flex items-center justify-center text-primary">
-                        <Globe size={22} />
-                      </div>
+                    <div className="bg-card border border-border p-6 rounded-2xl space-y-3 hover:border-primary/40 hover:shadow-md transition-all">
+                      <span className="font-mono text-xs font-bold text-primary tracking-widest block uppercase">01 // Web Architecture</span>
                       <div>
-                        <h3 className="font-display font-bold text-base text-foreground mb-1.5">Web Application Architecture</h3>
+                        <h3 className="font-display font-bold text-base text-foreground mb-1.5">Web Application Development</h3>
                         <p className="text-muted-foreground text-xs leading-relaxed">
                           Sub-second load times, server-side rendering with Next.js 15, accessible UI components, reactive state management, and optimized SEO pipelines for commercial storefronts and SaaS platforms.
                         </p>
@@ -582,10 +572,8 @@ const AboutPage = () => {
                     </div>
 
                     {/* Mobile Card */}
-                    <div className="bg-card border border-border p-6 rounded-2xl space-y-4 hover:border-primary/40 hover:shadow-md transition-all">
-                      <div className="w-11 h-11 rounded-xl bg-orange-50 border border-orange-200/70 flex items-center justify-center text-primary">
-                        <Smartphone size={22} />
-                      </div>
+                    <div className="bg-card border border-border p-6 rounded-2xl space-y-3 hover:border-primary/40 hover:shadow-md transition-all">
+                      <span className="font-mono text-xs font-bold text-primary tracking-widest block uppercase">02 // Mobile Architecture</span>
                       <div>
                         <h3 className="font-display font-bold text-base text-foreground mb-1.5">Cross-Platform Mobile Development</h3>
                         <p className="text-muted-foreground text-xs leading-relaxed">
@@ -723,10 +711,8 @@ const AboutPage = () => {
                   <h2 className="font-display text-xl font-bold text-foreground">Engineering Principles</h2>
                   <div className="grid sm:grid-cols-2 gap-4">
                     {philosophy.map((v, i) => (
-                      <div key={i} className="bg-card border border-border p-5 rounded-2xl space-y-2.5 stagger-item hover:border-primary/40 transition-all">
-                        <div className="w-9 h-9 rounded-xl bg-orange-50 border border-orange-200/60 flex items-center justify-center text-primary">
-                          <v.icon size={18} />
-                        </div>
+                      <div key={i} className="bg-card border border-border p-5 rounded-2xl space-y-2 stagger-item hover:border-primary/40 transition-all">
+                        <span className="font-mono text-xs font-bold text-primary tracking-widest block">0{i + 1} // PRINCIPLE</span>
                         <h3 className="font-display font-semibold text-sm text-foreground">{v.title}</h3>
                         <p className="text-muted-foreground text-xs leading-relaxed">{v.desc}</p>
                       </div>

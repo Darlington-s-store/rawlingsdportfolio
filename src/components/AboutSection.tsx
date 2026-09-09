@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
-import {
-  Code2, Server, Globe, Zap, ArrowRight, ShieldCheck, CreditCard
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -48,22 +46,22 @@ const AboutSection = () => {
             <div className="grid sm:grid-cols-2 gap-4 stagger-children">
               {[
                 {
-                  icon: Zap,
+                  num: "01 // PERFORMANCE",
                   title: "Performance & Low Latency",
                   desc: "Sub-second render benchmarks, minimal asset bundles, and low-bandwidth optimization designed for mobile connections.",
                 },
                 {
-                  icon: Server,
+                  num: "02 // ARCHITECTURE",
                   title: "Type-Safe Backend Services",
                   desc: "Predictable REST APIs, strict TypeScript/Zod schema validation, and optimized relational queries in PostgreSQL and MySQL.",
                 },
                 {
-                  icon: Code2,
+                  num: "03 // FRONTEND",
                   title: "Modular Frontend & Mobile",
                   desc: "Reusable component systems built with React 19, Next.js 15, and React Native, adhering to accessible WCAG design standards.",
                 },
                 {
-                  icon: ShieldCheck,
+                  num: "04 // SECURITY",
                   title: "Security & Systems Integrity",
                   desc: "Hardened authentication (JWT, RBAC), parameterized queries to prevent injection, and zero-downtime deployment pipelines.",
                 },
@@ -73,9 +71,7 @@ const AboutSection = () => {
                   className="bg-card rounded-2xl p-6 border border-border card-hover stagger-item flex flex-col justify-between"
                 >
                   <div>
-                    <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-200/60 flex items-center justify-center mb-4 text-primary">
-                      <item.icon size={20} />
-                    </div>
+                    <span className="font-mono text-[11px] font-bold text-primary tracking-wider block mb-3">{item.num}</span>
                     <h3 className="font-display font-semibold text-base mb-2 text-foreground">{item.title}</h3>
                     <p className="text-muted-foreground text-xs leading-relaxed">{item.desc}</p>
                   </div>
