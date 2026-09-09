@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import {
   MapPin, Mail, Github, Linkedin, Terminal, Cpu,
   CheckCircle2, Award, ArrowRight, Calendar, Briefcase,
-  Users, Code2, Download, Phone
+  Users, Code2, Download, Phone, Smartphone, Globe, Layers,
+  Check, Server, ShieldCheck, Zap, Clock, Sparkles, HelpCircle,
+  FolderGit2, ChevronRight, CheckCircle
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -11,38 +13,175 @@ import Footer from "@/components/Footer";
 import heroImage from "@/assets/Hero.jpeg";
 
 const skills = [
-  { name: "React / Next.js / Tailwind CSS", level: 95 },
-  { name: "TypeScript / JavaScript (Advanced)", level: 92 },
-  { name: "Node.js / Express.js / REST APIs", level: 90 },
-  { name: "Python (Django / Flask)", level: 85 },
-  { name: "PostgreSQL / MySQL / Supabase", level: 88 },
-  { name: "AI Prompting & LLM Integration", level: 93 },
-  { name: "Data Entry & CSV/Sheets Processing", level: 90 },
+  { name: "React 19 / Next.js 15 / Tailwind CSS (Web Architecture)", level: 96 },
+  { name: "React Native / Expo / iOS & Android (Mobile App Dev)", level: 93 },
+  { name: "TypeScript & Scalable Frontend Architecture", level: 94 },
+  { name: "Node.js / Express.js / High-Throughput REST APIs", level: 91 },
+  { name: "PostgreSQL / MySQL / Supabase Database Architecture", level: 89 },
+  { name: "Cloud & DevOps (AWS, Vercel, Docker, CI/CD)", level: 87 },
+  { name: "AI Engineering (OpenAI API, LangChain, RAG Pipelines)", level: 88 },
+];
+
+const techArsenal = [
+  {
+    category: "Web Frontend",
+    icon: Globe,
+    items: ["React 19", "Next.js 15", "TypeScript", "Tailwind CSS", "Vite", "HTML5 & CSS3", "TanStack Query", "Redux Toolkit"],
+  },
+  {
+    category: "Mobile App Development",
+    icon: Smartphone,
+    items: ["React Native", "Expo EAS", "iOS Development", "Android Development", "React Navigation", "Offline-First Caching", "Push Notifications"],
+  },
+  {
+    category: "Backend & Systems",
+    icon: Server,
+    items: ["Node.js", "Express.js", "RESTful APIs", "GraphQL", "WebSockets", "JWT Authentication", "Microservices Architecture"],
+  },
+  {
+    category: "Databases & Storage",
+    icon: Layers,
+    items: ["PostgreSQL", "MySQL", "Supabase", "Prisma ORM", "Redis Caching", "Cloudflare R2", "AWS S3"],
+  },
+  {
+    category: "Cloud, DevOps & Tools",
+    icon: Cpu,
+    items: ["Vercel", "AWS (EC2, S3)", "Docker", "Git & GitHub Actions", "CI/CD Pipelines", "Postman", "Linux", "Figma to Code"],
+  },
+  {
+    category: "AI & Intelligent Systems",
+    icon: Sparkles,
+    items: ["OpenAI API", "Claude API", "LangChain", "RAG Pipelines", "Vector Embeddings", "Prompt Engineering"],
+  },
+];
+
+const careerMilestones = [
+  {
+    period: "2024 — Present",
+    role: "Senior Full-Stack & Mobile Developer",
+    company: "Autonomous Engineering & International Consulting",
+    desc: "Leading end-to-end development of high-performance web platforms and cross-platform mobile apps for commercial clients. Architecting cloud-native solutions, real-time sync systems, and bespoke mobile experiences across iOS and Android.",
+  },
+  {
+    period: "2022 — 2024",
+    role: "Full-Stack & Mobile Systems Engineer",
+    company: "Client Solutions & Production Platforms",
+    desc: "Engineered scalable REST APIs, relational database schemas, and responsive web portals. Built tailored booking engines, inventory management software, and cross-platform mobile prototypes with React Native.",
+  },
+  {
+    period: "2020 — 2022",
+    role: "Web Application Developer",
+    company: "Commercial Enterprises & Nonprofits",
+    desc: "Delivered customized digital storefronts, inventory portals, and payment gateway workflows for businesses including Yaa Baby Enterprise and Hope for Prisoners advocacy portal.",
+  },
+  {
+    period: "2019 — 2020",
+    role: "Software Engineering Inception",
+    company: "Foundations & Academic Projects",
+    desc: "Mastered algorithmic programming, strict web standards, relational database design, and software lifecycle principles at USTED in Kumasi, Ghana.",
+  },
 ];
 
 const philosophy = [
-  { icon: Terminal, title: "Clean Code & Typing", desc: "Strongly-typed TypeScript and modular React code that is self-documenting and maintainable." },
-  { icon: Cpu, title: "Performance First", desc: "Fast load times, lightweight bundles, and optimal database queries." },
-  { icon: CheckCircle2, title: "Business Alignment", desc: "Matching technical features directly to stakeholder needs and business goals." },
-  { icon: Award, title: "Reliable Deliveries", desc: "Production-ready apps with robust error handling and secure integrations." },
+  {
+    icon: Terminal,
+    title: "Type-Safe & Clean Architecture",
+    desc: "Writing strongly-typed TypeScript and modular architectures that are self-documenting, easily testable, and maintainable.",
+  },
+  {
+    icon: Cpu,
+    title: "Performance & Low Latency",
+    desc: "Obsessing over sub-second render times, minimal bundle weights, optimized database queries, and 60fps mobile transitions.",
+  },
+  {
+    icon: CheckCircle2,
+    title: "Business & User Alignment",
+    desc: "Translating ambiguous client needs into concrete software roadmaps that directly generate measurable revenue and user delight.",
+  },
+  {
+    icon: Award,
+    title: "Production-Grade Reliability",
+    desc: "Implementing graceful error boundaries, defensive validation, secure authentication, and resilient fault recovery.",
+  },
+];
+
+const workflowSteps = [
+  {
+    step: "01",
+    title: "Discovery & System Architecture",
+    desc: "Deconstructing core business objectives, user journeys, relational database schemas, and API boundary definitions before writing code.",
+  },
+  {
+    step: "02",
+    title: "Component & UI Prototyping",
+    desc: "Crafting fluid, accessible web and mobile interfaces using unified design tokens, responsive Tailwind CSS, and Figma specifications.",
+  },
+  {
+    step: "03",
+    title: "Backend & Data Persistence",
+    desc: "Engineering high-throughput REST APIs, auth pipelines, database indexing, and third-party webhook integrations.",
+  },
+  {
+    step: "04",
+    title: "Verification & Cloud Delivery",
+    desc: "Rigorous cross-device testing, bundle optimization, security audits, and automated zero-downtime CI/CD deployment to Vercel and AWS.",
+  },
+];
+
+const valuePropositions = [
+  {
+    title: "End-to-End Ownership",
+    desc: "From initial concept wireframes and database architecture all the way to cloud deployment and mobile app store releases, I handle the full cycle without friction.",
+  },
+  {
+    title: "Zero Technical Debt",
+    desc: "Strict TypeScript typing, reusable component libraries, clean file hierarchies, and thorough self-documenting patterns ensure your software is future-proof.",
+  },
+  {
+    title: "Transparent Communication",
+    desc: "Consistent async check-ins, sprint demos, clear milestone breakdowns, and zero surprises keep stakeholders fully aligned throughout every phase.",
+  },
+  {
+    title: "Conversion & Speed Focus",
+    desc: "Every 100ms shaved from load time boosts conversion. I build lightweight, optimized applications designed to maximize retention and engagement.",
+  },
+];
+
+const faqs = [
+  {
+    q: "Are you available for international remote roles or contracts?",
+    a: "Yes. I regularly collaborate with international teams and clients across North America, Europe, and Africa. My schedule is structured to provide comfortable working overlap across multiple timezones.",
+  },
+  {
+    q: "Can you build both the Web platform and the Mobile app for a product?",
+    a: "Absolutely. One of my greatest strengths is cross-platform synergy: by sharing business logic, TypeScript definitions, and API endpoints between Next.js and React Native, we save significant development time while ensuring 100% feature parity.",
+  },
+  {
+    q: "Do you work with existing engineering teams or solo?",
+    a: "I work effectively in both environments. I am equally comfortable jumping into an existing Git codebase with established pull-request review workflows, or taking an idea from scratch as the sole lead developer.",
+  },
+  {
+    q: "What is your primary technology preference for new projects?",
+    a: "For web applications: Next.js 15, React 19, TypeScript, and Tailwind CSS with PostgreSQL / Supabase. For mobile applications: React Native with Expo and TypeScript. For backend services: Node.js / Express with modular architecture.",
+  },
 ];
 
 const references = [
   {
     name: "Prof. Portia Addai Boadu",
     role: "Lecturer, USTED",
-    phone: "+233 24 358 7655"
+    phone: "+233 24 358 7655",
   },
   {
     name: "Dr. Frank Gorden",
     role: "Senior Lecturer, USTED",
-    phone: "+233 24 365 8174"
+    phone: "+233 24 365 8174",
   },
   {
     name: "Pr. Kofi Ahenkan",
     role: "CEO, Saint Publications (Kumasi | Canada)",
-    phone: "+233 26 400 9020"
-  }
+    phone: "+233 26 400 9020",
+  },
 ];
 
 const SkillBar = ({ name, level }: { name: string; level: number }) => {
@@ -66,12 +205,12 @@ const SkillBar = ({ name, level }: { name: string; level: number }) => {
   return (
     <div ref={ref} className="space-y-1.5">
       <div className="flex justify-between text-sm">
-        <span className="text-foreground/80 font-medium">{name}</span>
-        <span className="text-primary font-mono">{level}%</span>
+        <span className="text-foreground font-medium">{name}</span>
+        <span className="text-primary font-mono font-semibold">{level}%</span>
       </div>
-      <div className="h-2 rounded-full bg-muted overflow-hidden">
+      <div className="h-2 rounded-full bg-secondary overflow-hidden">
         <div
-          className="h-full rounded-full bg-gradient-to-r from-primary to-orange-400 transition-all duration-1000 ease-out"
+          className="h-full rounded-full bg-primary transition-all duration-1000 ease-out"
           style={{ width: `${width}%` }}
         />
       </div>
@@ -96,26 +235,35 @@ const AboutPage = () => {
           <div className="grid lg:grid-cols-12 gap-12 items-start">
             {/* Left Column - Sticky Profile Details */}
             <ScrollReveal variant="left" className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
-              <div className="bg-card border border-border p-6 rounded-2xl text-center space-y-6 shadow-sm">
-                <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden border border-border">
+              <div className="bg-card border border-border p-6 rounded-3xl text-center space-y-6 shadow-sm">
+                <div className="w-36 h-36 mx-auto rounded-2xl overflow-hidden border-2 border-orange-200/80 shadow-md shadow-orange-500/5 bg-white">
                   <img src={heroImage} alt="Rawlings Junior Asomani" className="w-full h-full object-cover" />
                 </div>
                 <div className="space-y-1">
                   <h1 className="font-display text-2xl font-bold text-foreground">Rawlings Junior Asomani</h1>
-                  <p className="text-primary text-sm font-medium">Full-Stack Software Developer</p>
+                  <p className="text-primary text-sm font-semibold">Full-Stack Web & Mobile Developer</p>
+                  <p className="text-muted-foreground text-xs pt-1 max-w-xs mx-auto">
+                    Building high-performance web platforms and native mobile apps with modern TypeScript, React, Next.js, and React Native.
+                  </p>
+                </div>
+
+                {/* Availability Badge */}
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-50 border border-orange-200/80 text-orange-800 text-xs font-medium">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                  Available for Web & Mobile Projects
                 </div>
                 
-                <div className="space-y-3.5 pt-4 border-t border-border text-xs text-muted-foreground text-left max-w-xs mx-auto">
+                <div className="space-y-3 pt-4 border-t border-border text-xs text-muted-foreground text-left max-w-xs mx-auto">
                   <div className="flex items-start gap-2.5">
-                    <MapPin size={14} className="text-primary shrink-0 mt-0.5" />
+                    <MapPin size={15} className="text-primary shrink-0 mt-0.5" />
                     <span>Kumasi, Ghana (Open to Remote & Relocation)</span>
                   </div>
                   <div className="flex items-start gap-2.5">
-                    <Mail size={14} className="text-primary shrink-0 mt-0.5" />
-                    <span>asomanirawlingsjunior5333@gmail.com</span>
+                    <Mail size={15} className="text-primary shrink-0 mt-0.5" />
+                    <span className="break-all">asomanirawlingsjunior5333@gmail.com</span>
                   </div>
                   <div className="flex items-start gap-2.5">
-                    <Phone size={14} className="text-primary shrink-0 mt-0.5" />
+                    <Phone size={15} className="text-primary shrink-0 mt-0.5" />
                     <div className="flex flex-col gap-1 text-[11px]">
                       <span>+233 55 294 5333</span>
                       <span>+233 20 031 0301</span>
@@ -124,49 +272,143 @@ const AboutPage = () => {
                   </div>
                 </div>
 
-                {/* Stats */}
-                <div className="grid grid-cols-3 gap-2 py-4 border-t border-b border-border">
+                {/* Key Metrics */}
+                <div className="grid grid-cols-3 gap-2 py-4 border-t border-b border-border bg-orange-50/40 rounded-xl">
                   {[
-                    { value: "4+ Yrs", label: "Experience", icon: Calendar },
+                    { value: "5+ Yrs", label: "Experience", icon: Calendar },
                     { value: "10+", label: "Projects", icon: Briefcase },
                     { value: "8+", label: "Clients", icon: Users },
                   ].map((s) => (
                     <div key={s.label} className="text-center space-y-0.5">
                       <div className="flex items-center justify-center gap-1 text-primary">
-                        <s.icon size={12} />
+                        <s.icon size={13} />
                         <span className="font-display text-sm font-bold text-foreground">{s.value}</span>
                       </div>
-                      <p className="text-muted-foreground/70 text-[9px] uppercase tracking-widest font-medium">{s.label}</p>
+                      <p className="text-muted-foreground text-[9px] uppercase tracking-widest font-medium">{s.label}</p>
                     </div>
                   ))}
                 </div>
 
-                <div className="flex gap-2.5 justify-center">
-                  <a href="https://github.com/Darlington-s-store" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl bg-muted border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors"><Github size={16} /></a>
-                  <a href="https://www.linkedin.com/in/rawlings-junior-asomani-189a80253" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl bg-muted border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors"><Linkedin size={16} /></a>
-                  <a href="mailto:asomanirawlingsjunior5333@gmail.com" className="p-2.5 rounded-xl bg-muted border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors"><Mail size={16} /></a>
+                {/* Quick Info Grid */}
+                <div className="space-y-2 pt-2 text-left text-xs">
+                  <div className="flex justify-between py-1.5 border-b border-border/60">
+                    <span className="text-muted-foreground">Timezone:</span>
+                    <span className="font-medium text-foreground">GMT / UTC (Worldwide Overlap)</span>
+                  </div>
+                  <div className="flex justify-between py-1.5 border-b border-border/60">
+                    <span className="text-muted-foreground">Languages:</span>
+                    <span className="font-medium text-foreground">English (Fluent), Twi</span>
+                  </div>
+                  <div className="flex justify-between py-1.5 border-b border-border/60">
+                    <span className="text-muted-foreground">Education:</span>
+                    <span className="font-medium text-foreground">B.Sc. IT (USTED)</span>
+                  </div>
+                  <div className="flex justify-between py-1.5">
+                    <span className="text-muted-foreground">Specialty:</span>
+                    <span className="font-medium text-primary">Web & Cross-Platform Mobile</span>
+                  </div>
+                </div>
+
+                <div className="flex gap-3 justify-center pt-2">
+                  <a href="https://github.com/Darlington-s-store" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="p-2.5 rounded-xl bg-secondary border border-border text-foreground/70 hover:text-primary hover:border-primary/50 transition-colors">
+                    <Github size={17} />
+                  </a>
+                  <a href="https://www.linkedin.com/in/rawlings-junior-asomani-189a80253" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-2.5 rounded-xl bg-secondary border border-border text-foreground/70 hover:text-primary hover:border-primary/50 transition-colors">
+                    <Linkedin size={17} />
+                  </a>
+                  <a href="mailto:asomanirawlingsjunior5333@gmail.com" aria-label="Email" className="p-2.5 rounded-xl bg-secondary border border-border text-foreground/70 hover:text-primary hover:border-primary/50 transition-colors">
+                    <Mail size={17} />
+                  </a>
                 </div>
               </div>
             </ScrollReveal>
 
-            {/* Right Column - Narrative Content */}
-            <div className="lg:col-span-7 space-y-10">
-              {/* Bio */}
-              <ScrollReveal variant="right">
-                <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
+            {/* Right Column - Deep Narrative Content */}
+            <div className="lg:col-span-7 space-y-12">
+              {/* Detailed Narrative Biography */}
+              <ScrollReveal variant="right" className="space-y-5">
+                <div className="space-y-2">
+                  <p className="text-xs font-semibold text-primary uppercase tracking-wider">Background & Trajectory</p>
+                  <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground">
+                    Engineering software with purpose, clarity, and precision.
+                  </h2>
+                </div>
+
+                <div className="space-y-4 text-foreground/85 text-sm sm:text-base leading-relaxed">
                   <p>
-                    I'm a software engineer based in Kumasi, Ghana, with 5 years of experience building web applications, APIs, and mobile clients. I design end-to-end solutions - from React frontends to optimized PostgreSQL schemas.
+                    I'm <span className="text-foreground font-semibold">Rawlings Junior Asomani</span>, a full-stack software engineer based in Kumasi, Ghana, with over 5 years of professional experience building web platforms, mobile applications, and backend systems for local organizations and international clients.
                   </p>
-                  <p>
-                    I started freelancing in 2019 and have since worked with clients globally. I focus on clean architecture, type-safe code, and reliable delivery.
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    My engineering journey began in 2019 solving tangible business challenges: automating manual bookkeeping workflows, building custom inventory systems, and developing localized storefronts. Over time, I have engineered full-scale solutions across multiple industries—from localized retail platforms like <span className="text-foreground font-medium">Yaa Baby Enterprise</span>, to nonprofit advocacy portals like <span className="text-foreground font-medium">Hope for Prisoners</span>, to customized scheduling platforms like <span className="text-foreground font-medium">Rudi Finds Jem</span>.
+                  </p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    What sets my work apart is genuine full-stack ownership. Rather than treating frontend, backend, or mobile as disconnected silos, I bridge the entire software lifecycle: user-centered design, strict TypeScript contracts, performant PostgreSQL queries, cloud deployment pipelines, and seamless cross-platform mobile experiences on iOS and Android.
                   </p>
                 </div>
               </ScrollReveal>
 
-              {/* Skills */}
+              {/* Dual Web & Mobile Mastery Feature */}
               <ScrollReveal>
-                <div className="space-y-5 pt-6 border-t border-border">
-                  <h2 className="font-display text-lg font-bold text-foreground">Technical Skills</h2>
+                <div className="space-y-5 pt-8 border-t border-border">
+                  <div>
+                    <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Dual Specialization</p>
+                    <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground">Web & Mobile Application Mastery</h2>
+                    <p className="text-muted-foreground text-sm mt-1">
+                      Delivering top-tier user experiences across browsers and mobile devices with unified engineering standards.
+                    </p>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-5 pt-2">
+                    {/* Web Card */}
+                    <div className="bg-card border border-border p-6 rounded-2xl space-y-4 hover:border-primary/40 hover:shadow-md transition-all">
+                      <div className="w-11 h-11 rounded-xl bg-orange-50 border border-orange-200/70 flex items-center justify-center text-primary">
+                        <Globe size={22} />
+                      </div>
+                      <div>
+                        <h3 className="font-display font-bold text-base text-foreground mb-1.5">Web Application Architecture</h3>
+                        <p className="text-muted-foreground text-xs leading-relaxed">
+                          Delivering sub-second load times, server-side rendering with Next.js 15, accessible UI components, reactive state management, and optimized SEO pipelines for commercial storefronts and SaaS platforms.
+                        </p>
+                      </div>
+                      <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border/60">
+                        {["React 19", "Next.js 15", "TypeScript", "Tailwind CSS", "RESTful APIs"].map((tag) => (
+                          <span key={tag} className="text-[11px] font-medium bg-secondary px-2.5 py-0.5 rounded-md text-foreground">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Mobile Card */}
+                    <div className="bg-card border border-border p-6 rounded-2xl space-y-4 hover:border-primary/40 hover:shadow-md transition-all">
+                      <div className="w-11 h-11 rounded-xl bg-orange-50 border border-orange-200/70 flex items-center justify-center text-primary">
+                        <Smartphone size={22} />
+                      </div>
+                      <div>
+                        <h3 className="font-display font-bold text-base text-foreground mb-1.5">Cross-Platform Mobile Development</h3>
+                        <p className="text-muted-foreground text-xs leading-relaxed">
+                          Engineering native-feel iOS and Android applications with unified React Native and Expo ecosystems, fluid 60fps animations, offline-first data caching, push notifications, and hardware integrations.
+                        </p>
+                      </div>
+                      <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border/60">
+                        {["React Native", "Expo", "iOS", "Android", "Offline Sync"].map((tag) => (
+                          <span key={tag} className="text-[11px] font-medium bg-secondary px-2.5 py-0.5 rounded-md text-foreground">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              {/* Technical Proficiencies with Progress Bars */}
+              <ScrollReveal>
+                <div className="space-y-5 pt-8 border-t border-border">
+                  <div className="flex items-center justify-between">
+                    <h2 className="font-display text-xl font-bold text-foreground">Technical Proficiencies</h2>
+                    <span className="text-xs text-muted-foreground">Self-rated by production depth</span>
+                  </div>
                   <div className="space-y-4">
                     {skills.map((skill) => (
                       <SkillBar key={skill.name} name={skill.name} level={skill.level} />
@@ -175,35 +417,133 @@ const AboutPage = () => {
                 </div>
               </ScrollReveal>
 
-              {/* Philosophy */}
-              <ScrollReveal className="stagger-children">
-                <div className="space-y-5 pt-6 border-t border-border">
-                  <h2 className="font-display text-lg font-bold text-foreground">How I Work</h2>
+              {/* Categorized Tech Stack Arsenal */}
+              <ScrollReveal>
+                <div className="space-y-5 pt-8 border-t border-border">
+                  <div>
+                    <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Comprehensive Toolset</p>
+                    <h2 className="font-display text-xl font-bold text-foreground">Technology Matrix & Ecosystem</h2>
+                    <p className="text-muted-foreground text-xs mt-1">
+                      A categorized breakdown of the technologies, runtimes, and frameworks I use on a daily basis.
+                    </p>
+                  </div>
                   <div className="grid sm:grid-cols-2 gap-4">
-                    {philosophy.map((v, i) => (
-                      <div key={i} className="bg-card border border-border p-5 rounded-xl space-y-2 stagger-item">
-                        <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-                          <v.icon size={16} />
+                    {techArsenal.map((cat) => (
+                      <div key={cat.category} className="bg-card border border-border p-5 rounded-2xl space-y-3 hover:border-primary/40 transition-all">
+                        <div className="flex items-center gap-2 text-primary">
+                          <cat.icon size={17} />
+                          <h3 className="font-display font-semibold text-sm text-foreground">{cat.category}</h3>
                         </div>
-                        <h3 className="font-display font-semibold text-xs text-foreground">{v.title}</h3>
-                        <p className="text-muted-foreground text-[11px] leading-relaxed">{v.desc}</p>
+                        <div className="flex flex-wrap gap-1.5">
+                          {cat.items.map((item) => (
+                            <span key={item} className="text-[11px] font-medium bg-secondary/80 border border-border/60 px-2.5 py-1 rounded-md text-foreground">
+                              {item}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     ))}
                   </div>
                 </div>
               </ScrollReveal>
 
-              {/* Education */}
+              {/* Career Milestones & Journey Timeline */}
+              <ScrollReveal>
+                <div className="space-y-6 pt-8 border-t border-border">
+                  <div>
+                    <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Career Journey</p>
+                    <h2 className="font-display text-xl font-bold text-foreground">Milestones & Experience Timeline</h2>
+                  </div>
+
+                  <div className="relative border-l-2 border-orange-200 ml-3 space-y-8 pl-6">
+                    {careerMilestones.map((m, i) => (
+                      <div key={i} className="relative group">
+                        <div className="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-primary border-4 border-background" />
+                        <div className="space-y-1.5">
+                          <span className="font-mono text-xs font-semibold text-primary bg-orange-50 px-2.5 py-0.5 rounded-full border border-orange-200/80 inline-block">
+                            {m.period}
+                          </span>
+                          <h3 className="font-display font-bold text-base text-foreground">{m.role}</h3>
+                          <p className="text-xs font-medium text-muted-foreground">{m.company}</p>
+                          <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed pt-1">
+                            {m.desc}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              {/* Engineering Process */}
+              <ScrollReveal>
+                <div className="space-y-5 pt-8 border-t border-border">
+                  <div className="flex items-center justify-between">
+                    <h2 className="font-display text-xl font-bold text-foreground">My Engineering Process</h2>
+                    <span className="text-xs text-primary font-semibold uppercase tracking-wider">Concept to Production</span>
+                  </div>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    {workflowSteps.map((p) => (
+                      <div key={p.step} className="bg-card border border-border p-5 rounded-2xl space-y-2 hover:border-primary/40 transition-all">
+                        <span className="font-mono text-xs font-bold text-primary">{p.step}</span>
+                        <h3 className="font-display font-semibold text-sm text-foreground">{p.title}</h3>
+                        <p className="text-muted-foreground text-xs leading-relaxed">{p.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              {/* Why Work With Me / Value Propositions */}
+              <ScrollReveal>
+                <div className="space-y-5 pt-8 border-t border-border">
+                  <div>
+                    <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Collaboration Value</p>
+                    <h2 className="font-display text-xl font-bold text-foreground">What I Bring to Your Team</h2>
+                  </div>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    {valuePropositions.map((vp) => (
+                      <div key={vp.title} className="bg-card border border-border p-5 rounded-2xl space-y-2 hover:border-primary/40 transition-all">
+                        <div className="flex items-center gap-2 text-primary">
+                          <CheckCircle size={16} />
+                          <h3 className="font-display font-semibold text-sm text-foreground">{vp.title}</h3>
+                        </div>
+                        <p className="text-muted-foreground text-xs leading-relaxed">{vp.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              {/* Core Philosophy */}
               <ScrollReveal className="stagger-children">
-                <div className="space-y-5 pt-6 border-t border-border">
-                  <h2 className="font-display text-lg font-bold text-foreground">Education & Certifications</h2>
+                <div className="space-y-5 pt-8 border-t border-border">
+                  <h2 className="font-display text-xl font-bold text-foreground">Engineering Principles</h2>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    {philosophy.map((v, i) => (
+                      <div key={i} className="bg-card border border-border p-5 rounded-2xl space-y-2.5 stagger-item hover:border-primary/40 transition-all">
+                        <div className="w-9 h-9 rounded-xl bg-orange-50 border border-orange-200/60 flex items-center justify-center text-primary">
+                          <v.icon size={18} />
+                        </div>
+                        <h3 className="font-display font-semibold text-sm text-foreground">{v.title}</h3>
+                        <p className="text-muted-foreground text-xs leading-relaxed">{v.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              {/* Education & Certifications */}
+              <ScrollReveal className="stagger-children">
+                <div className="space-y-5 pt-8 border-t border-border">
+                  <h2 className="font-display text-xl font-bold text-foreground">Education & Certifications</h2>
                   <div className="space-y-3">
                     {[
                       { title: "Bachelor of Science - Information Technology", meta: "Expected: 2026 · USTED" },
                       { title: "Accounting Fundamentals - Certificate", meta: "2022 · Corporate Finance Institute (CFI)" },
                       { title: "AI Prompting Essentials & Prompt Engineering - Certificate", meta: "Issued: 2025" },
                     ].map((e) => (
-                      <div key={e.title} className="flex items-center justify-between bg-card border border-border p-4 rounded-xl stagger-item">
+                      <div key={e.title} className="flex items-center justify-between bg-card border border-border p-4 rounded-xl stagger-item hover:border-primary/30 transition-colors">
                         <div>
                           <h3 className="font-medium text-sm text-foreground">{e.title}</h3>
                           <p className="text-muted-foreground text-xs">{e.meta}</p>
@@ -215,16 +555,16 @@ const AboutPage = () => {
                 </div>
               </ScrollReveal>
 
-              {/* References */}
+              {/* Professional References */}
               <ScrollReveal className="stagger-children">
-                <div className="space-y-5 pt-6 border-t border-border">
-                  <h2 className="font-display text-lg font-bold text-foreground">References</h2>
+                <div className="space-y-5 pt-8 border-t border-border">
+                  <h2 className="font-display text-xl font-bold text-foreground">Professional References</h2>
                   <div className="grid sm:grid-cols-3 gap-4">
                     {references.map((r, i) => (
-                      <div key={i} className="bg-card border border-border p-4 rounded-xl space-y-2 text-left stagger-item">
+                      <div key={i} className="bg-card border border-border p-4 rounded-xl space-y-2 text-left stagger-item hover:border-primary/30 transition-colors">
                         <h3 className="font-medium text-xs text-foreground leading-tight">{r.name}</h3>
-                        <p className="text-[10px] text-primary font-medium">{r.role}</p>
-                        <p className="text-muted-foreground text-[10px] flex items-center gap-1 pt-1 border-t border-border/40 mt-1">
+                        <p className="text-[10px] text-primary font-semibold">{r.role}</p>
+                        <p className="text-muted-foreground text-[10px] flex items-center gap-1 pt-1 border-t border-border mt-1">
                           <Phone size={10} className="text-primary shrink-0" />
                           {r.phone}
                         </p>
@@ -234,18 +574,44 @@ const AboutPage = () => {
                 </div>
               </ScrollReveal>
 
-              {/* CTA */}
+              {/* Frequently Asked Questions */}
               <ScrollReveal>
-                <div className="flex flex-wrap gap-3 pt-6 border-t border-border">
-                  <Button className="rounded-xl h-10 px-5 text-sm" asChild>
-                    <Link to="/projects">View Projects <ArrowRight size={14} className="ml-2" /></Link>
-                  </Button>
-                  <Button variant="outline" className="rounded-xl h-10 px-5 text-sm" asChild>
-                    <Link to="/contact">Get in Touch</Link>
-                  </Button>
-                  <Button variant="outline" className="rounded-xl h-10 px-5 text-sm" asChild>
-                    <a href="/resume.pdf" target="_blank"><Download size={14} className="mr-2" /> Resume</a>
-                  </Button>
+                <div className="space-y-5 pt-8 border-t border-border">
+                  <div className="flex items-center gap-2 text-primary">
+                    <HelpCircle size={18} />
+                    <h2 className="font-display text-xl font-bold text-foreground">Frequently Asked Questions</h2>
+                  </div>
+                  <div className="space-y-3">
+                    {faqs.map((faq, i) => (
+                      <div key={i} className="bg-card border border-border p-5 rounded-2xl space-y-2">
+                        <h3 className="font-display font-semibold text-sm text-foreground flex items-center gap-2">
+                          <ChevronRight size={14} className="text-primary shrink-0" />
+                          {faq.q}
+                        </h3>
+                        <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed pl-5">
+                          {faq.a}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              {/* Action Callouts */}
+              <ScrollReveal>
+                <div className="p-6 rounded-3xl bg-orange-50 border border-orange-200/80 space-y-4 text-center sm:text-left sm:flex sm:items-center sm:justify-between sm:space-y-0">
+                  <div className="space-y-1">
+                    <h3 className="font-display font-bold text-lg text-foreground">Have a project in mind?</h3>
+                    <p className="text-xs text-muted-foreground">Let's discuss how we can bring your web or mobile vision to reality.</p>
+                  </div>
+                  <div className="flex flex-wrap gap-3 justify-center sm:justify-end">
+                    <Button size="lg" className="rounded-xl h-11 px-6 text-sm font-semibold bg-primary text-white hover:bg-primary/90 shadow-md shadow-primary/25" asChild>
+                      <Link to="/contact">Get in Touch <ArrowRight size={15} className="ml-2" /></Link>
+                    </Button>
+                    <Button variant="outline" size="lg" className="rounded-xl h-11 px-6 text-sm border-2 border-border bg-white text-foreground hover:border-primary hover:text-primary transition-all" asChild>
+                      <Link to="/projects">View Projects</Link>
+                    </Button>
+                  </div>
                 </div>
               </ScrollReveal>
             </div>
