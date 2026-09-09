@@ -1,6 +1,6 @@
 import projectWedding from "@/assets/wedding.png";
 import projectHope from "@/assets/hope-for-prisoners.png";
-import projectEcommerce from "@/assets/project-ecommerce.jpg";
+import projectEcommerce from "@/assets/project-ecommerce.png";
 import projectTravel from "@/assets/image.png";
 import projectLearning from "@/assets/fun.png";
 import projectNova from "@/assets/nova-eye-care.png";
@@ -103,12 +103,12 @@ export const projects: Project[] = [
   },
   {
     id: 8,
-    title: "E-Commerce Platform",
-    description: "In Progress: Building a scalable multi-vendor e-commerce solution with product catalogue, cart, order management, and vendor dashboards.",
-    techs: ["React", "TypeScript", "Node.js", "PostgreSQL", "Supabase"],
-    features: ["Product catalogue", "Order management", "Vendor dashboards", "Admin permission flows"],
-    problem: "Small vendors lack a unified, scalable ecosystem to list products, manage order state, and track earnings.",
-    solution: "Architected a multi-vendor e-commerce platform with robust role permissions, catalog tracking, and vendor metrics dashboards.",
+    title: "E-Commerce & Retail Storefront",
+    description: "Full-Stack Retail Platform: An online e-commerce marketplace featuring Ghanaian Cedi (Ghc) pricing, responsive product catalogues, detailed item showcases, and modern checkout.",
+    techs: ["React", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
+    features: ["Dynamic product catalogue", "Currency localized pricing (Ghc)", "Product detail showcases", "Cart & order management", "Dark mode support"],
+    problem: "Local merchants and customers needed a clean, localized online shopping experience with transparent pricing in Ghanaian Cedis and mobile-first browsing.",
+    solution: "Developed a fast, responsive e-commerce web application with rich product cards, real-time inventory indicators, instant search/filtering, and seamless checkout flows.",
     image: projectEcommerce,
   },
 ];
