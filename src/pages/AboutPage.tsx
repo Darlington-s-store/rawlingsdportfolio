@@ -319,9 +319,9 @@ const AboutPage = () => {
                 </div>
                 <div className="space-y-1">
                   <h1 className="font-display text-xl sm:text-2xl font-bold text-foreground">Rawlings Junior Asomani</h1>
-                  <p className="text-primary text-xs sm:text-sm font-semibold">Full-Stack Web & Mobile Developer</p>
+                  <p className="text-primary text-xs sm:text-sm font-semibold">Full-Stack Web, Mobile & AI Engineer</p>
                   <p className="text-muted-foreground text-xs pt-1 max-w-xs mx-auto">
-                    Full-stack engineer specializing in web and mobile applications, payment gateways, messaging pipelines, and database administration.
+                    Senior full-stack engineer specializing in web and mobile applications, AI engineering & voice agents, payment gateways, messaging pipelines, and database administration.
                   </p>
                 </div>
                 
@@ -535,30 +535,30 @@ const AboutPage = () => {
                 </div>
               </ScrollReveal>
 
-              {/* Dual Web & Mobile Mastery Feature */}
+              {/* Core Engineering Specializations: Web, Mobile & AI */}
               <ScrollReveal>
                 <div className="space-y-5 pt-8 border-t border-border">
                   <div>
-                    <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Dual Specialization</p>
-                    <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground">Web & Mobile Application Mastery</h2>
+                    <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">Core Specializations</p>
+                    <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground">Web, Mobile & AI Engineering</h2>
                     <p className="text-muted-foreground text-sm mt-1">
-                      Delivering top-tier user experiences across browsers and mobile devices with unified engineering standards.
+                      Delivering production systems across responsive web applications, native mobile ecosystems, and autonomous AI agents.
                     </p>
                   </div>
 
-                  <div className="grid sm:grid-cols-2 gap-5 pt-2">
+                  <div className="grid md:grid-cols-3 gap-5 pt-2">
                     {/* Web Card */}
-                    <div className="bg-card border border-border p-6 rounded-2xl space-y-3 hover:border-primary/40 hover:shadow-md transition-all">
-                      <span className="font-mono text-xs font-bold text-primary tracking-widest block uppercase">01 // Web Architecture</span>
-                      <div>
-                        <h3 className="font-display font-bold text-base text-foreground mb-1.5">Web Application Development</h3>
+                    <div className="bg-card border border-border p-6 rounded-2xl space-y-3 hover:border-primary/40 hover:shadow-md transition-all flex flex-col justify-between">
+                      <div className="space-y-3">
+                        <span className="font-mono text-xs font-bold text-primary tracking-widest block uppercase">01 // Web Architecture</span>
+                        <h3 className="font-display font-bold text-base text-foreground">Web Application Development</h3>
                         <p className="text-muted-foreground text-xs leading-relaxed">
                           Sub-second load times, server-side rendering with Next.js 15, accessible UI components, reactive state management, and optimized SEO pipelines for commercial storefronts and SaaS platforms.
                         </p>
                       </div>
                       <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border/60">
                         {["React 19", "Next.js 15", "TypeScript", "Tailwind CSS", "RESTful APIs"].map((tag) => (
-                          <span key={tag} className="text-[11px] font-medium bg-secondary px-2.5 py-0.5 rounded-md text-foreground">
+                          <span key={tag} className="text-[10px] font-medium bg-secondary px-2.5 py-0.5 rounded-md text-foreground">
                             {tag}
                           </span>
                         ))}
@@ -566,17 +566,35 @@ const AboutPage = () => {
                     </div>
 
                     {/* Mobile Card */}
-                    <div className="bg-card border border-border p-6 rounded-2xl space-y-3 hover:border-primary/40 hover:shadow-md transition-all">
-                      <span className="font-mono text-xs font-bold text-primary tracking-widest block uppercase">02 // Mobile Architecture</span>
-                      <div>
-                        <h3 className="font-display font-bold text-base text-foreground mb-1.5">Cross-Platform Mobile Development</h3>
+                    <div className="bg-card border border-border p-6 rounded-2xl space-y-3 hover:border-primary/40 hover:shadow-md transition-all flex flex-col justify-between">
+                      <div className="space-y-3">
+                        <span className="font-mono text-xs font-bold text-primary tracking-widest block uppercase">02 // Mobile Architecture</span>
+                        <h3 className="font-display font-bold text-base text-foreground">Cross-Platform Mobile Apps</h3>
                         <p className="text-muted-foreground text-xs leading-relaxed">
                           Native-feel iOS and Android applications with unified React Native and Expo ecosystems, fluid 60fps animations, offline-first data caching, push notifications, and hardware integrations.
                         </p>
                       </div>
                       <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border/60">
                         {["React Native", "Expo", "iOS", "Android", "Offline Sync"].map((tag) => (
-                          <span key={tag} className="text-[11px] font-medium bg-secondary px-2.5 py-0.5 rounded-md text-foreground">
+                          <span key={tag} className="text-[10px] font-medium bg-secondary px-2.5 py-0.5 rounded-md text-foreground">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* AI Engineering Card */}
+                    <div className="bg-card border border-border p-6 rounded-2xl space-y-3 hover:border-primary/40 hover:shadow-md transition-all flex flex-col justify-between">
+                      <div className="space-y-3">
+                        <span className="font-mono text-xs font-bold text-primary tracking-widest block uppercase">03 // AI Engineering</span>
+                        <h3 className="font-display font-bold text-base text-foreground">Autonomous AI Agents & Voice</h3>
+                        <p className="text-muted-foreground text-xs leading-relaxed">
+                          Voice-powered interactive agents (Atlaswave Travels), real-time speech recognition, structured LLM prompt workflows, OpenAI function calling, and developer tooling acceleration.
+                        </p>
+                      </div>
+                      <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border/60">
+                        {["Voice AI Agents", "OpenAI API", "Web Speech API", "LLM Prompting", "Function Calling"].map((tag) => (
+                          <span key={tag} className="text-[10px] font-medium bg-secondary px-2.5 py-0.5 rounded-md text-foreground">
                             {tag}
                           </span>
                         ))}

@@ -63,15 +63,15 @@ const coreStacks = [
     techs: ["AWS", "Google Cloud", "Vercel", "Supabase", "Docker", "Git"],
   },
   {
-    title: "AI & Intelligent Systems",
+    title: "AI Engineering & Voice Agents",
     badge: "Core Specialization",
     image: aiStack,
     imageFit: "object-cover",
     imageBg: "bg-white",
-    alt: "AI Stack - AI Integration & Intelligent Systems with LLMs, OpenAI API, LangChain, RAG",
+    alt: "AI Stack - AI Engineering, Voice Agents, OpenAI API, Speech Synthesis, LLMs",
     description:
-      "Integrating practical AI features: voice-enabled interfaces, conversational assistants, and structured prompt pipelines.",
-    techs: ["OpenAI API", "LangChain", "LLMs", "RAG Pipelines", "Prompt Engineering"],
+      "Engineering autonomous voice-driven AI agents (Atlaswave Travels), real-time speech recognition, structured LLM prompt workflows, and AI developer tooling.",
+    techs: ["Voice AI Agents", "OpenAI API", "Web Speech API", "LLM Prompting", "Function Calling", "RAG Pipelines"],
   },
 ];
 

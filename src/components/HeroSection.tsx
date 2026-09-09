@@ -19,11 +19,11 @@ const HeroSection = () => {
           {/* Left Column - Content */}
           <div className="lg:col-span-6 space-y-5 sm:space-y-6">
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] text-foreground animate-fade-up">
-              Building high-impact <span className="text-primary">web & mobile applications</span>.
+              Engineering high-impact <span className="text-primary">web, mobile & AI systems</span>.
             </h1>
 
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl animate-fade-up delay-1">
-              I'm <span className="text-foreground font-semibold">Rawlings Junior Asomani</span>, a software engineer with 5+ years of experience engineering web platforms, native iOS & Android applications with React Native, Paystack & Stripe payment systems, and production databases.
+              I'm <span className="text-foreground font-semibold">Rawlings Junior Asomani</span>, a full-stack, mobile & AI engineer with 5+ years of experience engineering production web platforms, React Native mobile apps, autonomous voice AI agents, Paystack & Stripe payment systems, and robust database architectures.
             </p>
 
             <ScrollReveal>
@@ -74,15 +74,15 @@ const HeroSection = () => {
                 </div>
 
                 <div className="space-y-1 p-2.5 sm:p-0 rounded-xl bg-orange-50/30 sm:bg-transparent border border-orange-100/60 sm:border-0">
-                  <span className="font-mono text-[10px] font-bold text-primary uppercase tracking-widest">03 / Payments</span>
-                  <p className="font-display font-bold text-xs sm:text-sm text-foreground">Paystack & Stripe</p>
-                  <p className="text-[11px] sm:text-xs text-muted-foreground">MoMo · Webhooks</p>
+                  <span className="font-mono text-[10px] font-bold text-primary uppercase tracking-widest">03 / AI Engineering</span>
+                  <p className="font-display font-bold text-xs sm:text-sm text-foreground">Voice AI & Agents</p>
+                  <p className="text-[11px] sm:text-xs text-muted-foreground">Atlaswave AI · OpenAI</p>
                 </div>
 
                 <div className="space-y-1 p-2.5 sm:p-0 rounded-xl bg-orange-50/30 sm:bg-transparent border border-orange-100/60 sm:border-0">
-                  <span className="font-mono text-[10px] font-bold text-primary uppercase tracking-widest">04 / Systems</span>
-                  <p className="font-display font-bold text-xs sm:text-sm text-foreground">PostgreSQL & APIs</p>
-                  <p className="text-[11px] sm:text-xs text-muted-foreground">SMS/Email · Voice AI</p>
+                  <span className="font-mono text-[10px] font-bold text-primary uppercase tracking-widest">04 / Payments & DBMS</span>
+                  <p className="font-display font-bold text-xs sm:text-sm text-foreground">Paystack & SQL</p>
+                  <p className="text-[11px] sm:text-xs text-muted-foreground">MoMo · SMS/Email</p>
                 </div>
               </div>
             </ScrollReveal>
