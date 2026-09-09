@@ -6,7 +6,8 @@ import {
   Users, Code2, Download, Phone, Smartphone, Globe, Layers,
   Check, Server, ShieldCheck, Zap, Clock, Sparkles, HelpCircle,
   FolderGit2, ChevronRight, CheckCircle, Mic, Volume2, Lock,
-  Shield, KeyRound, Bot, Database
+  Shield, KeyRound, Bot, Database, CreditCard, MessageSquare,
+  Send, MailCheck, BellRing, RefreshCw
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -16,11 +17,40 @@ import heroImage from "@/assets/Hero.jpeg";
 const skills = [
   { name: "React 19 / Next.js 15 / Scalable Frontend Architecture", level: 96 },
   { name: "Node.js / Express.js / High-Throughput Backend APIs", level: 95 },
-  { name: "AI Integration & Voice-Powered Agents (AtlasWave)", level: 94 },
+  { name: "Database Management Systems (PostgreSQL, MySQL, Supabase, Redis)", level: 94 },
+  { name: "Payment Integrations & Webhooks (Paystack, Stripe, MoMo)", level: 94 },
+  { name: "AI Integration & Voice-Powered Agents (AtlasWave Travels)", level: 94 },
   { name: "React Native / Expo / iOS & Android Mobile Apps", level: 93 },
+  { name: "SMS & Email Automation (Twilio, Resend, SendGrid, Hubtel)", level: 92 },
   { name: "Application Security & Hardened Auth (JWT, RBAC, Zod)", level: 92 },
-  { name: "PostgreSQL / MySQL / Supabase Database Architecture", level: 90 },
   { name: "Cloud & DevOps (AWS, Vercel, Docker, CI/CD)", level: 88 },
+];
+
+const enterpriseIntegrations = [
+  {
+    icon: CreditCard,
+    title: "Payment Gateway Integrations",
+    desc: "Seamless checkout, subscription billing, and transaction processing across web and mobile platforms. Expert integration with Paystack (Ghanaian Mobile Money / MoMo, Bank Cards, USSD), Stripe (Apple Pay, Google Pay, International Cards), and PayPal. Robust webhook listeners, idempotent verification, automated invoices, and multi-currency handling.",
+    tags: ["Paystack", "Stripe", "Mobile Money (MoMo)", "PayPal", "Webhooks", "Idempotent Verification", "Multi-Currency"],
+  },
+  {
+    icon: MessageSquare,
+    title: "SMS Notification & OTP Engines",
+    desc: "Automated, low-latency SMS pipelines for time-sensitive alerts, two-factor authentication (2FA / OTP phone codes), instant booking confirmations, order tracking, and customer broadcasts across global and regional gateways including Twilio, Hubtel, Arkesel, and Termii.",
+    tags: ["Twilio", "Hubtel SMS", "Arkesel", "2FA / OTP Verification", "Order Alerts", "Transactional SMS"],
+  },
+  {
+    icon: MailCheck,
+    title: "Transactional Email Systems",
+    desc: "Production-grade email delivery for automated user onboarding drip sequences, password reset tokens, receipt delivery, and event reminders using Resend, SendGrid, NodeMailer, and AWS SES with high-deliverability DNS authentication (SPF, DKIM, DMARC).",
+    tags: ["Resend", "SendGrid", "NodeMailer", "AWS SES", "HTML Email Templates", "DNS Deliverability"],
+  },
+  {
+    icon: Database,
+    title: "Database Management Systems (DBMS)",
+    desc: "Complete lifecycle database management: relational schema design, 3NF normalization, composite indexing, query performance tuning, connection pooling, and ACID transaction guarantees across PostgreSQL, MySQL, Supabase, and in-memory Redis caching.",
+    tags: ["PostgreSQL", "MySQL", "Supabase", "Redis Caching", "Schema Modeling", "Automated Backups", "Query Tuning"],
+  },
 ];
 
 const techArsenal = [
@@ -30,9 +60,24 @@ const techArsenal = [
     items: ["React 19", "Next.js 15", "TypeScript", "Tailwind CSS", "Vite", "TanStack Query", "Redux Toolkit", "Zustand", "Figma to Code"],
   },
   {
-    category: "Backend Architecture",
+    category: "Backend & Systems",
     icon: Server,
     items: ["Node.js", "Express.js", "RESTful APIs", "GraphQL", "WebSockets", "Microservices", "Event-Driven Systems", "Postman"],
+  },
+  {
+    category: "Payment Gateways",
+    icon: CreditCard,
+    items: ["Paystack API", "Stripe Checkout", "Mobile Money (MoMo)", "PayPal SDK", "Webhook Handlers", "Idempotent Receipts", "Multi-Currency"],
+  },
+  {
+    category: "SMS & Email Communications",
+    icon: BellRing,
+    items: ["Twilio API", "Hubtel SMS", "Arkesel Gateway", "Resend", "SendGrid", "NodeMailer", "AWS SES", "2FA / OTP Verification"],
+  },
+  {
+    category: "Database Management (DBMS)",
+    icon: Database,
+    items: ["PostgreSQL", "MySQL", "Supabase", "Prisma ORM", "Redis Caching", "Schema Normalization", "Query Indexing", "Backup Automation"],
   },
   {
     category: "AI & Voice Agents",
@@ -40,19 +85,14 @@ const techArsenal = [
     items: ["Voice-Powered Agents", "Web Speech API (STT / TTS)", "OpenAI API", "Claude API", "LangChain", "RAG Pipelines", "AI Developer Tooling"],
   },
   {
-    category: "Application & System Security",
-    icon: ShieldCheck,
-    items: ["JWT Auth & Refresh Rotation", "Role-Based Access Control (RBAC)", "Zod Schema Validation", "SQL Injection Defense", "XSS & CSRF Mitigation", "Rate Limiting & Helmet"],
-  },
-  {
     category: "Cross-Platform Mobile",
     icon: Smartphone,
     items: ["React Native", "Expo EAS", "iOS Development", "Android Development", "React Navigation", "Offline-First Sync", "Push Notifications"],
   },
   {
-    category: "Databases & Cloud Infrastructure",
-    icon: Database,
-    items: ["PostgreSQL", "MySQL", "Supabase", "Prisma ORM", "Redis Caching", "AWS (EC2, S3)", "Vercel", "Docker", "CI/CD"],
+    category: "Security & Cloud Infrastructure",
+    icon: ShieldCheck,
+    items: ["JWT Auth & RBAC", "Zod Validation", "SQL Injection Defense", "Rate Limiting", "AWS (EC2, S3)", "Vercel", "Docker", "CI/CD"],
   },
 ];
 
@@ -84,25 +124,25 @@ const careerMilestones = [
     period: "2024 — Present",
     role: "Senior Full-Stack, Mobile & AI Engineer",
     company: "Autonomous Engineering & International Consulting",
-    desc: "Engineering secure, production-grade web platforms, cross-platform mobile apps, and autonomous voice-powered AI agents (such as AtlasWave Travels). Delivering end-to-end architectures that unite modern frontend aesthetics with resilient, hardened backend systems.",
+    desc: "Engineering secure, production-grade web platforms, cross-platform mobile apps, payment gateways (Paystack/Stripe), SMS/email notification pipelines, and autonomous voice-powered AI agents (such as AtlasWave Travels). Delivering end-to-end architectures that unite modern frontend aesthetics with resilient, hardened backend systems.",
   },
   {
     period: "2022 — 2024",
     role: "Full-Stack & Mobile Systems Engineer",
     company: "Commercial Platforms & High-Traffic Solutions",
-    desc: "Architected scalable REST APIs, relational PostgreSQL databases, and cross-platform mobile prototypes with React Native. Delivered secure scheduling platforms and localized commercial engines with automated cloud deployments.",
+    desc: "Architected scalable REST APIs, relational PostgreSQL & MySQL databases, and cross-platform mobile prototypes with React Native. Delivered secure scheduling platforms, payment integrations, and localized commercial engines with automated cloud deployments.",
   },
   {
     period: "2020 — 2022",
     role: "Full-Stack Web Developer",
     company: "Commercial Enterprises & Nonprofits",
-    desc: "Delivered customized digital storefronts and inventory management platforms for clients including Yaa Baby Enterprise and Hope for Prisoners advocacy portal, ensuring 100% data integrity and payment security.",
+    desc: "Delivered customized digital storefronts and inventory management platforms for clients including Yaa Baby Enterprise and Hope for Prisoners advocacy portal, integrating SMS alerts and ensuring 100% data integrity and payment security.",
   },
   {
     period: "2019 — 2020",
     role: "Software Engineering Inception",
     company: "Foundations & Academic Engineering",
-    desc: "Mastered algorithmic programming, strict web standards, relational database architecture, and computer science fundamentals at USTED in Kumasi, Ghana.",
+    desc: "Mastered algorithmic programming, strict web standards, relational database architecture (DBMS), and computer science fundamentals at USTED in Kumasi, Ghana.",
   },
 ];
 
@@ -111,6 +151,11 @@ const philosophy = [
     icon: Terminal,
     title: "Full-Stack Craftsmanship",
     desc: "Equal mastery across the entire stack—delivering polished, accessible frontends backed by rock-solid, high-throughput Node.js and PostgreSQL engines.",
+  },
+  {
+    icon: CreditCard,
+    title: "Frictionless Transactions",
+    desc: "Integrating reliable payment gateways (Paystack, Stripe, MoMo) with verified webhooks, idempotent handlers, and instant SMS/email delivery.",
   },
   {
     icon: ShieldCheck,
@@ -122,33 +167,28 @@ const philosophy = [
     title: "Intelligent AI Integration",
     desc: "Empowering user experiences with natural conversational and voice-powered AI agents, while using AI engineering tools to accelerate development velocity.",
   },
-  {
-    icon: Cpu,
-    title: "Performance & Low Latency",
-    desc: "Obsessing over sub-second web load times, efficient database query plans, minimal network payloads, and fluid 60fps mobile transitions.",
-  },
 ];
 
 const workflowSteps = [
   {
     step: "01",
-    title: "Discovery & Security Modeling",
-    desc: "Deconstructing core business goals, relational schemas, API boundaries, threat models, and authentication lifecycles before writing code.",
+    title: "Discovery, Schema & Security Modeling",
+    desc: "Deconstructing core business goals, relational database schemas (DBMS), payment flows, API boundaries, threat models, and authentication lifecycles before writing code.",
   },
   {
     step: "02",
-    title: "Frontend & Voice Agent Prototyping",
-    desc: "Crafting fluid, accessible web and mobile interfaces with Tailwind CSS, integrating voice synthesis/recognition and AI agent response pipelines.",
+    title: "Frontend, Mobile & Voice Prototyping",
+    desc: "Crafting fluid, accessible web and mobile interfaces with Tailwind CSS, integrating voice synthesis/recognition and responsive checkout UI components.",
   },
   {
     step: "03",
-    title: "Hardened Backend & Data Persistence",
-    desc: "Engineering high-throughput REST APIs, input sanitization, database indexing, rate-limiting, and encrypted persistence in PostgreSQL.",
+    title: "Hardened Backend, Payments & Pipelines",
+    desc: "Engineering high-throughput REST APIs, Paystack/Stripe webhook listeners, SMS/email alert triggers, database indexing, and encrypted persistence in PostgreSQL.",
   },
   {
     step: "04",
     title: "Verification, Auditing & Cloud Delivery",
-    desc: "Rigorous vulnerability scanning, cross-device testing, bundle optimization, and zero-downtime CI/CD automated deployment to Vercel and AWS.",
+    desc: "Rigorous vulnerability scanning, end-to-end payment testing, cross-device verification, and zero-downtime CI/CD automated deployment to Vercel and AWS.",
   },
 ];
 
@@ -158,35 +198,39 @@ const valuePropositions = [
     desc: "No gaps between client and server. I build responsive, visually stunning user interfaces and back them with rock-solid, scalable backend APIs and relational databases.",
   },
   {
+    title: "Payment, SMS & Email Pipelines",
+    desc: "Turnkey integrations for financial transactions (Paystack, Stripe, Mobile Money) and automated customer communications via SMS and transactional email.",
+  },
+  {
+    title: "Database Management Mastery (DBMS)",
+    desc: "Deep expertise in relational schema normalization, query optimization, automated backups, and real-time synchronization across PostgreSQL, MySQL, Supabase, and Redis.",
+  },
+  {
     title: "Voice-Powered AI & Intelligent Agents",
-    desc: "Proven expertise integrating conversational and voice-powered AI agents (demonstrated in AtlasWave Travels) that provide hands-free recommendations and automated customer workflows.",
-  },
-  {
-    title: "Ironclad System Security",
-    desc: "All applications are protected with hardened JWT authentication, RBAC authorization, strict Zod validation, parameterized queries, and defensive error boundaries.",
-  },
-  {
-    title: "AI-Accelerated Velocity",
-    desc: "I leverage cutting-edge AI engineering tools to automate boilerplate, streamline debugging, and deliver high-quality, production-ready software in record turnaround times.",
+    desc: "Proven expertise integrating conversational and voice-powered AI agents (demonstrated in AtlasWave Travels) that provide hands-free recommendations and automated workflows.",
   },
 ];
 
 const faqs = [
   {
+    q: "Which payment gateways do you integrate into websites and apps?",
+    a: "I integrate both global and localized payment systems: Paystack (Ghanaian Mobile Money / MTN MoMo, Telecel Cash, AT Money, Bank Cards, USSD), Stripe (Cards, Apple Pay, Google Pay), and PayPal. All integrations include secure webhook listener verification, idempotent handlers, and automatic receipt generation.",
+  },
+  {
+    q: "Can you set up automated SMS and email notifications?",
+    a: "Yes. I engineer automated communication workflows for web, mobile, and backend systems: 2FA / OTP verification codes via SMS (using Twilio, Hubtel, or Arkesel), order confirmation SMS, and branded transactional emails (using Resend, SendGrid, NodeMailer, or AWS SES) with verified DNS records (SPF, DKIM, DMARC).",
+  },
+  {
+    q: "How do you manage Database Management Systems (DBMS)?",
+    a: "I handle the complete database lifecycle: designing normalized relational schemas (3NF), creating composite indexes for fast search, optimizing heavy SQL queries, configuring connection pooling, automating daily backups, and setting up Redis caching for ultra-fast data retrieval in PostgreSQL, MySQL, and Supabase.",
+  },
+  {
     q: "How do you integrate AI and voice agents into production systems?",
     a: "In projects like AtlasWave Travels, I integrate OpenAI LLMs with bidirectional Web Speech APIs (speech recognition & natural synthesis) and custom agentic prompts. This allows users to speak directly to the application, receive spoken guidance, and automatically trigger booking actions with full data validation.",
   },
   {
-    q: "Are you equally proficient in both frontend and backend development?",
-    a: "Yes. My development philosophy is rooted in full-stack ownership. I architect fast, accessible interfaces with React 19, Next.js 15, and Tailwind CSS, while simultaneously engineering high-throughput backends using Node.js, Express, PostgreSQL, and Supabase.",
-  },
-  {
     q: "How do you ensure projects and systems are well-secured?",
     a: "Security is built in from the ground up: hardened JWT auth with refresh rotation, role-based access control, strict Zod schema validation to stop malformed payloads, parameterized queries to prevent SQL injection, DOM sanitization against XSS, and rate limiting against DDoS.",
-  },
-  {
-    q: "Do you use modern AI tools in your daily development workflow?",
-    a: "Yes. I actively use AI-assisted developer tooling to accelerate architecture scaffolding, generate test cases, refactor complex routines, and optimize queries. This allows me to build faster, smarter, and with superior precision.",
   },
   {
     q: "Are you available for international remote roles or contracts?",
@@ -271,20 +315,20 @@ const AboutPage = () => {
                   <h1 className="font-display text-2xl font-bold text-foreground">Rawlings Junior Asomani</h1>
                   <p className="text-primary text-sm font-semibold">Full-Stack Web & Mobile Developer</p>
                   <p className="text-muted-foreground text-xs pt-1 max-w-xs mx-auto">
-                    Powerhouse in Frontend & Backend engineering, voice-powered AI agents, cross-platform mobile apps, and hardened application security.
+                    Powerhouse in Frontend & Backend engineering, Payment & SMS integrations, Database Management Systems (DBMS), and voice-powered AI.
                   </p>
                 </div>
 
                 {/* Availability Badge */}
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-50 border border-orange-200/80 text-orange-800 text-xs font-medium">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  Available for Web, Mobile & AI Projects
+                  Available for Web, Mobile, Payments & AI Projects
                 </div>
 
                 {/* Security Focus Indicator */}
                 <div className="flex items-center justify-center gap-2 text-[11px] text-muted-foreground bg-secondary/50 py-1.5 px-3 rounded-lg border border-border/60">
                   <ShieldCheck size={13} className="text-primary" />
-                  <span className="font-medium text-foreground">Security-First Architecture</span>
+                  <span className="font-medium text-foreground">Security-First & DBMS Architecture</span>
                 </div>
                 
                 <div className="space-y-3 pt-4 border-t border-border text-xs text-muted-foreground text-left max-w-xs mx-auto">
@@ -327,19 +371,19 @@ const AboutPage = () => {
                 <div className="space-y-2 pt-2 text-left text-xs">
                   <div className="flex justify-between py-1.5 border-b border-border/60">
                     <span className="text-muted-foreground">Core Superpowers:</span>
-                    <span className="font-medium text-foreground">Full-Stack, Mobile & AI</span>
+                    <span className="font-medium text-foreground">Full-Stack, Mobile, Payments & AI</span>
                   </div>
                   <div className="flex justify-between py-1.5 border-b border-border/60">
-                    <span className="text-muted-foreground">AI Specialization:</span>
-                    <span className="font-medium text-primary">Voice-Powered Agents</span>
+                    <span className="text-muted-foreground">Integrations:</span>
+                    <span className="font-medium text-primary">Paystack, Stripe, SMS & Email</span>
+                  </div>
+                  <div className="flex justify-between py-1.5 border-b border-border/60">
+                    <span className="text-muted-foreground">Database Mastery:</span>
+                    <span className="font-medium text-foreground">PostgreSQL, MySQL, Redis (DBMS)</span>
                   </div>
                   <div className="flex justify-between py-1.5 border-b border-border/60">
                     <span className="text-muted-foreground">Timezone:</span>
                     <span className="font-medium text-foreground">GMT / UTC (Global Overlap)</span>
-                  </div>
-                  <div className="flex justify-between py-1.5 border-b border-border/60">
-                    <span className="text-muted-foreground">Languages:</span>
-                    <span className="font-medium text-foreground">English (Fluent), Twi</span>
                   </div>
                   <div className="flex justify-between py-1.5">
                     <span className="text-muted-foreground">Education:</span>
@@ -366,24 +410,24 @@ const AboutPage = () => {
               {/* Detailed Narrative Biography */}
               <ScrollReveal variant="right" className="space-y-5">
                 <div className="space-y-2">
-                  <p className="text-xs font-semibold text-primary uppercase tracking-wider">Background & Philosophy</p>
+                  <p className="text-xs font-semibold text-primary uppercase tracking-wider">Background & Trajectory</p>
                   <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground">
-                    Engineering secure, high-impact systems with full-stack mastery and intelligent AI.
+                    Engineering secure, high-impact systems with full-stack mastery, payment engines, and intelligent AI.
                   </h2>
                 </div>
 
                 <div className="space-y-4 text-foreground/85 text-sm sm:text-base leading-relaxed">
                   <p>
-                    I'm <span className="text-foreground font-semibold">Rawlings Junior Asomani</span>, a full-stack software engineer based in Kumasi, Ghana, with over 5 years of hands-on experience delivering commercial web applications, cross-platform mobile apps, and intelligent AI systems.
+                    I'm <span className="text-foreground font-semibold">Rawlings Junior Asomani</span>, a full-stack software engineer based in Kumasi, Ghana, with over 5 years of hands-on experience building commercial web platforms, native mobile applications, database management systems (DBMS), and intelligent AI solutions.
                   </p>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    I pride myself on being exceptionally strong across <span className="text-foreground font-medium">both the backend and the frontend</span>. On the backend, I design resilient, high-throughput Node.js architectures, relational PostgreSQL databases, and secure RESTful APIs. On the frontend, I create fast, intuitive, and responsive interfaces with React 19, Next.js 15, and React Native for iOS and Android.
+                    I am exceptionally strong across <span className="text-foreground font-medium">both the backend and the frontend</span>. On the backend, I design resilient, high-throughput Node.js architectures, relational PostgreSQL/MySQL schemas, and secure RESTful APIs. On the frontend, I create fast, accessible, and responsive interfaces with React 19, Next.js 15, and cross-platform mobile apps using React Native for iOS and Android.
                   </p>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    A defining pillar of my engineering capability is <span className="text-foreground font-medium">AI integration</span>. As demonstrated in my work on the <span className="text-foreground font-semibold">AtlasWave Travels</span> project, I integrated an autonomous <span className="text-foreground font-semibold">voice-powered AI agent</span> with natural speech synthesis and recognition, allowing travelers to discover destinations, plan custom itineraries, and book tours using conversational speech.
+                    Beyond core programming, I specialize in critical infrastructure integrations: <span className="text-foreground font-medium">payment gateways</span> (Paystack with Mobile Money, Stripe, PayPal), <span className="text-foreground font-medium">automated SMS notification and 2FA/OTP engines</span> (Twilio, Hubtel, Arkesel), and <span className="text-foreground font-medium">transactional email pipelines</span> (Resend, SendGrid, NodeMailer). I also manage full Database Management Systems (DBMS)—optimizing indexes, normalizing schemas, and ensuring automated backup routines.
                   </p>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Furthermore, I love leveraging modern AI tools to accelerate development workflows, streamline complex refactoring, and automate boilerplate—allowing me to ship polished software at remarkable speed without sacrificing quality. Above all, I ensure that <span className="text-foreground font-medium">every system I build is rigorously secured</span>: protected with hardened authentication, strict input validation, data encryption, and zero-trust access controls.
+                    In addition, I bring proven expertise in <span className="text-foreground font-medium">AI integration</span>. As demonstrated in my work on the <span className="text-foreground font-semibold">AtlasWave Travels</span> project, I engineered an autonomous <span className="text-foreground font-semibold">voice-powered AI agent</span> with real-time speech recognition and text-to-speech audio, allowing travelers to discover destinations and book tours hands-free. I love using modern AI tools to accelerate development workflows while maintaining bulletproof security across every line of code.
                   </p>
                 </div>
               </ScrollReveal>
@@ -436,6 +480,43 @@ const AboutPage = () => {
                     <Button size="sm" variant="outline" className="rounded-xl h-8 text-xs border-primary/40 text-primary hover:bg-primary/10" asChild>
                       <Link to="/projects">Inspect AtlasWave Case Study <ArrowRight size={12} className="ml-1" /></Link>
                     </Button>
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              {/* Dedicated Section: Payments, SMS, Email & DBMS */}
+              <ScrollReveal>
+                <div className="space-y-5 pt-8 border-t border-border">
+                  <div>
+                    <div className="flex items-center gap-2 text-primary mb-1">
+                      <CreditCard size={16} />
+                      <p className="text-xs font-semibold uppercase tracking-wider">Production Infrastructure</p>
+                    </div>
+                    <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground">Payments, Communications & DBMS</h2>
+                    <p className="text-muted-foreground text-xs sm:text-sm mt-1">
+                      Connecting your applications to financial rails, customer communication channels, and high-performance databases.
+                    </p>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-4 pt-2">
+                    {enterpriseIntegrations.map((item) => (
+                      <div key={item.title} className="bg-card border border-border p-5 rounded-2xl space-y-3 hover:border-primary/40 hover:shadow-md transition-all flex flex-col justify-between">
+                        <div className="space-y-2">
+                          <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-200/80 flex items-center justify-center text-primary">
+                            <item.icon size={20} />
+                          </div>
+                          <h3 className="font-display font-bold text-base text-foreground">{item.title}</h3>
+                          <p className="text-muted-foreground text-xs leading-relaxed">{item.desc}</p>
+                        </div>
+                        <div className="flex flex-wrap gap-1.5 pt-2 border-t border-border/60">
+                          {item.tags.map((tag) => (
+                            <span key={tag} className="text-[10px] font-medium bg-secondary px-2 py-0.5 rounded-md text-foreground">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </ScrollReveal>
@@ -723,7 +804,7 @@ const AboutPage = () => {
                 <div className="p-6 rounded-3xl bg-orange-50 border border-orange-200/80 space-y-4 text-center sm:text-left sm:flex sm:items-center sm:justify-between sm:space-y-0">
                   <div className="space-y-1">
                     <h3 className="font-display font-bold text-lg text-foreground">Have an ambitious project in mind?</h3>
-                    <p className="text-xs text-muted-foreground">Let's discuss how we can engineer your web, mobile, or AI-powered vision with rock-solid security.</p>
+                    <p className="text-xs text-muted-foreground">Let's discuss how we can engineer your web, mobile, payment, or AI-powered vision with rock-solid security.</p>
                   </div>
                   <div className="flex flex-wrap gap-3 justify-center sm:justify-end">
                     <Button size="lg" className="rounded-xl h-11 px-6 text-sm font-semibold bg-primary text-white hover:bg-primary/90 shadow-md shadow-primary/25" asChild>
