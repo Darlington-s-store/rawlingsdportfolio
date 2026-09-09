@@ -56,8 +56,14 @@
     @apply border-border;
   }
 
+  html, body, #root {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    -webkit-tap-highlight-color: transparent;
   }
 
   html {
@@ -67,7 +73,7 @@
 
 @layer components {
   .section-padding {
-    @apply px-6 py-20 md:px-12 lg:px-24 xl:px-32;
+    @apply px-4 sm:px-6 py-16 md:py-20 md:px-12 lg:px-24 xl:px-32;
   }
 
   .section-alt {

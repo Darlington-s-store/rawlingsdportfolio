@@ -293,27 +293,27 @@ const SkillBar = ({ name, level }: { name: string; level: number }) => {
 const AboutPage = () => {
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col">
-      <main className="flex-1 pt-28 pb-20 px-6">
+      <main className="flex-1 pt-24 sm:pt-28 pb-16 sm:pb-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Breadcrumb */}
           <ScrollReveal>
-            <div className="flex items-center gap-2 text-xs text-muted-foreground mb-10">
+            <div className="flex items-center gap-2 text-xs text-muted-foreground mb-8 sm:mb-10">
               <Link to="/" className="hover:text-primary transition-colors">Home</Link>
               <span className="text-muted-foreground/30">/</span>
               <span className="text-foreground font-medium">About Me</span>
             </div>
           </ScrollReveal>
 
-          <div className="grid lg:grid-cols-12 gap-12 items-start">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             {/* Left Column - Sticky Profile Details */}
             <ScrollReveal variant="left" className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
-              <div className="bg-card border border-border p-6 rounded-3xl text-center space-y-6 shadow-sm">
-                <div className="w-36 h-36 mx-auto rounded-2xl overflow-hidden border-2 border-orange-200/80 shadow-md shadow-orange-500/5 bg-white">
+              <div className="bg-card border border-border p-5 sm:p-6 rounded-3xl text-center space-y-5 sm:space-y-6 shadow-sm">
+                <div className="w-32 h-32 sm:w-36 sm:h-36 mx-auto rounded-2xl overflow-hidden border-2 border-orange-200/80 shadow-md shadow-orange-500/5 bg-white">
                   <img src={heroImage} alt="Rawlings Junior Asomani" className="w-full h-full object-cover" />
                 </div>
                 <div className="space-y-1">
-                  <h1 className="font-display text-2xl font-bold text-foreground">Rawlings Junior Asomani</h1>
-                  <p className="text-primary text-sm font-semibold">Full-Stack Web & Mobile Developer</p>
+                  <h1 className="font-display text-xl sm:text-2xl font-bold text-foreground">Rawlings Junior Asomani</h1>
+                  <p className="text-primary text-xs sm:text-sm font-semibold">Full-Stack Web & Mobile Developer</p>
                   <p className="text-muted-foreground text-xs pt-1 max-w-xs mx-auto">
                     Full-stack engineer specializing in web and mobile applications, payment gateways, messaging pipelines, and database administration.
                   </p>
@@ -339,7 +339,7 @@ const AboutPage = () => {
                 </div>
 
                 {/* Key Metrics */}
-                <div className="grid grid-cols-3 gap-2 py-4 border-t border-b border-border bg-orange-50/40 rounded-xl">
+                <div className="grid grid-cols-3 gap-2 py-3.5 border-t border-b border-border bg-orange-50/40 rounded-xl">
                   {[
                     { value: "5+ Yrs", label: "Experience", icon: Calendar },
                     { value: "10+", label: "Projects", icon: Briefcase },
@@ -356,24 +356,24 @@ const AboutPage = () => {
                 </div>
 
                 {/* Quick Info Grid */}
-                <div className="space-y-2 pt-2 text-left text-xs">
-                  <div className="flex justify-between py-1.5 border-b border-border/60">
+                <div className="space-y-1.5 pt-1 text-left text-xs">
+                  <div className="flex flex-col sm:flex-row sm:justify-between py-1.5 border-b border-border/60 gap-0.5">
                     <span className="text-muted-foreground">Core Expertise:</span>
                     <span className="font-medium text-foreground">Full-Stack, Mobile, Payments & AI</span>
                   </div>
-                  <div className="flex justify-between py-1.5 border-b border-border/60">
+                  <div className="flex flex-col sm:flex-row sm:justify-between py-1.5 border-b border-border/60 gap-0.5">
                     <span className="text-muted-foreground">Integrations:</span>
                     <span className="font-medium text-primary">Paystack, Stripe, SMS & Email</span>
                   </div>
-                  <div className="flex justify-between py-1.5 border-b border-border/60">
+                  <div className="flex flex-col sm:flex-row sm:justify-between py-1.5 border-b border-border/60 gap-0.5">
                     <span className="text-muted-foreground">Database Administration:</span>
                     <span className="font-medium text-foreground">PostgreSQL, MySQL, Redis (DBMS)</span>
                   </div>
-                  <div className="flex justify-between py-1.5 border-b border-border/60">
+                  <div className="flex flex-col sm:flex-row sm:justify-between py-1.5 border-b border-border/60 gap-0.5">
                     <span className="text-muted-foreground">Timezone:</span>
                     <span className="font-medium text-foreground">GMT / UTC (Global Overlap)</span>
                   </div>
-                  <div className="flex justify-between py-1.5">
+                  <div className="flex flex-col sm:flex-row sm:justify-between py-1.5 gap-0.5">
                     <span className="text-muted-foreground">Education:</span>
                     <span className="font-medium text-foreground">B.Sc. IT (USTED)</span>
                   </div>
@@ -780,11 +780,11 @@ const AboutPage = () => {
                     <h3 className="font-display font-bold text-lg text-foreground">Ready to build or improve your product?</h3>
                     <p className="text-xs text-muted-foreground">Available for full-time engineering roles, contract development, and technical consulting.</p>
                   </div>
-                  <div className="flex flex-wrap gap-3 justify-center sm:justify-end">
-                    <Button size="lg" className="rounded-xl h-11 px-6 text-sm font-semibold bg-primary text-white hover:bg-primary/90 shadow-md shadow-primary/25" asChild>
+                  <div className="flex flex-col sm:flex-row gap-3 justify-center sm:justify-end w-full sm:w-auto">
+                    <Button size="lg" className="rounded-xl h-11 px-6 text-sm font-semibold bg-primary text-white hover:bg-primary/90 shadow-md shadow-primary/25 w-full sm:w-auto" asChild>
                       <Link to="/contact">Get in Touch <ArrowRight size={15} className="ml-2" /></Link>
                     </Button>
-                    <Button variant="outline" size="lg" className="rounded-xl h-11 px-6 text-sm border-2 border-border bg-white text-foreground hover:border-primary hover:text-primary transition-all" asChild>
+                    <Button variant="outline" size="lg" className="rounded-xl h-11 px-6 text-sm border-2 border-border bg-white text-foreground hover:border-primary hover:text-primary transition-all w-full sm:w-auto" asChild>
                       <Link to="/projects">View Projects</Link>
                     </Button>
                   </div>

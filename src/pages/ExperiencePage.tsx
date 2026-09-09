@@ -202,7 +202,7 @@ const ExperiencePage = () => {
     <div className="min-h-screen bg-background text-foreground flex flex-col">
       <Navbar />
 
-      <main className="flex-1 pt-28 pb-20 px-6">
+      <main className="flex-1 pt-24 sm:pt-28 pb-16 sm:pb-20 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-xs text-muted-foreground mb-8 animate-fade-up">
@@ -212,39 +212,39 @@ const ExperiencePage = () => {
           </div>
 
           {/* Header */}
-          <div className="space-y-3 mb-10 text-center sm:text-left">
-            <h1 className="font-display text-3xl sm:text-4xl font-bold">Experience & Education</h1>
-            <p className="text-muted-foreground max-w-xl text-sm leading-relaxed">
+          <div className="space-y-3 mb-8 sm:mb-10 text-center sm:text-left">
+            <h1 className="font-display text-2xl sm:text-4xl font-bold">Experience & Education</h1>
+            <p className="text-muted-foreground max-w-xl text-xs sm:text-sm leading-relaxed">
               Discover my professional developer journey, administrative background, and technical credentials.
             </p>
           </div>
 
           {/* Tabs Navigation */}
-          <div className="flex justify-center sm:justify-start border-b border-border mb-10">
-            <div className="flex gap-8">
+          <div className="flex justify-start border-b border-border mb-8 sm:mb-10 overflow-x-auto no-scrollbar">
+            <div className="flex gap-4 sm:gap-8 min-w-full sm:min-w-0">
               <button
                 onClick={() => setActiveTab("work")}
-                className={`pb-4 text-sm font-semibold tracking-wide border-b-2 transition-all duration-300 ${
+                className={`pb-3.5 sm:pb-4 text-xs sm:text-sm font-semibold tracking-wide border-b-2 transition-all duration-300 shrink-0 ${
                   activeTab === "work"
                     ? "border-primary text-foreground"
                     : "border-transparent text-muted-foreground hover:text-foreground"
                 }`}
               >
-                <div className="flex items-center gap-2">
-                  <Briefcase size={16} />
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <Briefcase size={15} />
                   <span>Work Experience</span>
                 </div>
               </button>
               <button
                 onClick={() => setActiveTab("education")}
-                className={`pb-4 text-sm font-semibold tracking-wide border-b-2 transition-all duration-300 ${
+                className={`pb-3.5 sm:pb-4 text-xs sm:text-sm font-semibold tracking-wide border-b-2 transition-all duration-300 shrink-0 ${
                   activeTab === "education"
                     ? "border-primary text-foreground"
                     : "border-transparent text-muted-foreground hover:text-foreground"
                 }`}
               >
-                <div className="flex items-center gap-2">
-                  <GraduationCap size={17} />
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <GraduationCap size={16} />
                   <span>Education & Credentials</span>
                 </div>
               </button>
@@ -256,17 +256,17 @@ const ExperiencePage = () => {
             {activeTab === "work" ? (
               <ScrollReveal className="stagger-children space-y-8">
                 {roles.map((role, index) => (
-                  <div key={index} className="relative pl-8 sm:pl-12 pb-1 stagger-item">
+                  <div key={index} className="relative pl-7 sm:pl-12 pb-1 stagger-item">
                     {/* Line */}
                     {index < roles.length - 1 && (
-                      <div className="absolute left-[15px] sm:left-[23px] top-8 bottom-0 w-px bg-border" />
+                      <div className="absolute left-[13px] sm:left-[23px] top-8 bottom-0 w-px bg-border" />
                     )}
                     {/* Dot */}
-                    <div className="absolute left-0 sm:left-2 top-1.5 w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
-                      <Briefcase className="text-primary-foreground" size={14} />
+                    <div className="absolute left-0 sm:left-2 top-1.5 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
+                      <Briefcase className="text-primary-foreground" size={13} />
                     </div>
 
-                    <div className="bg-card rounded-2xl border border-border p-6 sm:p-8 card-hover shadow-sm">
+                    <div className="bg-card rounded-2xl border border-border p-5 sm:p-8 card-hover shadow-sm">
                       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
                         <h3 className="font-display text-lg sm:text-xl font-bold">{role.title}</h3>
                         <span className="font-mono text-xs font-semibold text-primary whitespace-nowrap self-start">
@@ -310,17 +310,17 @@ const ExperiencePage = () => {
             ) : (
               <ScrollReveal className="stagger-children space-y-6">
                 {education.map((edu, index) => (
-                  <div key={index} className="relative pl-8 sm:pl-12 pb-1 stagger-item">
+                  <div key={index} className="relative pl-7 sm:pl-12 pb-1 stagger-item">
                     {/* Line */}
                     {index < education.length - 1 && (
-                      <div className="absolute left-[15px] sm:left-[23px] top-8 bottom-0 w-px bg-border" />
+                      <div className="absolute left-[13px] sm:left-[23px] top-8 bottom-0 w-px bg-border" />
                     )}
                     {/* Dot */}
-                    <div className="absolute left-0 sm:left-2 top-1.5 w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
-                      <edu.icon className="text-primary-foreground" size={14} />
+                    <div className="absolute left-0 sm:left-2 top-1.5 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
+                      <edu.icon className="text-primary-foreground" size={13} />
                     </div>
 
-                    <div className="bg-card rounded-2xl border border-border p-6 sm:p-8 card-hover shadow-sm">
+                    <div className="bg-card rounded-2xl border border-border p-5 sm:p-8 card-hover shadow-sm">
                       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
                         <h3 className="font-display text-lg sm:text-xl font-bold">{edu.title}</h3>
                         <span className="font-mono text-xs font-semibold text-primary whitespace-nowrap self-start">

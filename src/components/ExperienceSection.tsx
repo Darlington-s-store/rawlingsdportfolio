@@ -171,11 +171,11 @@ const ExperienceSection = () => {
     <section id="experience" className="section-padding">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
-          <p className="text-primary font-display font-semibold text-sm uppercase tracking-widest mb-3">Experience</p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+          <p className="text-primary font-display font-semibold text-xs uppercase tracking-widest mb-3">Experience</p>
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             5+ years of <span className="text-gradient">building</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mb-12 leading-relaxed">
+          <p className="text-muted-foreground max-w-2xl mb-10 sm:mb-12 leading-relaxed text-sm sm:text-base">
             From freelance projects to leading full product builds - here's a timeline of my professional journey as a full-stack developer.
           </p>
         </ScrollReveal>
@@ -183,17 +183,17 @@ const ExperienceSection = () => {
         <ScrollReveal>
           <div className="space-y-0 stagger-children">
             {roles.map((role, index) => (
-            <div key={index} className="relative pl-8 md:pl-12 pb-12 last:pb-0 stagger-item">
+            <div key={index} className="relative pl-7 sm:pl-12 pb-10 sm:pb-12 last:pb-0 stagger-item">
               {/* Timeline line */}
               {index < roles.length - 1 && (
-                <div className="absolute left-[15px] md:left-[23px] top-8 bottom-0 w-px bg-border" />
+                <div className="absolute left-[13px] sm:left-[23px] top-8 bottom-0 w-px bg-border" />
               )}
               {/* Timeline dot */}
-              <div className="absolute left-0 md:left-2 top-1 w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
-                <Briefcase className="text-primary-foreground" size={14} />
+              <div className="absolute left-0 sm:left-2 top-1 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
+                <Briefcase className="text-primary-foreground" size={13} />
               </div>
 
-              <div className="bg-card rounded-2xl border border-border p-6 md:p-8 card-hover">
+              <div className="bg-card rounded-2xl border border-border p-5 sm:p-8 card-hover">
                 {/* Header */}
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-1">
                   <h3 className="font-display text-xl font-bold">{role.title}</h3>

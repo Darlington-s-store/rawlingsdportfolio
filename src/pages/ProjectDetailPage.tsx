@@ -24,48 +24,48 @@ const ProjectDetailPage = () => {
 
   return (
     <div className="min-h-screen">
-      <div className="pt-24 pb-16 px-6">
+      <div className="pt-20 sm:pt-24 pb-14 sm:pb-16 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
+          <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-muted-foreground mb-6 sm:mb-8">
             <Link to="/" className="hover:text-primary transition-colors">Home</Link>
             <ChevronRight size={14} />
             <Link to="/projects" className="hover:text-primary transition-colors">Projects</Link>
             <ChevronRight size={14} />
-            <span className="text-foreground">{project.title}</span>
+            <span className="text-foreground truncate max-w-[200px] sm:max-w-none">{project.title}</span>
           </div>
 
           {/* Hero image */}
-          <div className="rounded-2xl overflow-hidden border border-border mb-10">
+          <div className="rounded-2xl overflow-hidden border border-border mb-8 sm:mb-10 bg-black/5">
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-auto object-cover"
+              className="w-full h-auto object-cover max-h-[500px]"
               width={1280}
               height={800}
             />
           </div>
 
           {/* Header */}
-          <div className="flex flex-wrap items-start justify-between gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
             <div>
-              <h1 className="font-display text-3xl md:text-4xl font-bold mb-2">{project.title}</h1>
+              <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-1.5">{project.title}</h1>
               {project.status && (
                 <span className="font-mono text-xs font-semibold text-primary">
                   {project.status}
                 </span>
               )}
             </div>
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-2.5 sm:gap-3 w-full sm:w-auto">
               {project.github && (
-                <Button variant="outline" asChild>
+                <Button variant="outline" className="flex-1 sm:flex-initial h-11" asChild>
                   <a href={project.github} target="_blank" rel="noopener noreferrer">
                     <Github size={16} className="mr-2" /> GitHub
                   </a>
                 </Button>
               )}
               {project.live && (
-                <Button variant="default" asChild>
+                <Button variant="default" className="flex-1 sm:flex-initial h-11 shadow-md shadow-primary/25" asChild>
                   <a href={project.live} target="_blank" rel="noopener noreferrer">
                     <ExternalLink size={16} className="mr-2" /> Live Demo
                   </a>

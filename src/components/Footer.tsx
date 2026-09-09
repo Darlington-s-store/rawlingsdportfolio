@@ -4,11 +4,11 @@ import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-white px-6 py-12 md:py-20 border-t border-border">
+    <footer className="bg-white px-4 sm:px-6 py-12 md:py-16 border-t border-border">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-12 mb-10 sm:mb-12">
           {/* Brand */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6 sm:col-span-2 md:col-span-1">
             <Link to="/" className="flex items-center gap-2 group">
               <div className="w-10 h-10 rounded-xl overflow-hidden border border-border group-hover:border-primary/50 transition-all duration-300">
                 <img src={logo} alt="Logo" className="w-full h-full object-cover" />
@@ -21,9 +21,9 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <p className="font-display font-semibold text-sm uppercase tracking-wider text-foreground">Quick Links</p>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2.5 sm:gap-3">
               {[
                 { label: "About", href: "/about" },
                 { label: "Projects", href: "/projects" },
@@ -38,12 +38,12 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <p className="font-display font-semibold text-sm uppercase tracking-wider text-foreground">Contact</p>
             <div className="space-y-3">
               <a href="mailto:asomanirawlingsjunior5333@gmail.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-all duration-300">
                 <Mail size={16} className="shrink-0" />
-                <span>asomanirawlingsjunior5333@gmail.com</span>
+                <span className="break-all text-xs sm:text-sm">asomanirawlingsjunior5333@gmail.com</span>
               </a>
               <a href="tel:+233552945333" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-all duration-300">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="16" height="16" className="shrink-0">

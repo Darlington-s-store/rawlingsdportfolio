@@ -24,7 +24,7 @@ const ProjectsSection = () => {
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
           <p className="text-primary font-display font-semibold text-xs uppercase tracking-widest mb-3">Portfolio Showcase</p>
-          <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight mb-3">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-3">
             Featured <span className="text-gradient">production work</span>
           </h2>
           <p className="text-muted-foreground text-sm sm:text-base max-w-2xl mb-8">
@@ -39,7 +39,7 @@ const ProjectsSection = () => {
 
         {/* Filter Tabs */}
         <ScrollReveal>
-          <div className="flex flex-wrap gap-2 mb-10">
+          <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-8 sm:mb-10">
             <button
               onClick={() => setFilter("All")}
               className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all ${

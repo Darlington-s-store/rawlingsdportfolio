@@ -64,58 +64,58 @@ const ContactSection = () => {
     <section id="contact" className="section-padding section-alt">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
-          <p className="text-primary font-display font-semibold text-sm uppercase tracking-widest mb-3">Contact</p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-12">
+          <p className="text-primary font-display font-semibold text-xs uppercase tracking-widest mb-3">Contact</p>
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12">
             Let's <span className="text-gradient">connect</span>
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
           {/* Info */}
           <ScrollReveal variant="left">
             <div className="space-y-6">
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
                 Have an idea, a project you want to build, or looking to hire? Reach out and let's talk about how I can help.
               </p>
 
               <div className="space-y-4">
-                <a href="mailto:asomanirawlingsjunior5333@gmail.com" className="flex items-center gap-4 group">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Mail className="text-primary" size={20} />
+                <a href="mailto:asomanirawlingsjunior5333@gmail.com" className="flex items-center gap-3.5 sm:gap-4 group">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
+                    <Mail className="text-primary" size={19} />
                   </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Email</p>
-                    <p className="font-medium text-sm">asomanirawlingsjunior5333@gmail.com</p>
-                  </div>
-                </a>
-
-                <a href="tel:+233552945333" className="flex items-center gap-4 group">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Phone className="text-primary" size={20} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Phone</p>
-                    <p className="font-medium text-xs leading-relaxed">+233 55 294 5333 / +233 20 031 0301 / +233 25 750 1827</p>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-xs sm:text-sm text-muted-foreground">Email</p>
+                    <p className="font-medium text-xs sm:text-sm break-all">asomanirawlingsjunior5333@gmail.com</p>
                   </div>
                 </a>
 
-                <a href="https://github.com/Darlington-s-store" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Github className="text-primary" size={20} />
+                <a href="tel:+233552945333" className="flex items-center gap-3.5 sm:gap-4 group">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
+                    <Phone className="text-primary" size={19} />
                   </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">GitHub</p>
-                    <p className="font-medium text-sm">github.com/Darlington-s-store</p>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-xs sm:text-sm text-muted-foreground">Phone</p>
+                    <p className="font-medium text-xs leading-relaxed break-words">+233 55 294 5333 / +233 20 031 0301 / +233 25 750 1827</p>
                   </div>
                 </a>
 
-                <a href="https://www.linkedin.com/in/rawlings-junior-asomani-189a80253" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Linkedin className="text-primary" size={20} />
+                <a href="https://github.com/Darlington-s-store" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3.5 sm:gap-4 group">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
+                    <Github className="text-primary" size={19} />
                   </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">LinkedIn</p>
-                    <p className="font-medium text-sm">linkedin.com/in/rawlings-junior-asomani</p>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-xs sm:text-sm text-muted-foreground">GitHub</p>
+                    <p className="font-medium text-xs sm:text-sm truncate">github.com/Darlington-s-store</p>
+                  </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/rawlings-junior-asomani-189a80253" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3.5 sm:gap-4 group">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
+                    <Linkedin className="text-primary" size={19} />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-xs sm:text-sm text-muted-foreground">LinkedIn</p>
+                    <p className="font-medium text-xs sm:text-sm truncate">linkedin.com/in/rawlings-junior-asomani</p>
                   </div>
                 </a>
               </div>
@@ -125,7 +125,7 @@ const ContactSection = () => {
           {/* Form / Success Card */}
           {success ? (
             <ScrollReveal variant="right">
-              <div className="bg-card rounded-2xl border border-border p-8 text-center flex flex-col items-center justify-center space-y-5 min-h-[418px]">
+              <div className="bg-card rounded-2xl border border-border p-6 sm:p-8 text-center flex flex-col items-center justify-center space-y-5 min-h-[418px]">
                 <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-2 shadow-inner">
                   <Check className="w-6 h-6" strokeWidth={3} />
                 </div>
@@ -140,7 +140,7 @@ const ContactSection = () => {
             </ScrollReveal>
           ) : (
             <ScrollReveal variant="right">
-              <form onSubmit={handleSubmit} className="bg-card rounded-2xl border border-border p-8 space-y-5">
+              <form onSubmit={handleSubmit} className="bg-card rounded-2xl border border-border p-5 sm:p-8 space-y-4 sm:space-y-5">
                 <div>
                   <label className="block text-sm font-medium mb-2">Name</label>
                   <input

@@ -79,25 +79,25 @@ const TechStackSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section id="tech" className="px-6 pt-12 pb-20 md:px-12 md:pt-16 md:pb-24 lg:px-24 xl:px-32">
+    <section id="tech" className="px-4 sm:px-6 pt-12 pb-16 md:px-12 md:pt-16 md:pb-24 lg:px-24 xl:px-32">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
           <p className="text-primary font-display font-semibold text-xs uppercase tracking-widest mb-3">Production Tooling</p>
-          <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight mb-10">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-8 sm:mb-10">
             Technologies I <span className="text-gradient">build with daily</span>
           </h2>
         </ScrollReveal>
 
         {/* 6 Core Pillars 3x2 Grid */}
         <ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {coreStacks.map((stack, index) => (
               <div
                 key={stack.title}
                 className="bg-card rounded-2xl border border-border overflow-hidden card-hover group flex flex-col justify-between shadow-sm hover:border-primary/40 hover:shadow-xl transition-all duration-300"
               >
                 {/* Visual Header */}
-                <div className={`relative w-full h-48 sm:h-56 overflow-hidden ${stack.imageBg} border-b border-border/50 flex items-center justify-center`}>
+                <div className={`relative w-full h-44 sm:h-52 md:h-56 overflow-hidden ${stack.imageBg} border-b border-border/50 flex items-center justify-center`}>
                   <img
                     src={stack.image}
                     alt={stack.alt}
@@ -107,7 +107,7 @@ const TechStackSection = () => {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 sm:p-7 flex flex-col flex-1 justify-between">
+                <div className="p-5 sm:p-7 flex flex-col flex-1 justify-between">
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-3">
                       <span className="font-mono text-xs font-bold text-primary tracking-wider uppercase">

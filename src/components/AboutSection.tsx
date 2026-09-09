@@ -5,19 +5,19 @@ import { ArrowRight } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="px-6 pt-20 pb-16 md:px-12 md:pt-24 md:pb-20 lg:px-24 xl:px-32 section-alt">
+    <section id="about" className="px-4 sm:px-6 pt-16 pb-14 md:px-12 md:pt-24 md:pb-20 lg:px-24 xl:px-32 section-alt">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
           <p className="text-primary font-display font-semibold text-xs uppercase tracking-widest mb-3">Background & Architecture</p>
-          <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight mb-12">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-8 sm:mb-12">
             Engineering software with <span className="text-gradient">precision & reliability</span>.
           </h2>
         </ScrollReveal>
 
-        <div className="grid lg:grid-cols-12 gap-12 items-start mb-16">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-12 sm:mb-16">
           {/* Narrative Left Column */}
           <ScrollReveal className="lg:col-span-6">
-            <div className="space-y-5 text-foreground/85 leading-relaxed text-base sm:text-lg">
+            <div className="space-y-4 sm:space-y-5 text-foreground/85 leading-relaxed text-sm sm:text-base md:text-lg">
               <p>
                 I build software from practical fundamentals: normalized data models, documented API contracts, and responsive, accessible interfaces engineered for real-world devices.
               </p>
@@ -28,13 +28,13 @@ const AboutSection = () => {
                 My core work spans both ends of the stack: Node.js backend services and database administration (PostgreSQL, MySQL, Supabase, Redis), paired with modern web and mobile frontends in React 19, Next.js 15, and React Native. I regularly integrate critical services like payment gateways (Paystack Mobile Money & cards, Stripe), automated SMS/email notifications, and voice-assisted AI features—always structured around defensive validation and data privacy.
               </p>
 
-              <div className="pt-4 flex flex-wrap items-center gap-4">
-                <Button className="rounded-xl h-11 px-6 text-sm font-semibold shadow-sm" asChild>
+              <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+                <Button className="rounded-xl h-11 px-6 text-sm font-semibold shadow-sm w-full sm:w-auto" asChild>
                   <Link to="/experience">
                     View Career Timeline <ArrowRight size={14} className="ml-2" />
                   </Link>
                 </Button>
-                <Button variant="outline" className="rounded-xl h-11 px-6 text-sm" asChild>
+                <Button variant="outline" className="rounded-xl h-11 px-6 text-sm w-full sm:w-auto" asChild>
                   <Link to="/projects">See Live Work</Link>
                 </Button>
               </div>
