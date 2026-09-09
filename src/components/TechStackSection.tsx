@@ -5,6 +5,7 @@ import backendStack from "@/assets/backend-stack.png";
 import databaseStack from "@/assets/database-stack.jpg";
 import mobileStack from "@/assets/mobile-stack.jpg";
 import cloudInfrastructure from "@/assets/cloud-infrastructure.jpg";
+import aiStack from "@/assets/ai-stack.jpg";
 import {
   Code2, Server, Database, Smartphone, Cloud, Brain,
 } from "lucide-react";
@@ -21,7 +22,6 @@ const coreStacks = [
     description:
       "Specialized in crafting modern, high-performance web applications, fluid micro-interactions, and scalable design systems.",
     techs: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5 & CSS3"],
-    colSpan: "md:col-span-1 lg:col-span-2",
   },
   {
     title: "Backend & API Systems",
@@ -34,7 +34,6 @@ const coreStacks = [
     description:
       "Architecting reliable REST APIs, server-side data workflows, authentication pipelines, and optimized business logic.",
     techs: ["Node.js", "Express.js", "Python", "Django", "REST APIs"],
-    colSpan: "md:col-span-1 lg:col-span-2",
   },
   {
     title: "Database Architecture",
@@ -47,7 +46,6 @@ const coreStacks = [
     description:
       "Engineering structured relational schemas, query performance optimization, indexing, and high-integrity transactional data storage.",
     techs: ["PostgreSQL", "MySQL", "SQL Server", "Oracle"],
-    colSpan: "md:col-span-1 lg:col-span-2",
   },
   {
     title: "Mobile App Development",
@@ -60,7 +58,6 @@ const coreStacks = [
     description:
       "Crafting high-performance, cross-platform mobile experiences for iOS and Android with unified React Native & Expo architectures.",
     techs: ["React Native", "Expo", "iOS", "Android"],
-    colSpan: "md:col-span-1 lg:col-span-3",
   },
   {
     title: "Cloud & Infrastructure",
@@ -73,7 +70,18 @@ const coreStacks = [
     description:
       "Deploying high-availability infrastructure, automated CI/CD pipelines, containerized environments, and cloud architecture.",
     techs: ["AWS", "Google Cloud", "Vercel", "Supabase", "Docker", "Git"],
-    colSpan: "md:col-span-2 lg:col-span-3",
+  },
+  {
+    title: "AI & Intelligent Systems",
+    badge: "Core Specialization",
+    icon: Brain,
+    image: aiStack,
+    imageFit: "object-cover",
+    imageBg: "bg-[#02132e]",
+    alt: "AI Stack - AI Integration & Intelligent Systems with LLMs, OpenAI API, LangChain, RAG",
+    description:
+      "Integrating cutting-edge AI capabilities, retrieval-augmented generation (RAG), prompt architecture, and agentic workflows.",
+    techs: ["OpenAI API", "LangChain", "LLMs", "RAG Pipelines", "Prompt Engineering"],
   },
 ];
 
@@ -90,13 +98,13 @@ const TechStackSection = () => {
           </h2>
         </ScrollReveal>
 
-        {/* 5 Core Pillars Grid */}
-        <ScrollReveal className="mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
+        {/* 6 Core Pillars 3x2 Grid */}
+        <ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {coreStacks.map((stack) => (
               <div
                 key={stack.title}
-                className={`bg-card rounded-2xl border border-border overflow-hidden card-hover group flex flex-col justify-between shadow-sm hover:border-primary/40 hover:shadow-xl transition-all duration-300 ${stack.colSpan}`}
+                className="bg-card rounded-2xl border border-border overflow-hidden card-hover group flex flex-col justify-between shadow-sm hover:border-primary/40 hover:shadow-xl transition-all duration-300"
               >
                 {/* Visual Header */}
                 <div className={`relative w-full h-48 sm:h-56 overflow-hidden ${stack.imageBg} border-b border-border/50 flex items-center justify-center`}>
@@ -143,39 +151,6 @@ const TechStackSection = () => {
                 </div>
               </div>
             ))}
-          </div>
-        </ScrollReveal>
-
-        {/* AI & Emerging Systems Banner */}
-        <ScrollReveal>
-          <div className="bg-card rounded-2xl p-6 md:p-8 border border-border card-hover group flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-sm hover:border-primary/40 transition-all">
-            <div className="flex items-start md:items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors flex-shrink-0">
-                <Brain className="text-primary" size={24} />
-              </div>
-              <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="text-[11px] font-semibold text-primary uppercase tracking-wider">
-                    Emerging & Specialized
-                  </span>
-                </div>
-                <h3 className="font-display font-bold text-lg md:text-xl">AI Integration & Intelligent Systems</h3>
-                <p className="text-muted-foreground text-xs sm:text-sm mt-1 max-w-2xl">
-                  Engineering LLM-powered features, retrieval-augmented generation (RAG) pipelines, and autonomous agentic workflows.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-2 md:justify-end">
-              {["OpenAI API", "LangChain", "LLMs", "RAG Pipelines", "Prompt Engineering"].map((tech) => (
-                <button
-                  key={tech}
-                  onClick={() => navigate(`/projects?tech=${encodeURIComponent(tech)}`)}
-                  className="text-xs font-medium bg-secondary text-secondary-foreground hover:bg-primary/25 hover:text-primary px-3.5 py-1.5 rounded-full transition-all cursor-pointer border border-transparent hover:border-primary/20 hover:scale-105 active:scale-95 duration-200"
-                >
-                  {tech}
-                </button>
-              ))}
-            </div>
           </div>
         </ScrollReveal>
       </div>
