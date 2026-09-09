@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import {
-  Code2, Server, Globe, Zap, Terminal, Cpu,
-  CheckCircle2, Award, ArrowRight
+  Code2, Server, Globe, Zap, ArrowRight, ShieldCheck, CreditCard
 } from "lucide-react";
 
 const AboutSection = () => {
@@ -11,24 +10,24 @@ const AboutSection = () => {
     <section id="about" className="px-6 pt-20 pb-16 md:px-12 md:pt-24 md:pb-20 lg:px-24 xl:px-32 section-alt">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
-          <p className="text-primary font-display font-semibold text-xs uppercase tracking-widest mb-3">Philosophy & Background</p>
+          <p className="text-primary font-display font-semibold text-xs uppercase tracking-widest mb-3">Background & Architecture</p>
           <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight mb-12">
-            Engineering software with <span className="text-gradient">craftsmanship & purpose</span>.
+            Engineering software with <span className="text-gradient">precision & reliability</span>.
           </h2>
         </ScrollReveal>
 
         <div className="grid lg:grid-cols-12 gap-12 items-start mb-16">
           {/* Narrative Left Column */}
           <ScrollReveal className="lg:col-span-6">
-            <div className="space-y-5 text-foreground/80 leading-relaxed text-base sm:text-lg">
+            <div className="space-y-5 text-foreground/85 leading-relaxed text-base sm:text-lg">
               <p>
-                I approach software development from first principles: clean data models, reliable API contracts, and fast, accessible user interfaces that work flawlessly across devices.
+                I build software from practical fundamentals: normalized data models, documented API contracts, and responsive, accessible interfaces engineered for real-world devices.
               </p>
               <p className="text-muted-foreground text-sm sm:text-base">
-                Over the past 5 years in Kumasi, Ghana, I have designed and deployed production-grade applications for commercial enterprises and community organizations—including concert ticketing platform <span className="text-foreground font-medium">Tribes & Cliqs</span>, the <span className="text-foreground font-medium">Hinterland Falcons PF Club</span> administration portal, retail platform <span className="text-foreground font-medium">Yaa Baby Enterprise</span>, and the <span className="text-foreground font-medium">Hope for Prisoners</span> humanitarian network.
+                Over the past 5 years in Kumasi, Ghana, I have delivered production systems for businesses, non-profits, and community institutions. Projects include the event ticketing platform <span className="text-foreground font-medium">Tribes & Cliqs</span>, the <span className="text-foreground font-medium">Hinterland Falcons PF Club</span> administration system, retail storefront <span className="text-foreground font-medium">Yaa Baby Enterprise</span>, and the <span className="text-foreground font-medium">Hope for Prisoners</span> humanitarian network.
               </p>
               <p className="text-muted-foreground text-sm sm:text-base">
-                I am exceptionally strong across <span className="text-foreground font-medium">both the backend and the frontend</span>, engineering scalable Node.js architectures and Database Management Systems (PostgreSQL, MySQL, Supabase, Redis). I specialize in integrating <span className="text-foreground font-medium">payment gateways</span> (Paystack with Mobile Money & cards, Stripe), <span className="text-foreground font-medium">SMS & transactional email engines</span>, and <span className="text-foreground font-medium">voice-powered AI agents</span> (such as on <span className="text-foreground font-medium">AtlasWave Travels</span>)—always adhering to bulletproof system security.
+                My core work spans both ends of the stack: Node.js backend services and database administration (PostgreSQL, MySQL, Supabase, Redis), paired with modern web and mobile frontends in React 19, Next.js 15, and React Native. I regularly integrate critical services like payment gateways (Paystack Mobile Money & cards, Stripe), automated SMS/email notifications, and voice-assisted AI features—always structured around defensive validation and data privacy.
               </p>
 
               <div className="pt-4 flex flex-wrap items-center gap-4">
@@ -50,23 +49,23 @@ const AboutSection = () => {
               {[
                 {
                   icon: Zap,
-                  title: "Performance First",
-                  desc: "Sub-second load times, lightweight bundle budgets, and low-bandwidth optimization designed for real-world devices.",
+                  title: "Performance & Low Latency",
+                  desc: "Sub-second render benchmarks, minimal asset bundles, and low-bandwidth optimization designed for mobile connections.",
                 },
                 {
                   icon: Server,
-                  title: "Type-Safe Backend",
-                  desc: "Robust REST APIs, strict TypeScript validation, and optimized relational schemas in PostgreSQL & Supabase.",
+                  title: "Type-Safe Backend Services",
+                  desc: "Predictable REST APIs, strict TypeScript/Zod schema validation, and optimized relational queries in PostgreSQL and MySQL.",
                 },
                 {
                   icon: Code2,
-                  title: "Modern Frontend",
-                  desc: "Modular component systems built with React 19, Next.js 15, accessible ARIA patterns, and responsive Tailwind CSS.",
+                  title: "Modular Frontend & Mobile",
+                  desc: "Reusable component systems built with React 19, Next.js 15, and React Native, adhering to accessible WCAG design standards.",
                 },
                 {
-                  icon: Globe,
-                  title: "Production Ownership",
-                  desc: "Hands-on delivery from architecture diagrams and UX flows to automated CI/CD deployments on Vercel and AWS.",
+                  icon: ShieldCheck,
+                  title: "Security & Systems Integrity",
+                  desc: "Hardened authentication (JWT, RBAC), parameterized queries to prevent injection, and zero-downtime deployment pipelines.",
                 },
               ].map((item) => (
                 <div
@@ -74,10 +73,10 @@ const AboutSection = () => {
                   className="bg-card rounded-2xl p-6 border border-border card-hover stagger-item flex flex-col justify-between"
                 >
                   <div>
-                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                      <item.icon className="text-primary" size={20} />
+                    <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-200/60 flex items-center justify-center mb-4 text-primary">
+                      <item.icon size={20} />
                     </div>
-                    <h3 className="font-display font-semibold text-base mb-2">{item.title}</h3>
+                    <h3 className="font-display font-semibold text-base mb-2 text-foreground">{item.title}</h3>
                     <p className="text-muted-foreground text-xs leading-relaxed">{item.desc}</p>
                   </div>
                 </div>

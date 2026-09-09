@@ -20,7 +20,7 @@ const coreStacks = [
     imageBg: "bg-white",
     alt: "Frontend Stack - React 19, Next.js 15, TypeScript, Tailwind CSS",
     description:
-      "Specialized in crafting modern, high-performance web applications, fluid micro-interactions, and scalable design systems.",
+      "Engineering accessible web applications with clean component trees, responsive layouts, and efficient state management.",
     techs: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5 & CSS3"],
   },
   {
@@ -56,7 +56,7 @@ const coreStacks = [
     imageBg: "bg-white",
     alt: "Mobile Stack - Android & iOS Mobile App Development with React Native, Expo, Apple iOS, Android",
     description:
-      "Crafting high-performance, cross-platform mobile experiences for iOS and Android with unified React Native & Expo architectures.",
+      "Engineering cross-platform mobile applications for iOS and Android with unified React Native & Expo codebases, native device APIs, and offline caching.",
     techs: ["React Native", "Expo", "iOS", "Android"],
   },
   {
@@ -80,7 +80,7 @@ const coreStacks = [
     imageBg: "bg-white",
     alt: "AI Stack - AI Integration & Intelligent Systems with LLMs, OpenAI API, LangChain, RAG",
     description:
-      "Integrating cutting-edge AI capabilities, retrieval-augmented generation (RAG), prompt architecture, and agentic workflows.",
+      "Integrating practical AI features: voice-enabled interfaces, conversational assistants, and structured prompt pipelines.",
     techs: ["OpenAI API", "LangChain", "LLMs", "RAG Pipelines", "Prompt Engineering"],
   },
 ];

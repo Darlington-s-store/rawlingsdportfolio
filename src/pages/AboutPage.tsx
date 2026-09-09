@@ -149,23 +149,23 @@ const careerMilestones = [
 const philosophy = [
   {
     icon: Terminal,
-    title: "Full-Stack Craftsmanship",
-    desc: "Equal mastery across the entire stack—delivering polished, accessible frontends backed by rock-solid, high-throughput Node.js and PostgreSQL engines.",
+    title: "Full-Stack Architecture",
+    desc: "Clean separation of concerns between client and server, pairing accessible interfaces with reliable Node.js services and normalized PostgreSQL databases.",
   },
   {
     icon: CreditCard,
-    title: "Frictionless Transactions",
-    desc: "Integrating reliable payment gateways (Paystack, Stripe, MoMo) with verified webhooks, idempotent handlers, and instant SMS/email delivery.",
+    title: "Reliable Payment Workflows",
+    desc: "Configuring payment integrations (Paystack, Stripe, Mobile Money) with idempotent webhook processing, automated receipts, and transaction verification.",
   },
   {
     icon: ShieldCheck,
     title: "Security by Default",
-    desc: "Treating security not as an afterthought, but as an architectural foundation: defensive validation, hardened authentication, and zero-trust data boundaries.",
+    desc: "Defensive input validation, parameterized queries, hardened JWT authentication, and zero-trust data boundaries implemented from day one.",
   },
   {
     icon: Bot,
-    title: "Intelligent AI Integration",
-    desc: "Empowering user experiences with natural conversational and voice-powered AI agents, while using AI engineering tools to accelerate development velocity.",
+    title: "Purpose-Built AI Features",
+    desc: "Applying conversational AI and voice interfaces where they reduce user friction, alongside modern developer tooling that accelerates project delivery.",
   },
 ];
 
@@ -194,20 +194,20 @@ const workflowSteps = [
 
 const valuePropositions = [
   {
-    title: "Equally Strong in Backend & Frontend",
-    desc: "No gaps between client and server. I build responsive, visually stunning user interfaces and back them with rock-solid, scalable backend APIs and relational databases.",
+    title: "End-to-End System Ownership",
+    desc: "Unified engineering from user interface to database schema, avoiding communication gaps and ensuring consistent data contracts across the application.",
   },
   {
     title: "Payment, SMS & Email Pipelines",
     desc: "Turnkey integrations for financial transactions (Paystack, Stripe, Mobile Money) and automated customer communications via SMS and transactional email.",
   },
   {
-    title: "Database Management Mastery (DBMS)",
-    desc: "Deep expertise in relational schema normalization, query optimization, automated backups, and real-time synchronization across PostgreSQL, MySQL, Supabase, and Redis.",
+    title: "Database Administration (DBMS)",
+    desc: "Relational schema design (3NF), query indexing, connection pooling, and automated backup routines across PostgreSQL, MySQL, and Supabase.",
   },
   {
-    title: "Voice-Powered AI & Intelligent Agents",
-    desc: "Proven expertise integrating conversational and voice-powered AI agents (demonstrated in AtlasWave Travels) that provide hands-free recommendations and automated workflows.",
+    title: "Voice & Conversational AI",
+    desc: "Practical implementation of voice-driven agents (as built in AtlasWave Travels) for hands-free search, recommendations, and booking workflows.",
   },
 ];
 
@@ -315,7 +315,7 @@ const AboutPage = () => {
                   <h1 className="font-display text-2xl font-bold text-foreground">Rawlings Junior Asomani</h1>
                   <p className="text-primary text-sm font-semibold">Full-Stack Web & Mobile Developer</p>
                   <p className="text-muted-foreground text-xs pt-1 max-w-xs mx-auto">
-                    Powerhouse in Frontend & Backend engineering, Payment & SMS integrations, Database Management Systems (DBMS), and voice-powered AI.
+                    Full-stack engineer specializing in web and mobile applications, payment gateways, messaging pipelines, and database administration.
                   </p>
                 </div>
 
@@ -370,7 +370,7 @@ const AboutPage = () => {
                 {/* Quick Info Grid */}
                 <div className="space-y-2 pt-2 text-left text-xs">
                   <div className="flex justify-between py-1.5 border-b border-border/60">
-                    <span className="text-muted-foreground">Core Superpowers:</span>
+                    <span className="text-muted-foreground">Core Expertise:</span>
                     <span className="font-medium text-foreground">Full-Stack, Mobile, Payments & AI</span>
                   </div>
                   <div className="flex justify-between py-1.5 border-b border-border/60">
@@ -378,7 +378,7 @@ const AboutPage = () => {
                     <span className="font-medium text-primary">Paystack, Stripe, SMS & Email</span>
                   </div>
                   <div className="flex justify-between py-1.5 border-b border-border/60">
-                    <span className="text-muted-foreground">Database Mastery:</span>
+                    <span className="text-muted-foreground">Database Administration:</span>
                     <span className="font-medium text-foreground">PostgreSQL, MySQL, Redis (DBMS)</span>
                   </div>
                   <div className="flex justify-between py-1.5 border-b border-border/60">
@@ -410,24 +410,24 @@ const AboutPage = () => {
               {/* Detailed Narrative Biography */}
               <ScrollReveal variant="right" className="space-y-5">
                 <div className="space-y-2">
-                  <p className="text-xs font-semibold text-primary uppercase tracking-wider">Background & Trajectory</p>
+                  <p className="text-xs font-semibold text-primary uppercase tracking-wider">Background & Experience</p>
                   <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground">
-                    Engineering secure, high-impact systems with full-stack mastery, payment engines, and intelligent AI.
+                    Building dependable web, mobile, and payment systems with disciplined engineering.
                   </h2>
                 </div>
 
                 <div className="space-y-4 text-foreground/85 text-sm sm:text-base leading-relaxed">
                   <p>
-                    I'm <span className="text-foreground font-semibold">Rawlings Junior Asomani</span>, a full-stack software engineer based in Kumasi, Ghana, with over 5 years of hands-on experience building commercial web platforms, native mobile applications, database management systems (DBMS), and intelligent AI solutions.
+                    I'm <span className="text-foreground font-semibold">Rawlings Junior Asomani</span>, a full-stack software engineer based in Kumasi, Ghana, with over 5 years of professional experience developing commercial web platforms, mobile applications, and database management systems.
                   </p>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    I am exceptionally strong across <span className="text-foreground font-medium">both the backend and the frontend</span>. On the backend, I design resilient, high-throughput Node.js architectures, relational PostgreSQL/MySQL schemas, and secure RESTful APIs. On the frontend, I create fast, accessible, and responsive interfaces with React 19, Next.js 15, and cross-platform mobile apps using React Native for iOS and Android.
+                    I build across <span className="text-foreground font-medium">both the backend and the frontend</span> with equal rigor. On the server side, I design modular Node.js architectures, normalized PostgreSQL and MySQL schemas, and documented RESTful APIs. On the client side, I create responsive, accessible user interfaces using React 19, Next.js 15, and cross-platform mobile apps with React Native for iOS and Android.
                   </p>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Beyond core programming, I specialize in critical infrastructure integrations: <span className="text-foreground font-medium">payment gateways</span> (Paystack with Mobile Money, Stripe, PayPal), <span className="text-foreground font-medium">automated SMS notification and 2FA/OTP engines</span> (Twilio, Hubtel, Arkesel), and <span className="text-foreground font-medium">transactional email pipelines</span> (Resend, SendGrid, NodeMailer). My flagship projects include the <span className="text-foreground font-medium">Tribes & Cliqs</span> concert ticketing platform (with live analytics & Paystack payments), the <span className="text-foreground font-medium">Hinterland Falcons PF Club</span> administration system (intake workflows & dues accounting), retail platforms like <span className="text-foreground font-medium">Yaa Baby Enterprise</span>, and the <span className="text-foreground font-medium">Hope for Prisoners</span> humanitarian portal.
+                    Beyond core programming, I specialize in critical infrastructure integrations: <span className="text-foreground font-medium">payment gateways</span> (Paystack with Mobile Money & cards, Stripe, PayPal), <span className="text-foreground font-medium">automated SMS notification and 2FA/OTP engines</span> (Twilio, Hubtel, Arkesel), and <span className="text-foreground font-medium">transactional email delivery</span> (Resend, SendGrid, NodeMailer). My flagship projects include the <span className="text-foreground font-medium">Tribes & Cliqs</span> concert ticketing platform (with live analytics & Paystack payments), the <span className="text-foreground font-medium">Hinterland Falcons PF Club</span> administration system (intake workflows & dues accounting), retail platforms like <span className="text-foreground font-medium">Yaa Baby Enterprise</span>, and the <span className="text-foreground font-medium">Hope for Prisoners</span> humanitarian portal.
                   </p>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    In addition, I bring proven expertise in <span className="text-foreground font-medium">AI integration</span>. As demonstrated in my work on the <span className="text-foreground font-semibold">AtlasWave Travels</span> project, I engineered an autonomous <span className="text-foreground font-semibold">voice-powered AI agent</span> with real-time speech recognition and text-to-speech audio, allowing travelers to discover destinations and book tours hands-free. I love using modern AI tools to accelerate development workflows while maintaining bulletproof security across every line of code.
+                    I also integrate AI capabilities where they solve concrete user problems. On the <span className="text-foreground font-semibold">AtlasWave Travels</span> project, I built a <span className="text-foreground font-semibold">voice-driven travel assistant</span> combining OpenAI language models with the browser Web Speech API for real-time speech recognition and audio synthesis. In my daily workflow, I leverage modern developer AI tooling to accelerate prototyping, generate unit tests, and eliminate boilerplate—preserving focus for system architecture, edge-case testing, and data security.
                   </p>
                 </div>
               </ScrollReveal>
@@ -529,7 +529,7 @@ const AboutPage = () => {
                       <ShieldCheck size={16} />
                       <p className="text-xs font-semibold uppercase tracking-wider">Enterprise-Grade Protection</p>
                     </div>
-                    <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground">Bulletproof Security Architecture</h2>
+                    <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground">Application Security & Data Protection</h2>
                     <p className="text-muted-foreground text-xs sm:text-sm mt-1">
                       Ensuring every project, database, and endpoint is hardened against modern attack vectors.
                     </p>
@@ -803,8 +803,8 @@ const AboutPage = () => {
               <ScrollReveal>
                 <div className="p-6 rounded-3xl bg-orange-50 border border-orange-200/80 space-y-4 text-center sm:text-left sm:flex sm:items-center sm:justify-between sm:space-y-0">
                   <div className="space-y-1">
-                    <h3 className="font-display font-bold text-lg text-foreground">Have an ambitious project in mind?</h3>
-                    <p className="text-xs text-muted-foreground">Let's discuss how we can engineer your web, mobile, payment, or AI-powered vision with rock-solid security.</p>
+                    <h3 className="font-display font-bold text-lg text-foreground">Ready to build or improve your product?</h3>
+                    <p className="text-xs text-muted-foreground">Available for full-time engineering roles, contract development, and technical consulting.</p>
                   </div>
                   <div className="flex flex-wrap gap-3 justify-center sm:justify-end">
                     <Button size="lg" className="rounded-xl h-11 px-6 text-sm font-semibold bg-primary text-white hover:bg-primary/90 shadow-md shadow-primary/25" asChild>
