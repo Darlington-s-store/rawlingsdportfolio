@@ -4,6 +4,10 @@ export function useInView(options?: IntersectionObserverInit) {
   const ref = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
 
+  const root = options?.root;
+  const rootMargin = options?.rootMargin ?? "120px 0px";
+  const threshold = options?.threshold ?? 0;
+
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
@@ -20,7 +24,7 @@ export function useInView(options?: IntersectionObserverInit) {
           obs.unobserve(el);
         }
       },
-      { threshold: 0, rootMargin: "120px 0px", ...options },
+      { root, rootMargin, threshold },
     );
     obs.observe(el);
 
@@ -33,7 +37,7 @@ export function useInView(options?: IntersectionObserverInit) {
       obs.disconnect();
       clearTimeout(timer);
     };
-  }, []);
+  }, [root, rootMargin, threshold]);
 
   return { ref, inView };
 }
