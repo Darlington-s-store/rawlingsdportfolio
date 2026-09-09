@@ -36,8 +36,8 @@
 
     --radius: 1rem;
 
-    --hero-bg: 0 0% 4%;
-    --hero-foreground: 0 0% 100%;
+    --hero-bg: 0 0% 100%;
+    --hero-foreground: 0 0% 12%;
     --section-alt: 30 100% 98%;
 
     --sidebar-background: 0 0% 98%;
@@ -75,8 +75,8 @@
   }
 
   .hero-gradient {
-    background: hsl(var(--hero-bg));
-    color: hsl(var(--hero-foreground));
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
   }
 
   .text-gradient {

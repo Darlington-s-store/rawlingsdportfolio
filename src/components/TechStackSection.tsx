@@ -17,7 +17,7 @@ const coreStacks = [
     icon: Code2,
     image: frontendStack,
     imageFit: "object-cover",
-    imageBg: "bg-black/20",
+    imageBg: "bg-white",
     alt: "Frontend Stack - React 19, Next.js 15, TypeScript, Tailwind CSS",
     description:
       "Specialized in crafting modern, high-performance web applications, fluid micro-interactions, and scalable design systems.",
@@ -29,7 +29,7 @@ const coreStacks = [
     icon: Server,
     image: backendStack,
     imageFit: "object-cover",
-    imageBg: "bg-black/20",
+    imageBg: "bg-white",
     alt: "Backend Stack - Node.js, JavaScript, Python, Django",
     description:
       "Architecting reliable REST APIs, server-side data workflows, authentication pipelines, and optimized business logic.",
@@ -53,7 +53,7 @@ const coreStacks = [
     icon: Smartphone,
     image: mobileStack,
     imageFit: "object-contain p-2",
-    imageBg: "bg-[#0c142b]",
+    imageBg: "bg-white",
     alt: "Mobile Stack - Android & iOS Mobile App Development with React Native, Expo, Apple iOS, Android",
     description:
       "Crafting high-performance, cross-platform mobile experiences for iOS and Android with unified React Native & Expo architectures.",
@@ -65,7 +65,7 @@ const coreStacks = [
     icon: Cloud,
     image: cloudInfrastructure,
     imageFit: "object-contain p-3",
-    imageBg: "bg-black",
+    imageBg: "bg-white",
     alt: "Cloud Infrastructure - Compute, Storage, Networking, Virtualization, Security, Monitoring & Automation",
     description:
       "Deploying high-availability infrastructure, automated CI/CD pipelines, containerized environments, and cloud architecture.",
@@ -77,7 +77,7 @@ const coreStacks = [
     icon: Brain,
     image: aiStack,
     imageFit: "object-cover",
-    imageBg: "bg-[#02132e]",
+    imageBg: "bg-white",
     alt: "AI Stack - AI Integration & Intelligent Systems with LLMs, OpenAI API, LangChain, RAG",
     description:
       "Integrating cutting-edge AI capabilities, retrieval-augmented generation (RAG), prompt architecture, and agentic workflows.",
