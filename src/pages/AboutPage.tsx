@@ -108,7 +108,7 @@ const AboutPage = () => {
                 <div className="space-y-3.5 pt-4 border-t border-border text-xs text-muted-foreground text-left max-w-xs mx-auto">
                   <div className="flex items-start gap-2.5">
                     <MapPin size={14} className="text-primary shrink-0 mt-0.5" />
-                    <span>Accra, Ghana (Open to Remote & Relocation)</span>
+                    <span>Kumasi, Ghana (Open to Remote & Relocation)</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Mail size={14} className="text-primary shrink-0 mt-0.5" />
