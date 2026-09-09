@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Github, Linkedin } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Globe, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import heroPhoto from "@/assets/Hero.jpeg";
@@ -18,16 +18,22 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column - Content */}
           <div className="lg:col-span-7">
+            {/* Specialization Badge */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200/70 text-primary text-xs font-semibold uppercase tracking-wider mb-6 animate-fade-up">
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <span>Full-Stack Web & Mobile App Developer</span>
+            </div>
+
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.08] mb-6 text-foreground animate-fade-up">
-              Building modern web products with <span className="text-primary">clarity & speed</span>.
+              Building high-impact <span className="text-primary">web & mobile applications</span>.
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mb-10 animate-fade-up delay-1">
-              I'm <span className="text-foreground font-semibold">Rawlings Junior Asomani</span>, a full-stack engineer with 5+ years of production experience shipping booking platforms, NGO portals, and localized e-commerce storefronts across React, Next.js, Node.js, and PostgreSQL.
+              I'm <span className="text-foreground font-semibold">Rawlings Junior Asomani</span>, a software engineer with 5+ years of production experience crafting scalable web platforms and native-performance iOS & Android mobile applications using React, Next.js, React Native, Expo, Node.js, and PostgreSQL.
             </p>
 
             <ScrollReveal>
-              <div className="flex flex-wrap items-center gap-4">
+              <div className="flex flex-wrap items-center gap-4 mb-8">
                 <Button size="lg" className="h-13 px-8 text-base rounded-xl font-semibold bg-primary text-white hover:bg-primary/90 shadow-md shadow-primary/25" asChild>
                   <Link to="/projects">
                     Explore Selected Work <ArrowRight className="ml-2" size={18} />
@@ -56,6 +62,29 @@ const HeroSection = () => {
                   >
                     <Linkedin size={18} />
                   </a>
+                </div>
+              </div>
+
+              {/* Dual Core Pillar Callouts */}
+              <div className="pt-6 border-t border-border/80 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl">
+                <div className="flex items-center gap-3 p-3 rounded-xl bg-orange-50/60 border border-orange-200/50">
+                  <div className="w-10 h-10 rounded-lg bg-white border border-orange-200/60 flex items-center justify-center shrink-0 text-primary shadow-xs">
+                    <Globe size={19} />
+                  </div>
+                  <div>
+                    <p className="font-display font-semibold text-sm text-foreground">Web Engineering</p>
+                    <p className="text-xs text-muted-foreground">React, Next.js & Node.js</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 p-3 rounded-xl bg-orange-50/60 border border-orange-200/50">
+                  <div className="w-10 h-10 rounded-lg bg-white border border-orange-200/60 flex items-center justify-center shrink-0 text-primary shadow-xs">
+                    <Smartphone size={19} />
+                  </div>
+                  <div>
+                    <p className="font-display font-semibold text-sm text-foreground">Mobile App Development</p>
+                    <p className="text-xs text-muted-foreground">React Native • iOS & Android</p>
+                  </div>
                 </div>
               </div>
             </ScrollReveal>
